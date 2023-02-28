@@ -1,26 +1,30 @@
 require "sinatra"
 
 get "/register" do
-    @field1 = params["field1"]
-    @field2 = params["field2"]
+    @username = params["username"]
+    @email = params["email"]
+    @password = params["password"]
   
-    @form_was_submitted = !@field1.nil? || !@field2.nil?
+    @form_was_submitted = !@username.nil? || !@email.nil? || !@password.nil?
   
     @submission_error = nil
-    @field1_error = nil
-    @field2_error = nil
+    @username_error = nil
+    @email_error = nil
+    @password_error = nil
   
     if @form_was_submitted
       # sanitise the values by removing whitespace
-      @field1.strip!
-      @field2.strip!
+      @username.strip!
+      @email.strip!
+      @password.strip!
   
       # now proceed to validation
-      @field1_error = "Please enter a value for field 1" if @field1.empty?
-      @field2_error = "Please enter a value for field 2" if @field2.empty?
-      @submission_error = "Please correct the errors below" unless @field1_error.nil? && @field2_error.nil?
+      @username_error = "Please enter a value for username" if @username.empty?
+      @email_error = "Please enter a value for your E-mail" if @email.empty?
+      @password_error = "Please enter a value for your password" if @password.empty?
+      @submission_error = "Please correct the errors below" unless @username_error.nil? && @email_error.nil? && @password_error.nil?
     end
   
-    erb :form
+    erb :register
   end
   

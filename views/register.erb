@@ -10,15 +10,21 @@
     <% end %>
     <form>
       <p>
-        Field1: <input type="text" name="field1" value="<%= h @field1 %>" />
-        <% if @field1_error %>
-          <br /><strong class="error"><%= @field1_error %></strong>
+        Username: <input type="text" name="username" value="<%= h @username %>" />
+        <% if @username_error %>
+          <br /><strong class="error"><%= @username_error %></strong>
         <% end %>
       </p>
       <p>
-        Field2: <input type="text" name="field2" value="<%= h @field2 %>" />
-        <% if @field2_error %>
-          <br /><strong class="error"><%= @field2_error %></strong>
+        Email: <input type="text" name="email" value="<%= h @email %>" />
+        <% if @email_error %>
+          <br /><strong class="error"><%= @email_error %></strong>
+        <% end %>
+      </p>
+      <p>
+        Password: <input type="text" name="password" value="<%= h @password %>" />
+        <% if @password_error %>
+          <br /><strong class="error"><%= @password_error %></strong>
         <% end %>
       </p>
       <p><input type="submit" value="Submit"></p>
