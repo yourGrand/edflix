@@ -90,3 +90,8 @@ I, [2023-03-03T16:41:38.768603 #620]  INFO -- : (0.000082s) SELECT sqlite_versio
 I, [2023-03-03T16:41:38.768960 #620]  INFO -- : (0.000155s) PRAGMA table_xinfo('courses')
 I, [2023-03-03T16:41:45.853620 #620]  INFO -- : (0.000193s) SELECT * FROM `courses`
 I, [2023-03-03T16:42:03.213466 #620]  INFO -- : (0.000168s) SELECT * FROM `courses`
+I, [2023-03-03T16:52:29.931318 #652]  INFO -- : (0.000389s) PRAGMA foreign_keys = 1
+I, [2023-03-03T16:52:29.931450 #652]  INFO -- : (0.000020s) PRAGMA case_sensitive_like = 1
+I, [2023-03-03T16:52:29.932041 #652]  INFO -- : (0.000083s) SELECT sqlite_version()
+I, [2023-03-03T16:52:29.932383 #652]  INFO -- : (0.000147s) PRAGMA table_xinfo('courses')
+I, [2023-03-03T16:52:35.397419 #652]  INFO -- : (0.000219s) SELECT * FROM `courses`
