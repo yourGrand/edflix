@@ -6,29 +6,36 @@
   <meta name="author" content="Artem Vakhutinskiy">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>COM1001</title>
-  <link rel="stylesheet" href="style/reset.css">
-  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/edflix.css">
+  <script type="text/javascript" src="js/js.js"></script>
 </head>
 
-<body id="home">
+<body>
 
-<!-- Navigation menu -->
-  <nav>
+<!--Navigation-->
+  <header>
 
-    <div>
-      <img src="images/logo.png" alt="EdFlix">
+    <div class="logo">
+      <a href="home"><img src="images/logo.png" alt="Edflix logo"></a>
     </div>
 
-    <div class="menu">
-      <li><a href="">Home</a></li>
-      <li><a href="">Courses</a></li>
-      <li><a href="">Sign in</a></li>
-      <li><a href="/register">Register</a></li>
-      <li><a href="">About us</a></li>
-    </div>
+    <nav class="navigation">
+      <form class="search-field" action="#">
+        <input type="text" placeholder="Search" name="search">
+        <button class="search-button" type="submit">
+          <img src="images/search.png">
+        </button>
+      </form>
+      <a href="home">Home</a>
+      <a href="courses">Courses</a>
+      <a href="#">About us</a>
+      <a href="register">Sign in</a>
+    </nav>
 
-    <form action="">
-      <input type="search" placeholder="Search" required>
-      <button type="submit"></button>
-    </form>
-  </nav>
+    <div class="toggleBox">
+      <a onclick="showMenu()" href="#">
+        <img class="menu" src="images/bars.png" alt="menu bars">
+        <img class="close-menu" src="images/xmark.png" alt="close x-mark">
+      </a>
+    </div>
+  </header>

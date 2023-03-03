@@ -1,6 +1,10 @@
 # Gems
 require "require_all"
 require "sinatra"
+require "sequel"
+
+# So we can escape HTML special characters in the view
+include ERB::Util
 
 # App
-require_rel "models", "controllers"
+require_rel "db/db", "models", "controllers"
