@@ -1,33 +1,28 @@
-get "/" do
-  redirect "/login" unless session[:logged_in]
-  erb :index
-end
+require 'sinatra'
+require_relative '../models/user'
 
-get "/login" do
-  @user = User.new
+
+# Render the login form
+get '/login' do
   erb :login
 end
 
+# Handle the login form submission
 post "/login" do
-  @user = User.new
-  @user.load(params)
-  @error = nil
+  username = params["username"]
+  password = params["password"]
 
-  if @user.valid?
-    if @user.exist?
-      session[:logged_in] = true
-      redirect "/"
-    else
-      @error = "Username/Password combination incorrect"
-    end
+  # Check if the username or password is empty
+  if username.empty? || password.empty?
+    @error = "Please enter both username and password"
+    erb :login
   else
-    @error = "Please correct the information below"
+    # Attempt to log in the user
+    if User.login(username, password)
+      "Welcome, #{username}!"
+    else
+      @error = "Incorrect username or password"
+      erb :login
+    end
   end
-
-  erb :login
-end
-
-get "/logout" do
-  session.clear
-  erb :logout
 end

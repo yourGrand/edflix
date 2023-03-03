@@ -1,29 +1,23 @@
-<%= erb :"common/header" %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login page</title>
+    <link rel="stylesheet" href="style/style.css">
+  </head>
+  <body>
+    <form method="post" action="/login">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username">
 
-<h1>Login</h1>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
 
-<form method="post" action="/login">
+      <button type="submit">Log In</button>
+    </form>
 
-<% unless @error.nil? %>
-<p><strong class="error"><%= @error %></strong></p>
-<% end %>
+    <% if @error %>
+      <p><%= @error %></p>
+    <% end %>
+  </body>
+</html>
 
-<p>Username: <br /><input type="text" name="username" value="<%= @user.username %>"/></p>
-<% if @user.errors.include?("username") %>
-  <% @user.errors["username"].each do |error| %>
-    <p class="error"><strong>Username <%= error %></strong></p>
-  <% end %>
-<% end %>
-
-<p>Password: <br /><input type="password" name="password" /></p>
-<% if @user.errors.include?("password") %>
-  <% @user.errors["password"].each do |error| %>
-    <p class="error"><strong>Password <%= error %></strong></p>
-  <% end %>
-<% end %>
-
-<p><input type="submit" value="Submit"></p>
-
-</form>
-
-<%= erb :"common/footer" %>
