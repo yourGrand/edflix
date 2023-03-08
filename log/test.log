@@ -171,3 +171,13 @@ I, [2023-03-03T21:16:19.179917 #286]  INFO -- : (0.000013s) PRAGMA case_sensitiv
 I, [2023-03-03T21:16:19.180389 #286]  INFO -- : (0.000070s) SELECT sqlite_version()
 I, [2023-03-03T21:16:19.180643 #286]  INFO -- : (0.000105s) PRAGMA table_xinfo('courses')
 I, [2023-03-03T21:16:19.181505 #286]  INFO -- : (0.000169s) PRAGMA table_xinfo('users')
+I, [2023-03-08T11:20:45.000023 #2700]  INFO -- : (0.000318s) PRAGMA foreign_keys = 1
+I, [2023-03-08T11:20:45.000210 #2700]  INFO -- : (0.000028s) PRAGMA case_sensitive_like = 1
+I, [2023-03-08T11:20:45.001127 #2700]  INFO -- : (0.000117s) SELECT sqlite_version()
+I, [2023-03-08T11:20:45.001594 #2700]  INFO -- : (0.000217s) PRAGMA table_xinfo('courses')
+I, [2023-03-08T11:20:45.003332 #2700]  INFO -- : (0.000275s) PRAGMA table_xinfo('users')
+I, [2023-03-08T11:31:17.137017 #3070]  INFO -- : (0.000275s) PRAGMA foreign_keys = 1
+I, [2023-03-08T11:31:17.137211 #3070]  INFO -- : (0.000029s) PRAGMA case_sensitive_like = 1
+I, [2023-03-08T11:31:17.138095 #3070]  INFO -- : (0.000116s) SELECT sqlite_version()
+I, [2023-03-08T11:31:17.138714 #3070]  INFO -- : (0.000216s) PRAGMA table_xinfo('courses')
+I, [2023-03-08T11:31:17.140060 #3070]  INFO -- : (0.000243s) PRAGMA table_xinfo('users')
