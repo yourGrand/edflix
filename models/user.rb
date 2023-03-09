@@ -1,4 +1,4 @@
-class User < Sequel::Model (:login_details)
+class User < Sequel::Model(:login_details)
   def self.login(username, password)
     # Find the user with the given username
     user = User.first(username: username)
