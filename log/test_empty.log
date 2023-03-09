@@ -1,0 +1,16 @@
+# Logfile created on 2023-03-09 13:14:09 +0000 by logger.rb/66358
+I, [2023-03-09T13:14:09.961180 #6139]  INFO -- : (0.000212s) PRAGMA foreign_keys = 1
+I, [2023-03-09T13:14:09.961329 #6139]  INFO -- : (0.000020s) PRAGMA case_sensitive_like = 1
+I, [2023-03-09T13:14:09.961948 #6139]  INFO -- : (0.000081s) SELECT sqlite_version()
+I, [2023-03-09T13:14:09.962264 #6139]  INFO -- : (0.000147s) PRAGMA table_xinfo('courses')
+I, [2023-03-09T13:14:09.963696 #6139]  INFO -- : (0.000112s) PRAGMA table_xinfo('login_details')
+I, [2023-03-09T13:34:13.299641 #6351]  INFO -- : (0.000221s) PRAGMA foreign_keys = 1
+I, [2023-03-09T13:34:13.299808 #6351]  INFO -- : (0.000025s) PRAGMA case_sensitive_like = 1
+I, [2023-03-09T13:34:13.300437 #6351]  INFO -- : (0.000083s) SELECT sqlite_version()
+I, [2023-03-09T13:34:13.300804 #6351]  INFO -- : (0.000160s) PRAGMA table_xinfo('courses')
+I, [2023-03-09T13:34:13.302529 #6351]  INFO -- : (0.000136s) PRAGMA table_xinfo('login_details')
+I, [2023-03-09T13:50:19.488864 #7164]  INFO -- : (0.000295s) PRAGMA foreign_keys = 1
+I, [2023-03-09T13:50:19.489075 #7164]  INFO -- : (0.000031s) PRAGMA case_sensitive_like = 1
+I, [2023-03-09T13:50:19.490052 #7164]  INFO -- : (0.000150s) SELECT sqlite_version()
+I, [2023-03-09T13:50:19.490571 #7164]  INFO -- : (0.000252s) PRAGMA table_xinfo('courses')
+I, [2023-03-09T13:50:19.492946 #7164]  INFO -- : (0.000230s) PRAGMA table_xinfo('login_details')
