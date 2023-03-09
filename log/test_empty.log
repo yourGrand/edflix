@@ -14,3 +14,105 @@ I, [2023-03-09T13:50:19.489075 #7164]  INFO -- : (0.000031s) PRAGMA case_sensiti
 I, [2023-03-09T13:50:19.490052 #7164]  INFO -- : (0.000150s) SELECT sqlite_version()
 I, [2023-03-09T13:50:19.490571 #7164]  INFO -- : (0.000252s) PRAGMA table_xinfo('courses')
 I, [2023-03-09T13:50:19.492946 #7164]  INFO -- : (0.000230s) PRAGMA table_xinfo('login_details')
+I, [2023-03-09T21:55:44.885028 #1483]  INFO -- : (0.000218s) PRAGMA foreign_keys = 1
+I, [2023-03-09T21:55:44.885195 #1483]  INFO -- : (0.000027s) PRAGMA case_sensitive_like = 1
+I, [2023-03-09T21:55:44.885865 #1483]  INFO -- : (0.000086s) SELECT sqlite_version()
+I, [2023-03-09T21:55:44.886267 #1483]  INFO -- : (0.000146s) PRAGMA table_xinfo('courses')
+I, [2023-03-09T21:55:44.887755 #1483]  INFO -- : (0.000117s) PRAGMA table_xinfo('login_details')
+I, [2023-03-09T21:55:44.957356 #1483]  INFO -- : (0.000164s) SELECT * FROM `courses`
+I, [2023-03-09T21:55:44.983312 #1483]  INFO -- : (0.000172s) SELECT * FROM `courses`
+I, [2023-03-09T21:55:44.986743 #1483]  INFO -- : (0.000090s) BEGIN
+I, [2023-03-09T21:55:44.987640 #1483]  INFO -- : (0.000457s) INSERT INTO `courses` (`course_title`, `course_description`, `image_path`) VALUES ('Test', 'You better test your software', 'images/Test.png') RETURNING *
+I, [2023-03-09T21:55:45.052706 #1483]  INFO -- : (0.064937s) COMMIT
+I, [2023-03-09T21:55:45.120340 #1483]  INFO -- : (0.066251s) DELETE FROM `courses` WHERE `course_id` = 1
+I, [2023-03-09T21:56:20.720606 #1517]  INFO -- : (0.000233s) PRAGMA foreign_keys = 1
+I, [2023-03-09T21:56:20.720756 #1517]  INFO -- : (0.000021s) PRAGMA case_sensitive_like = 1
+I, [2023-03-09T21:56:20.721345 #1517]  INFO -- : (0.000084s) SELECT sqlite_version()
+I, [2023-03-09T21:56:20.721667 #1517]  INFO -- : (0.000146s) PRAGMA table_xinfo('courses')
+I, [2023-03-09T21:56:20.723224 #1517]  INFO -- : (0.000129s) PRAGMA table_xinfo('login_details')
+I, [2023-03-09T21:56:20.795421 #1517]  INFO -- : (0.000158s) SELECT * FROM `courses`
+I, [2023-03-09T21:56:20.821455 #1517]  INFO -- : (0.000157s) SELECT * FROM `courses`
+I, [2023-03-09T21:56:20.824911 #1517]  INFO -- : (0.000054s) BEGIN
+I, [2023-03-09T21:56:20.825739 #1517]  INFO -- : (0.000474s) INSERT INTO `courses` (`course_title`, `course_description`, `image_path`) VALUES ('Test', 'You better test your software', 'images/Test.png') RETURNING *
+I, [2023-03-09T21:56:20.891797 #1517]  INFO -- : (0.065916s) COMMIT
+I, [2023-03-09T21:56:20.961196 #1517]  INFO -- : (0.067793s) DELETE FROM `courses` WHERE `course_id` = 1
+I, [2023-03-09T22:02:48.500831 #1603]  INFO -- : (0.000213s) PRAGMA foreign_keys = 1
+I, [2023-03-09T22:02:48.500981 #1603]  INFO -- : (0.000020s) PRAGMA case_sensitive_like = 1
+I, [2023-03-09T22:02:48.502691 #1603]  INFO -- : (0.000085s) SELECT sqlite_version()
+I, [2023-03-09T22:02:48.503060 #1603]  INFO -- : (0.000169s) PRAGMA table_xinfo('courses')
+I, [2023-03-09T22:02:48.505424 #1603]  INFO -- : (0.000115s) PRAGMA table_xinfo('login_details')
+I, [2023-03-09T22:02:48.565723 #1603]  INFO -- : (0.000139s) SELECT * FROM `courses`
+I, [2023-03-09T22:02:48.576906 #1603]  INFO -- : (0.000131s) SELECT * FROM `courses`
+I, [2023-03-09T22:02:48.584606 #1603]  INFO -- : (0.000041s) BEGIN
+I, [2023-03-09T22:02:48.585346 #1603]  INFO -- : (0.000435s) INSERT INTO `courses` (`course_title`, `course_description`, `image_path`) VALUES ('Test', 'You better test your software', 'images/Test.png') RETURNING *
+I, [2023-03-09T22:02:48.646283 #1603]  INFO -- : (0.060820s) COMMIT
+I, [2023-03-09T22:02:48.707514 #1603]  INFO -- : (0.060292s) DELETE FROM `courses` WHERE `course_id` = 1
+I, [2023-03-09T22:03:05.226396 #1650]  INFO -- : (0.000220s) PRAGMA foreign_keys = 1
+I, [2023-03-09T22:03:05.226544 #1650]  INFO -- : (0.000021s) PRAGMA case_sensitive_like = 1
+I, [2023-03-09T22:03:05.227210 #1650]  INFO -- : (0.000083s) SELECT sqlite_version()
+I, [2023-03-09T22:03:05.227544 #1650]  INFO -- : (0.000149s) PRAGMA table_xinfo('courses')
+I, [2023-03-09T22:03:05.229120 #1650]  INFO -- : (0.000112s) PRAGMA table_xinfo('login_details')
+I, [2023-03-09T22:06:49.098271 #1803]  INFO -- : (0.000225s) PRAGMA foreign_keys = 1
+I, [2023-03-09T22:06:49.098428 #1803]  INFO -- : (0.000021s) PRAGMA case_sensitive_like = 1
+I, [2023-03-09T22:06:49.099180 #1803]  INFO -- : (0.000093s) SELECT sqlite_version()
+I, [2023-03-09T22:06:49.099527 #1803]  INFO -- : (0.000149s) PRAGMA table_xinfo('courses')
+I, [2023-03-09T22:06:49.101229 #1803]  INFO -- : (0.000163s) PRAGMA table_xinfo('login_details')
+I, [2023-03-09T22:06:49.176353 #1803]  INFO -- : (0.000150s) SELECT * FROM `courses`
+I, [2023-03-09T22:06:49.189458 #1803]  INFO -- : (0.000041s) BEGIN
+I, [2023-03-09T22:06:49.190374 #1803]  INFO -- : (0.000479s) INSERT INTO `courses` (`course_title`, `course_description`, `image_path`) VALUES ('Test', 'You better test your software', 'images/Test.png') RETURNING *
+I, [2023-03-09T22:06:49.255123 #1803]  INFO -- : (0.064598s) COMMIT
+I, [2023-03-09T22:07:47.045038 #1857]  INFO -- : (0.000349s) PRAGMA foreign_keys = 1
+I, [2023-03-09T22:07:47.045277 #1857]  INFO -- : (0.000031s) PRAGMA case_sensitive_like = 1
+I, [2023-03-09T22:07:47.046461 #1857]  INFO -- : (0.000165s) SELECT sqlite_version()
+I, [2023-03-09T22:07:47.047037 #1857]  INFO -- : (0.000237s) PRAGMA table_xinfo('courses')
+I, [2023-03-09T22:07:47.049883 #1857]  INFO -- : (0.000278s) PRAGMA table_xinfo('login_details')
+I, [2023-03-09T22:07:47.143596 #1857]  INFO -- : (0.000248s) SELECT * FROM `courses`
+I, [2023-03-09T22:07:47.171046 #1857]  INFO -- : (0.000044s) BEGIN
+I, [2023-03-09T22:07:47.171872 #1857]  INFO -- : (0.000471s) INSERT INTO `courses` (`course_title`, `course_description`, `image_path`) VALUES ('Test', 'You better test your software', 'images/Test.png') RETURNING *
+I, [2023-03-09T22:07:47.235999 #1857]  INFO -- : (0.063990s) COMMIT
+I, [2023-03-09T22:07:47.236838 #1857]  INFO -- : (0.000157s) SELECT * FROM `courses`
+I, [2023-03-09T22:07:47.302537 #1857]  INFO -- : (0.064997s) DELETE FROM `courses` WHERE `course_id` = 2
+I, [2023-03-09T22:09:13.697710 #1894]  INFO -- : (0.000226s) PRAGMA foreign_keys = 1
+I, [2023-03-09T22:09:13.698004 #1894]  INFO -- : (0.000028s) PRAGMA case_sensitive_like = 1
+I, [2023-03-09T22:09:13.698839 #1894]  INFO -- : (0.000144s) SELECT sqlite_version()
+I, [2023-03-09T22:09:13.699327 #1894]  INFO -- : (0.000217s) PRAGMA table_xinfo('courses')
+I, [2023-03-09T22:09:13.700938 #1894]  INFO -- : (0.000152s) PRAGMA table_xinfo('login_details')
+I, [2023-03-09T22:09:13.795483 #1894]  INFO -- : (0.000220s) SELECT * FROM `courses`
+I, [2023-03-09T22:09:13.826876 #1894]  INFO -- : (0.000044s) BEGIN
+I, [2023-03-09T22:09:13.827806 #1894]  INFO -- : (0.000550s) INSERT INTO `courses` (`course_title`, `course_description`, `image_path`) VALUES ('Test', 'You better test your software', 'images/Test.png') RETURNING *
+I, [2023-03-09T22:09:13.898039 #1894]  INFO -- : (0.070059s) COMMIT
+I, [2023-03-09T22:09:13.899001 #1894]  INFO -- : (0.000205s) SELECT * FROM `courses`
+I, [2023-03-09T22:09:13.961425 #1894]  INFO -- : (0.061760s) DELETE FROM `courses` WHERE `course_id` = 2
+I, [2023-03-09T22:10:53.693463 #1946]  INFO -- : (0.000208s) PRAGMA foreign_keys = 1
+I, [2023-03-09T22:10:53.693625 #1946]  INFO -- : (0.000021s) PRAGMA case_sensitive_like = 1
+I, [2023-03-09T22:10:53.694262 #1946]  INFO -- : (0.000084s) SELECT sqlite_version()
+I, [2023-03-09T22:10:53.694596 #1946]  INFO -- : (0.000145s) PRAGMA table_xinfo('courses')
+I, [2023-03-09T22:10:53.696027 #1946]  INFO -- : (0.000111s) PRAGMA table_xinfo('login_details')
+I, [2023-03-09T22:10:53.765202 #1946]  INFO -- : (0.000161s) SELECT * FROM `courses`
+I, [2023-03-09T22:10:53.778021 #1946]  INFO -- : (0.000041s) BEGIN
+I, [2023-03-09T22:10:53.779013 #1946]  INFO -- : (0.000603s) INSERT INTO `courses` (`course_title`, `course_description`, `image_path`) VALUES ('Test', 'You better test your software', 'images/Test.png') RETURNING *
+I, [2023-03-09T22:10:53.843686 #1946]  INFO -- : (0.064519s) COMMIT
+I, [2023-03-09T22:10:53.844412 #1946]  INFO -- : (0.000144s) SELECT * FROM `courses`
+I, [2023-03-09T22:10:53.912254 #1946]  INFO -- : (0.067222s) DELETE FROM `courses` WHERE `course_id` = 1
+I, [2023-03-09T22:10:57.339852 #1973]  INFO -- : (0.000214s) PRAGMA foreign_keys = 1
+I, [2023-03-09T22:10:57.339994 #1973]  INFO -- : (0.000021s) PRAGMA case_sensitive_like = 1
+I, [2023-03-09T22:10:57.340631 #1973]  INFO -- : (0.000083s) SELECT sqlite_version()
+I, [2023-03-09T22:10:57.341019 #1973]  INFO -- : (0.000157s) PRAGMA table_xinfo('courses')
+I, [2023-03-09T22:10:57.342846 #1973]  INFO -- : (0.000238s) PRAGMA table_xinfo('login_details')
+I, [2023-03-09T22:10:57.413726 #1973]  INFO -- : (0.000139s) SELECT * FROM `courses`
+I, [2023-03-09T22:10:57.426313 #1973]  INFO -- : (0.000042s) BEGIN
+I, [2023-03-09T22:10:57.427106 #1973]  INFO -- : (0.000406s) INSERT INTO `courses` (`course_title`, `course_description`, `image_path`) VALUES ('Test', 'You better test your software', 'images/Test.png') RETURNING *
+I, [2023-03-09T22:10:57.484586 #1973]  INFO -- : (0.057326s) COMMIT
+I, [2023-03-09T22:10:57.485365 #1973]  INFO -- : (0.000180s) SELECT * FROM `courses`
+I, [2023-03-09T22:10:57.587900 #1973]  INFO -- : (0.101847s) DELETE FROM `courses` WHERE `course_id` = 1
+I, [2023-03-09T22:11:04.771617 #2001]  INFO -- : (0.000222s) PRAGMA foreign_keys = 1
+I, [2023-03-09T22:11:04.771763 #2001]  INFO -- : (0.000021s) PRAGMA case_sensitive_like = 1
+I, [2023-03-09T22:11:04.772324 #2001]  INFO -- : (0.000077s) SELECT sqlite_version()
+I, [2023-03-09T22:11:04.772634 #2001]  INFO -- : (0.000144s) PRAGMA table_xinfo('courses')
+I, [2023-03-09T22:11:04.774068 #2001]  INFO -- : (0.000117s) PRAGMA table_xinfo('login_details')
+I, [2023-03-09T22:11:04.843377 #2001]  INFO -- : (0.000144s) SELECT * FROM `courses`
+I, [2023-03-09T22:11:04.856171 #2001]  INFO -- : (0.000044s) BEGIN
+I, [2023-03-09T22:11:04.856985 #2001]  INFO -- : (0.000464s) INSERT INTO `courses` (`course_title`, `course_description`, `image_path`) VALUES ('Test', 'You better test your software', 'images/Test.png') RETURNING *
+I, [2023-03-09T22:11:04.927677 #2001]  INFO -- : (0.070534s) COMMIT
+I, [2023-03-09T22:11:04.928444 #2001]  INFO -- : (0.000145s) SELECT * FROM `courses`
+I, [2023-03-09T22:11:04.993557 #2001]  INFO -- : (0.064498s) DELETE FROM `courses` WHERE `course_id` = 1
