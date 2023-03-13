@@ -1,9 +1,67 @@
 <%= erb :"common/header" %>
 <!-- DASHBOARD -->
+  <head>
+  <style>
+  .courseProgress {
+  width: 400px;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 0;
+  }
+  .courseProgress img {
+  width: 40px;
+  height: 60px;
+  object-fit: cover;
+}
+
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-right: 20px;
+    margin-left: auto;
+  }  
+  th, td {
+    padding: 5px;
+    text-align: left;
+  }
+</style>
+  </head>
   <h1>
     Welcome to the Edflix dashboard.
   </h1>
   <h2>
-    Here is where you can access key functions relating to your courses
+    Here is where you can access key functions relating to your courses.
   </h2>
+  <table>
+  <tr>
+    <th>Full Name:</th>
+    <td>Firstname Surname</td>
+  </tr>
+    <tr>
+    <th>Year of Study:</th>
+    <td>32</td>
+  </tr>
+    <tr>
+    <th>Nationality:</th>
+    <td>aoitnesgrsje</td>
+  </tr>
+  <tr>
+    <th>Courses in Progress:</th>
+    <td>Not enough</td>
+  </tr>
+  <tr>
+    <th>Anything Else:</th>
+    <td>setoudbraowjesdi</td>
+  </tr>
+</table>
+<div class = "courseProgress">
+<img src="images/CourseSymbol.png" alt="Course Symbol"/>
+<h3>Current course progression:</h3>
+<br>idk: 62%
+<progress id="firstCourseProgress" value="62" max="100"> 32% </progress>
+<br>idk again: 89%
+<progress id="firstCourseProgress" value="89" max="100"> 32% </progress>
+<br>idk one more time: 22%
+<progress id="firstCourseProgress" value="22" max="100"> 32% </progress>
+</div>
 <%= erb :"common/footer" %>
