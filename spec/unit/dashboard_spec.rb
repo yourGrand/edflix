@@ -15,3 +15,9 @@ Rspec.describe "Dashboard page" do
       get "/dashboard"
       expect(last_response.status).to eq(200)
     end
+
+    #Check if page includes body text
+    it "says 'Here is where you can access key functions relating to your courses.' " do
+      get "/dashboard"
+      expect(last_response.body).to include("Here is where you can access key functions relating to your courses.")
+    end
