@@ -1,7 +1,6 @@
 require 'sinatra'
 require_relative '../models/user'
 
-
 # Render the login form
 get '/login' do
   erb :login
@@ -22,14 +21,12 @@ post "/login" do
   elsif password.empty?
     @error = "Please enter your password"
     erb :login
-  else
+  elsif User.login(username, password)
     # Attempt to log in the user
-    if User.login(username, password)
-      "Welcome, #{username}!"
-      erb :dashboard
-    else
+    "Welcome, #{username}!"
+    erb :dashboard
+  else
       @error = "Incorrect username or password"
       erb :login
-    end
   end
 end

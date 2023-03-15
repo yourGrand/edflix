@@ -1,13 +1,13 @@
 class Course < Sequel::Model
   def name
-    "#{course_title}"
+    course_title.to_s
   end
 
   def about
-    "#{course_description}"
+    course_description.to_s
   end
 
   def image
-    "#{image_path}"
+    image_path.to_s
   end
 end

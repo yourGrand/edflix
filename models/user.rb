@@ -5,10 +5,10 @@ class User < Sequel::Model(:login_details)
 
     # Return false if the user doesn't exist or the password is incorrect
     return false unless user
+
     user.password == password
   end
 
-    # Return true to indicate success
-    true
+  # Return true to indicate success
+  true
 end
-
