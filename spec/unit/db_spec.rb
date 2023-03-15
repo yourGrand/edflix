@@ -20,7 +20,7 @@ describe "DB" do
   end
 
   it "should have a logger set up" do
-    expect(@db_instance.loggers).not_to be (nil)
+    expect(@db_instance.loggers.size).to be >0
   end
 end
 
