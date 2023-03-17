@@ -22,11 +22,16 @@ post "/login" do
     @error = "Please enter your password"
     erb :login
   elsif User.login(username, password)
+    session[:logged_in] = true
     # Attempt to log in the user
-    "Welcome, #{username}!"
-    erb :dashboard
+    redirect '/dashboard'
   else
       @error = "Incorrect username or password"
       erb :login
   end
+end
+
+get "/logout" do
+  session.clear
+  erb :logout
 end
