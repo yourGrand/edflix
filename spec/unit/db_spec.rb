@@ -1,4 +1,3 @@
-
 require_relative "../spec_helper"
 require "logger"
 require "sequel"
@@ -20,9 +19,6 @@ describe "DB" do
   end
 
   it "should have a logger set up" do
-    expect(@db_instance.logger).to be_a(Logger)
+    expect(@db_instance.loggers.size).to be > 0
   end
 end
-
-
-

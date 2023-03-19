@@ -57,5 +57,3 @@ describe 'Login page' do
     end
   end
 end
-
-
