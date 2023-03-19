@@ -1,15 +1,46 @@
 <%= erb :"common/header" %>
 <!-- HOME -->
-
+<main>
   <h1>
     Welcome to Edflix where you can learn every course you want!
   </h1>
 
-  <img class="backround" src="images/background.jpeg" alt="background"/>
+  <!--<img class="backround" src="images/background.jpeg" alt="background"/>-->
 
   <div>
-    <h2>Featured articles</h2>
+    <% if @coursesSortedByRating.count > 0 %>
+      <h2>Most popular courses</h2>
+      <% @coursesSortedByRating.each do |course| %>
+        <div class="courses-container">
+          <div class="course">
+            <img src=<%=h course.image %>>
+            <h2><%=h course.name %></h2>
+            <p><%=h course.about %></p>
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      <p>The database is empty!</p>
+    <% end %> 
+  </div>
 
+  <div>
+    <% if @articles.count > 0 %>
+      <h2>Featured Articles</h2>
+      <% @articles.each do |article| %>
+        <div class="article-container">
+          <article class="article">
+            <img src=<%=h article.image %>>
+            <h2><%=h article.title %></h2>
+            <p><%=h article.body %></p>
+          </article>
+        </div>
+      <% end %>
+    <% else %>
+      <p>The database is empty!</p>
+    <% end %>   
+    
+    <!--
     <div>
       <h3>A brief history of the UK’s Winchcombe meteorite</h3>
       <p>
@@ -18,7 +49,7 @@
       </p>
       <img class="thumbnail" src="images/meteorite.jpg" alt="meteorite"/>
     </div>
-    
+
     <div>
       <h3>Why does music bring back memories? What the science says</h3>
       <p>
@@ -44,8 +75,8 @@
       </p>
       <img class="thumbnail" src="images/dinosaur.jpg" alt="dinosaur"/>
     </div>
-
+    -->
   </div>
 
-
+</main>
 <%= erb :"common/footer" %>
