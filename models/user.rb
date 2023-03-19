@@ -1,4 +1,5 @@
 class User < Sequel::Model(:login_details)
+
   def self.login(username, password)
     # Find the user with the given username
     user = User.first(username: username)
@@ -8,7 +9,18 @@ class User < Sequel::Model(:login_details)
     user.password == password
   end
 
-    # Return true to indicate success
-    true
+  def self.newUser(username, password, email)
+
+    # Gets most recent login_id
+    newID = User.max(:login_id) + 1
+
+    # Adds user to login_details
+    User.insert(login_id: newID, email: email, username: username, password: password)
+
+    return true
+
+  end
+
+
 end
 
