@@ -4,13 +4,7 @@ ENV["APP_ENV"] = "test_empty"
 # load helper
 require_relative "../spec_helper"
 
-# load models
-
 RSpec.describe "Home" do
-  def app
-    Sinatra::Application
-  end
-
   describe "Course" do
     course = Course.new(course_title: "Test Course", course_description: "This is a test course.", course_rating: 5, image_path: "images/Test.png")
 
