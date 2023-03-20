@@ -6,7 +6,7 @@ require_relative "../spec_helper"
 
 RSpec.describe "Dashboard page" do
   describe "GET /dashboard" do
-    #Check if dashboard loads after logging in
+    # Check if dashboard loads after logging in
     it "says 'Here is where you can access key functions relating to your courses.' " do
       add_test_user
       login_test_user

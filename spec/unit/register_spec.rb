@@ -18,7 +18,7 @@ RSpec.describe "Register page" do
 
             add_test_user
             expect(page).to have_content "Success!"
-            
+
             # clear database
             clear
         end
@@ -30,7 +30,7 @@ RSpec.describe "Register page" do
             visit "/register"
             fill_in "email", with: "test@test.com"
             fill_in "password", with: "pass"
-            click_button "Submit" 
+            click_button "Submit"
 
             expect(page).to have_content "Please correct the errors below"
             expect(page).to have_content "Please enter a value for username"
@@ -43,7 +43,7 @@ RSpec.describe "Register page" do
             visit "/register"
             fill_in "username", with: "test"
             fill_in "password", with: "pass"
-            click_button "Submit" 
+            click_button "Submit"
 
             expect(page).to have_content "Please correct the errors below"
             expect(page).to have_content "Please enter a value for your E-mail"
