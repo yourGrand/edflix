@@ -1,15 +1,8 @@
 # load helper
 require_relative "../spec_helper"
 
-Rspec.describe "Dashboard page" do
-  include Rack::Test::Methods
-
-  def app
-    Sinatra::Application
-  end
-
+RSpec.describe "Dashboard page" do
   describe "GET /dashboard" do
-
     #Check if page loads
     it "has a status code of 200 (OK)" do
       get "/dashboard"
@@ -21,3 +14,5 @@ Rspec.describe "Dashboard page" do
       get "/dashboard"
       expect(last_response.body).to include("Here is where you can access key functions relating to your courses.")
     end
+  end
+end

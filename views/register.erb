@@ -9,7 +9,7 @@
         <p><strong class="success">Success!</strong></p>        
       <% end %>
     <% end %>
-    <form>
+    <form method="post" action="/register">
       <p>
         Username: <input type="text" name="username" value="<%= h @username %>" />
         <% if @username_error %>

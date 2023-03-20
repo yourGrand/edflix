@@ -26,7 +26,7 @@ RSpec.describe "Courses page" do
         # perform the test by going to the page and examining the content
         get "/courses"
         expect(last_response.status).to eq(200)
-        expect(course.image_path).to eq("images/Test.png")
+        expect(course.image).to eq("images/Test.png")
         expect(course.name).to eq("Test")
         expect(course.about).to eq("You better test your software")
 

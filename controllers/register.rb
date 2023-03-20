@@ -1,31 +1,39 @@
 require "sinatra"
 
-get "/register" do
-    @username = params["username"]
-    @email = params["email"]
-    @password = params["password"]
+get '/register' do
+  erb :register
+end
 
-    @form_was_submitted = !@username.nil? || !@email.nil? || !@password.nil?
+post "/register" do
+  @username = params["username"]
+  @email = params["email"]
+  @password = params["password"]
 
-    @submission_error = nil
-    @username_error = nil
-    @email_error = nil
-    @password_error = nil
+  @form_was_submitted = !@username.nil? || !@email.nil? || !@password.nil?
 
-    if @form_was_submitted
-      # sanitise the values by removing whitespace
-      @username.strip!
-      @email.strip!
-      @password.strip!
+  @submission_error = nil
+  @username_error = nil
+  @email_error = nil
+  @password_error = nil
 
-      # now proceed to validation
-      @username_error = "Please enter a value for username" if @username.empty?
-      @email_error = "Please enter a value for your E-mail" if @email.empty?
-      @password_error = "Please enter a value for your password" if @password.empty?
-      unless @username_error.nil? && @email_error.nil? && @password_error.nil?
-        @submission_error = "Please correct the errors below"
-      end
+  if @form_was_submitted
+    # sanitise the values by removing whitespace
+    @username.strip!
+    @email.strip!
+    @password.strip!
+
+    # now proceed to validation
+    @username_error = "Please enter a value for username" if @username.empty?
+    @email_error = "Please enter a value for your E-mail" if @email.empty?
+    @password_error = "Please enter a value for your password" if @password.empty?
+    if @username_error.nil? && @email_error.nil? && @password_error.nil?
+      User.newUser(@username, @password, @email)
+      erb :dashboard
+    else
+      @submission_error = "Please correct the errors below"
+      erb :register
     end
-
+  else
     erb :register
+  end
 end

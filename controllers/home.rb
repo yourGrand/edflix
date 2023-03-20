@@ -1,9 +1,8 @@
 require "sinatra"
 
 get "/" do
-    erb :home
-end
-
-get "/home" do
+    # sorts array of courses by rating from highest to lowest
+    @coursesSortedByRating = Course.all.sort_by(&:rating).reverse
+    @articles = Article.all
     erb :home
 end
