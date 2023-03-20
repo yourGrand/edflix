@@ -497,3 +497,115 @@ I, [2023-03-20T12:30:46.058176 #390]  INFO -- : (0.000059s) SELECT * FROM `artic
 I, [2023-03-20T12:30:46.065024 #390]  INFO -- : (0.000118s) SELECT * FROM `login_details` WHERE (`username` = 'valid_username') LIMIT 1
 I, [2023-03-20T12:30:46.067647 #390]  INFO -- : (0.000101s) SELECT * FROM `login_details` WHERE (`username` = 'invalid_username') LIMIT 1
 I, [2023-03-20T12:30:46.068974 #390]  INFO -- : (0.000087s) SELECT * FROM `login_details` WHERE (`username` = 'valid_username') LIMIT 1
+I, [2023-03-20T22:21:46.751193 #1765]  INFO -- : (0.000199s) PRAGMA foreign_keys = 1
+I, [2023-03-20T22:21:46.751285 #1765]  INFO -- : (0.000013s) PRAGMA case_sensitive_like = 1
+I, [2023-03-20T22:21:46.751732 #1765]  INFO -- : (0.000063s) SELECT sqlite_version()
+I, [2023-03-20T22:21:46.751962 #1765]  INFO -- : (0.000104s) PRAGMA table_xinfo('courses')
+I, [2023-03-20T22:21:46.752623 #1765]  INFO -- : (0.000083s) PRAGMA table_xinfo('articles')
+I, [2023-03-20T22:21:46.753788 #1765]  INFO -- : (0.000089s) PRAGMA table_xinfo('login_details')
+I, [2023-03-20T22:21:46.815273 #1765]  INFO -- : (0.000111s) SELECT max(`login_id`) AS 'max' FROM `login_details` LIMIT 1
+I, [2023-03-20T22:21:46.879512 #1765]  INFO -- : (0.064066s) INSERT INTO `login_details` (`login_id`, `email`, `username`, `password`) VALUES (0, 'learner1@learner1.com', 'learner1', 'learner1')
+I, [2023-03-20T22:21:46.886384 #1765]  INFO -- : (0.000155s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-03-20T22:21:46.953198 #1765]  INFO -- : (0.060516s) DELETE FROM `login_details` WHERE (1 = 1)
+I, [2023-03-20T22:22:15.349675 #1825]  INFO -- : (0.000158s) PRAGMA foreign_keys = 1
+I, [2023-03-20T22:22:15.349778 #1825]  INFO -- : (0.000017s) PRAGMA case_sensitive_like = 1
+I, [2023-03-20T22:22:15.350228 #1825]  INFO -- : (0.000065s) SELECT sqlite_version()
+I, [2023-03-20T22:22:15.350499 #1825]  INFO -- : (0.000110s) PRAGMA table_xinfo('courses')
+I, [2023-03-20T22:22:15.351196 #1825]  INFO -- : (0.000088s) PRAGMA table_xinfo('articles')
+I, [2023-03-20T22:22:15.352441 #1825]  INFO -- : (0.000089s) PRAGMA table_xinfo('login_details')
+I, [2023-03-20T22:22:15.406932 #1825]  INFO -- : (0.000119s) SELECT * FROM `courses`
+I, [2023-03-20T22:22:15.418588 #1825]  INFO -- : (0.000028s) BEGIN
+I, [2023-03-20T22:22:15.419138 #1825]  INFO -- : (0.000327s) INSERT INTO `courses` (`course_title`, `course_description`, `image_path`) VALUES ('Test', 'You better test your software', 'images/Test.png') RETURNING *
+I, [2023-03-20T22:22:15.484658 #1825]  INFO -- : (0.065441s) COMMIT
+I, [2023-03-20T22:22:15.485216 #1825]  INFO -- : (0.000103s) SELECT * FROM `courses`
+I, [2023-03-20T22:22:15.549139 #1825]  INFO -- : (0.063280s) DELETE FROM `courses` WHERE `course_id` = 1
+I, [2023-03-20T22:22:15.564433 #1825]  INFO -- : (0.000113s) SELECT max(`login_id`) AS 'max' FROM `login_details` LIMIT 1
+I, [2023-03-20T22:22:15.623229 #1825]  INFO -- : (0.058615s) INSERT INTO `login_details` (`login_id`, `email`, `username`, `password`) VALUES (0, 'learner1@learner1.com', 'learner1', 'learner1')
+I, [2023-03-20T22:22:15.628495 #1825]  INFO -- : (0.000113s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-03-20T22:22:15.694146 #1825]  INFO -- : (0.061356s) DELETE FROM `login_details` WHERE (1 = 1)
+I, [2023-03-20T22:22:15.698441 #1825]  INFO -- : (0.000110s) SELECT * FROM `courses`
+I, [2023-03-20T22:22:15.698639 #1825]  INFO -- : (0.000068s) SELECT * FROM `articles`
+I, [2023-03-20T22:22:15.700808 #1825]  INFO -- : (0.000020s) BEGIN
+I, [2023-03-20T22:22:15.701253 #1825]  INFO -- : (0.000271s) INSERT INTO `courses` (`course_title`, `course_description`, `course_rating`, `image_path`) VALUES ('Course A', 'Description A', '5', 'course_a.jpg') RETURNING *
+I, [2023-03-20T22:22:15.772743 #1825]  INFO -- : (0.071412s) COMMIT
+I, [2023-03-20T22:22:15.772900 #1825]  INFO -- : (0.000022s) BEGIN
+I, [2023-03-20T22:22:15.773301 #1825]  INFO -- : (0.000244s) INSERT INTO `courses` (`course_title`, `course_description`, `course_rating`, `image_path`) VALUES ('Course B', 'Description B', '3', 'course_b.jpg') RETURNING *
+I, [2023-03-20T22:22:15.842953 #1825]  INFO -- : (0.069563s) COMMIT
+I, [2023-03-20T22:22:15.843145 #1825]  INFO -- : (0.000031s) BEGIN
+I, [2023-03-20T22:22:15.843582 #1825]  INFO -- : (0.000271s) INSERT INTO `courses` (`course_title`, `course_description`, `course_rating`, `image_path`) VALUES ('Course C', 'Description C', '4', 'course_c.jpg') RETURNING *
+I, [2023-03-20T22:22:15.903867 #1825]  INFO -- : (0.060197s) COMMIT
+I, [2023-03-20T22:22:15.904782 #1825]  INFO -- : (0.000176s) SELECT * FROM `courses`
+I, [2023-03-20T22:22:15.904998 #1825]  INFO -- : (0.000093s) SELECT * FROM `articles`
+I, [2023-03-20T22:22:15.976521 #1825]  INFO -- : (0.070574s) DELETE FROM `courses` WHERE `course_id` = 1
+I, [2023-03-20T22:22:16.045394 #1825]  INFO -- : (0.068731s) DELETE FROM `courses` WHERE `course_id` = 2
+I, [2023-03-20T22:22:16.103994 #1825]  INFO -- : (0.058389s) DELETE FROM `courses` WHERE `course_id` = 3
+I, [2023-03-20T22:22:16.104657 #1825]  INFO -- : (0.000039s) BEGIN
+I, [2023-03-20T22:22:16.105194 #1825]  INFO -- : (0.000272s) INSERT INTO `articles` (`article_title`, `article_body`, `image_path`) VALUES ('Article A', 'Body A', 'article_a.jpg') RETURNING *
+I, [2023-03-20T22:22:16.173347 #1825]  INFO -- : (0.068036s) COMMIT
+I, [2023-03-20T22:22:16.173901 #1825]  INFO -- : (0.000036s) BEGIN
+I, [2023-03-20T22:22:16.174377 #1825]  INFO -- : (0.000281s) INSERT INTO `articles` (`article_title`, `article_body`, `image_path`) VALUES ('Article B', 'Body B', 'article_b.jpg') RETURNING *
+I, [2023-03-20T22:22:16.241115 #1825]  INFO -- : (0.066643s) COMMIT
+I, [2023-03-20T22:22:16.241880 #1825]  INFO -- : (0.000122s) SELECT * FROM `courses`
+I, [2023-03-20T22:22:16.242036 #1825]  INFO -- : (0.000074s) SELECT * FROM `articles`
+I, [2023-03-20T22:22:16.316470 #1825]  INFO -- : (0.073619s) DELETE FROM `articles` WHERE `article_id` = 1
+I, [2023-03-20T22:22:16.392717 #1825]  INFO -- : (0.076095s) DELETE FROM `articles` WHERE `article_id` = 2
+I, [2023-03-20T22:22:16.393694 #1825]  INFO -- : (0.000109s) SELECT * FROM `courses`
+I, [2023-03-20T22:22:16.393856 #1825]  INFO -- : (0.000061s) SELECT * FROM `articles`
+I, [2023-03-20T22:22:16.400099 #1825]  INFO -- : (0.000096s) SELECT max(`login_id`) AS 'max' FROM `login_details` LIMIT 1
+I, [2023-03-20T22:22:16.472934 #1825]  INFO -- : (0.072664s) INSERT INTO `login_details` (`login_id`, `email`, `username`, `password`) VALUES (0, 'learner1@learner1.com', 'learner1', 'learner1')
+I, [2023-03-20T22:22:16.481889 #1825]  INFO -- : (0.000108s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-03-20T22:22:16.563796 #1825]  INFO -- : (0.079588s) DELETE FROM `login_details` WHERE (1 = 1)
+I, [2023-03-20T22:22:16.565036 #1825]  INFO -- : (0.000110s) SELECT * FROM `login_details` WHERE (`username` = 'invalid_username') LIMIT 1
+I, [2023-03-20T22:22:16.566526 #1825]  INFO -- : (0.000073s) SELECT * FROM `login_details` WHERE (`username` = 'valid_username') LIMIT 1
+I, [2023-03-20T22:22:16.576079 #1825]  INFO -- : (0.000079s) SELECT max(`login_id`) AS 'max' FROM `login_details` LIMIT 1
+I, [2023-03-20T22:22:16.657604 #1825]  INFO -- : (0.081362s) INSERT INTO `login_details` (`login_id`, `email`, `username`, `password`) VALUES (0, 'learner1@learner1.com', 'learner1', 'learner1')
+I, [2023-03-20T22:22:16.730526 #1825]  INFO -- : (0.069842s) DELETE FROM `login_details` WHERE (1 = 1)
+I, [2023-03-20T22:23:44.891749 #1912]  INFO -- : (0.000150s) PRAGMA foreign_keys = 1
+I, [2023-03-20T22:23:44.891847 #1912]  INFO -- : (0.000013s) PRAGMA case_sensitive_like = 1
+I, [2023-03-20T22:23:44.892282 #1912]  INFO -- : (0.000066s) SELECT sqlite_version()
+I, [2023-03-20T22:23:44.892508 #1912]  INFO -- : (0.000103s) PRAGMA table_xinfo('courses')
+I, [2023-03-20T22:23:44.893181 #1912]  INFO -- : (0.000084s) PRAGMA table_xinfo('articles')
+I, [2023-03-20T22:23:44.894453 #1912]  INFO -- : (0.000108s) PRAGMA table_xinfo('login_details')
+I, [2023-03-20T22:23:44.941016 #1912]  INFO -- : (0.000108s) SELECT * FROM `courses`
+I, [2023-03-20T22:23:44.952498 #1912]  INFO -- : (0.000031s) BEGIN
+I, [2023-03-20T22:23:44.953081 #1912]  INFO -- : (0.000366s) INSERT INTO `courses` (`course_title`, `course_description`, `image_path`) VALUES ('Test', 'You better test your software', 'images/Test.png') RETURNING *
+I, [2023-03-20T22:23:45.020861 #1912]  INFO -- : (0.067694s) COMMIT
+I, [2023-03-20T22:23:45.021508 #1912]  INFO -- : (0.000138s) SELECT * FROM `courses`
+I, [2023-03-20T22:23:45.081490 #1912]  INFO -- : (0.059327s) DELETE FROM `courses` WHERE `course_id` = 1
+I, [2023-03-20T22:23:45.096739 #1912]  INFO -- : (0.000117s) SELECT max(`login_id`) AS 'max' FROM `login_details` LIMIT 1
+I, [2023-03-20T22:23:45.163553 #1912]  INFO -- : (0.066624s) INSERT INTO `login_details` (`login_id`, `email`, `username`, `password`) VALUES (0, 'learner1@learner1.com', 'learner1', 'learner1')
+I, [2023-03-20T22:23:45.169289 #1912]  INFO -- : (0.000121s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-03-20T22:23:45.235784 #1912]  INFO -- : (0.062072s) DELETE FROM `login_details` WHERE (1 = 1)
+I, [2023-03-20T22:23:45.239589 #1912]  INFO -- : (0.000093s) SELECT * FROM `courses`
+I, [2023-03-20T22:23:45.239743 #1912]  INFO -- : (0.000052s) SELECT * FROM `articles`
+I, [2023-03-20T22:23:45.241688 #1912]  INFO -- : (0.000019s) BEGIN
+I, [2023-03-20T22:23:45.242099 #1912]  INFO -- : (0.000246s) INSERT INTO `courses` (`course_title`, `course_description`, `course_rating`, `image_path`) VALUES ('Course A', 'Description A', '5', 'course_a.jpg') RETURNING *
+I, [2023-03-20T22:23:45.326620 #1912]  INFO -- : (0.084443s) COMMIT
+I, [2023-03-20T22:23:45.326813 #1912]  INFO -- : (0.000030s) BEGIN
+I, [2023-03-20T22:23:45.327269 #1912]  INFO -- : (0.000284s) INSERT INTO `courses` (`course_title`, `course_description`, `course_rating`, `image_path`) VALUES ('Course B', 'Description B', '3', 'course_b.jpg') RETURNING *
+I, [2023-03-20T22:23:45.402190 #1912]  INFO -- : (0.074822s) COMMIT
+I, [2023-03-20T22:23:45.402401 #1912]  INFO -- : (0.000049s) BEGIN
+I, [2023-03-20T22:23:45.402803 #1912]  INFO -- : (0.000237s) INSERT INTO `courses` (`course_title`, `course_description`, `course_rating`, `image_path`) VALUES ('Course C', 'Description C', '4', 'course_c.jpg') RETURNING *
+I, [2023-03-20T22:23:45.466302 #1912]  INFO -- : (0.063426s) COMMIT
+I, [2023-03-20T22:23:45.466980 #1912]  INFO -- : (0.000115s) SELECT * FROM `courses`
+I, [2023-03-20T22:23:45.467122 #1912]  INFO -- : (0.000055s) SELECT * FROM `articles`
+I, [2023-03-20T22:23:45.540256 #1912]  INFO -- : (0.072432s) DELETE FROM `courses` WHERE `course_id` = 1
+I, [2023-03-20T22:23:45.603224 #1912]  INFO -- : (0.062856s) DELETE FROM `courses` WHERE `course_id` = 2
+I, [2023-03-20T22:23:45.664225 #1912]  INFO -- : (0.060885s) DELETE FROM `courses` WHERE `course_id` = 3
+I, [2023-03-20T22:23:45.664747 #1912]  INFO -- : (0.000028s) BEGIN
+I, [2023-03-20T22:23:45.665200 #1912]  INFO -- : (0.000237s) INSERT INTO `articles` (`article_title`, `article_body`, `image_path`) VALUES ('Article A', 'Body A', 'article_a.jpg') RETURNING *
+I, [2023-03-20T22:23:45.723320 #1912]  INFO -- : (0.058032s) COMMIT
+I, [2023-03-20T22:23:45.723497 #1912]  INFO -- : (0.000028s) BEGIN
+I, [2023-03-20T22:23:45.723872 #1912]  INFO -- : (0.000212s) INSERT INTO `articles` (`article_title`, `article_body`, `image_path`) VALUES ('Article B', 'Body B', 'article_b.jpg') RETURNING *
+I, [2023-03-20T22:23:45.782150 #1912]  INFO -- : (0.058195s) COMMIT
+I, [2023-03-20T22:23:45.782863 #1912]  INFO -- : (0.000105s) SELECT * FROM `courses`
+I, [2023-03-20T22:23:45.783019 #1912]  INFO -- : (0.000076s) SELECT * FROM `articles`
+I, [2023-03-20T22:23:45.846669 #1912]  INFO -- : (0.062944s) DELETE FROM `articles` WHERE `article_id` = 1
+I, [2023-03-20T22:23:45.904939 #1912]  INFO -- : (0.058137s) DELETE FROM `articles` WHERE `article_id` = 2
+I, [2023-03-20T22:23:45.905931 #1912]  INFO -- : (0.000102s) SELECT * FROM `courses`
+I, [2023-03-20T22:23:45.906072 #1912]  INFO -- : (0.000060s) SELECT * FROM `articles`
+I, [2023-03-20T22:23:45.907717 #1912]  INFO -- : (0.000078s) SELECT * FROM `login_details` WHERE (`username` = 'invalid_username') LIMIT 1
+I, [2023-03-20T22:23:45.908937 #1912]  INFO -- : (0.000069s) SELECT * FROM `login_details` WHERE (`username` = 'valid_username') LIMIT 1
+I, [2023-03-20T22:23:45.922173 #1912]  INFO -- : (0.000091s) SELECT max(`login_id`) AS 'max' FROM `login_details` LIMIT 1
+I, [2023-03-20T22:23:45.995171 #1912]  INFO -- : (0.072800s) INSERT INTO `login_details` (`login_id`, `email`, `username`, `password`) VALUES (0, 'learner1@learner1.com', 'learner1', 'learner1')
+I, [2023-03-20T22:23:46.057222 #1912]  INFO -- : (0.059482s) DELETE FROM `login_details` WHERE (1 = 1)

@@ -13,7 +13,11 @@ class User < Sequel::Model(:login_details)
   def self.newUser(username, password, email)
 
     # Gets most recent login_id
-    newID = User.max(:login_id) + 1
+    if User.max(:login_id) != nil
+      newID = User.max(:login_id) + 1
+    else
+      newID = 0
+    end
 
     # Adds user to login_details
     User.insert(login_id: newID, email: email, username: username, password: password)
