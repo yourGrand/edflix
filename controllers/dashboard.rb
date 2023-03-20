@@ -1,5 +1,11 @@
 require "sinatra"
 
 get "/dashboard" do
-    erb :dashboard
+    if session[:logged_in]
+        erb :dashboard
+    else
+        redirect '/login'
+    end
+
+
 end

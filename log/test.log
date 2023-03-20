@@ -566,3 +566,108 @@ I, [2023-03-19T22:56:28.363322 #1449]  INFO -- : (0.000060s) SELECT sqlite_versi
 I, [2023-03-19T22:56:28.363550 #1449]  INFO -- : (0.000105s) PRAGMA table_xinfo('courses')
 I, [2023-03-19T22:56:28.365773 #1449]  INFO -- : (0.000084s) PRAGMA table_xinfo('articles')
 I, [2023-03-19T22:56:28.366571 #1449]  INFO -- : (0.000087s) PRAGMA table_xinfo('login_details')
+I, [2023-03-20T10:48:32.635116 #300]  INFO -- : (0.000156s) PRAGMA foreign_keys = 1
+I, [2023-03-20T10:48:32.635195 #300]  INFO -- : (0.000012s) PRAGMA case_sensitive_like = 1
+I, [2023-03-20T10:48:32.635624 #300]  INFO -- : (0.000059s) SELECT sqlite_version()
+I, [2023-03-20T10:48:32.635837 #300]  INFO -- : (0.000099s) PRAGMA table_xinfo('courses')
+I, [2023-03-20T10:48:32.636521 #300]  INFO -- : (0.000098s) PRAGMA table_xinfo('articles')
+I, [2023-03-20T10:48:32.637304 #300]  INFO -- : (0.000087s) PRAGMA table_xinfo('login_details')
+I, [2023-03-20T10:48:34.912573 #300]  INFO -- : (0.000166s) SELECT * FROM `courses`
+I, [2023-03-20T10:48:34.912782 #300]  INFO -- : (0.000078s) SELECT * FROM `articles`
+I, [2023-03-20T10:48:44.109816 #300]  INFO -- : (0.000150s) SELECT * FROM `courses`
+I, [2023-03-20T10:52:59.129971 #314]  INFO -- : (0.000188s) PRAGMA foreign_keys = 1
+I, [2023-03-20T10:52:59.130053 #314]  INFO -- : (0.000012s) PRAGMA case_sensitive_like = 1
+I, [2023-03-20T10:52:59.130449 #314]  INFO -- : (0.000071s) SELECT sqlite_version()
+I, [2023-03-20T10:52:59.130654 #314]  INFO -- : (0.000103s) PRAGMA table_xinfo('courses')
+I, [2023-03-20T10:52:59.131333 #314]  INFO -- : (0.000118s) PRAGMA table_xinfo('articles')
+I, [2023-03-20T10:52:59.132108 #314]  INFO -- : (0.000087s) PRAGMA table_xinfo('login_details')
+I, [2023-03-20T10:53:00.984370 #314]  INFO -- : (0.000159s) SELECT * FROM `courses`
+I, [2023-03-20T10:53:00.984627 #314]  INFO -- : (0.000090s) SELECT * FROM `articles`
+I, [2023-03-20T12:05:10.337655 #202]  INFO -- : (0.000184s) PRAGMA foreign_keys = 1
+I, [2023-03-20T12:05:10.340125 #202]  INFO -- : (0.000017s) PRAGMA case_sensitive_like = 1
+I, [2023-03-20T12:05:10.340549 #202]  INFO -- : (0.000055s) SELECT sqlite_version()
+I, [2023-03-20T12:05:10.340765 #202]  INFO -- : (0.000097s) PRAGMA table_xinfo('courses')
+I, [2023-03-20T12:05:10.341467 #202]  INFO -- : (0.000110s) PRAGMA table_xinfo('articles')
+I, [2023-03-20T12:05:10.342268 #202]  INFO -- : (0.000087s) PRAGMA table_xinfo('login_details')
+I, [2023-03-20T12:05:31.121078 #206]  INFO -- : (0.000167s) PRAGMA foreign_keys = 1
+I, [2023-03-20T12:05:31.121163 #206]  INFO -- : (0.000013s) PRAGMA case_sensitive_like = 1
+I, [2023-03-20T12:05:31.121610 #206]  INFO -- : (0.000066s) SELECT sqlite_version()
+I, [2023-03-20T12:05:31.121826 #206]  INFO -- : (0.000102s) PRAGMA table_xinfo('courses')
+I, [2023-03-20T12:05:31.122494 #206]  INFO -- : (0.000086s) PRAGMA table_xinfo('articles')
+I, [2023-03-20T12:05:31.123322 #206]  INFO -- : (0.000088s) PRAGMA table_xinfo('login_details')
+I, [2023-03-20T12:05:33.403446 #206]  INFO -- : (0.000158s) SELECT * FROM `courses`
+I, [2023-03-20T12:05:33.404418 #206]  INFO -- : (0.000821s) SELECT * FROM `articles`
+I, [2023-03-20T12:05:37.965148 #206]  INFO -- : (0.000151s) SELECT * FROM `courses`
+I, [2023-03-20T12:05:37.965359 #206]  INFO -- : (0.000085s) SELECT * FROM `articles`
+I, [2023-03-20T12:05:42.180446 #206]  INFO -- : (0.000145s) SELECT * FROM `courses`
+I, [2023-03-20T12:05:42.180641 #206]  INFO -- : (0.000080s) SELECT * FROM `articles`
+I, [2023-03-20T12:05:58.043304 #206]  INFO -- : (0.000148s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-03-20T12:06:08.387286 #206]  INFO -- : (0.000147s) SELECT * FROM `courses`
+I, [2023-03-20T12:06:08.387469 #206]  INFO -- : (0.000075s) SELECT * FROM `articles`
+I, [2023-03-20T12:06:49.637853 #206]  INFO -- : (0.000139s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-03-20T12:08:42.564665 #219]  INFO -- : (0.000193s) PRAGMA foreign_keys = 1
+I, [2023-03-20T12:08:42.564748 #219]  INFO -- : (0.000013s) PRAGMA case_sensitive_like = 1
+I, [2023-03-20T12:08:42.565147 #219]  INFO -- : (0.000072s) SELECT sqlite_version()
+I, [2023-03-20T12:08:42.565354 #219]  INFO -- : (0.000103s) PRAGMA table_xinfo('courses')
+I, [2023-03-20T12:08:42.566043 #219]  INFO -- : (0.000104s) PRAGMA table_xinfo('articles')
+I, [2023-03-20T12:08:42.566800 #219]  INFO -- : (0.000086s) PRAGMA table_xinfo('login_details')
+I, [2023-03-20T12:08:44.885185 #219]  INFO -- : (0.000159s) SELECT * FROM `courses`
+I, [2023-03-20T12:08:44.885454 #219]  INFO -- : (0.000108s) SELECT * FROM `articles`
+I, [2023-03-20T12:08:56.093389 #219]  INFO -- : (0.000144s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-03-20T12:09:03.064959 #219]  INFO -- : (0.000145s) SELECT * FROM `courses`
+I, [2023-03-20T12:09:03.065135 #219]  INFO -- : (0.000074s) SELECT * FROM `articles`
+I, [2023-03-20T12:10:32.968011 #230]  INFO -- : (0.000215s) PRAGMA foreign_keys = 1
+I, [2023-03-20T12:10:32.968104 #230]  INFO -- : (0.000013s) PRAGMA case_sensitive_like = 1
+I, [2023-03-20T12:10:32.968554 #230]  INFO -- : (0.000066s) SELECT sqlite_version()
+I, [2023-03-20T12:10:32.968796 #230]  INFO -- : (0.000099s) PRAGMA table_xinfo('courses')
+I, [2023-03-20T12:10:32.969530 #230]  INFO -- : (0.000107s) PRAGMA table_xinfo('articles')
+I, [2023-03-20T12:10:32.970489 #230]  INFO -- : (0.000086s) PRAGMA table_xinfo('login_details')
+I, [2023-03-20T12:10:35.380499 #230]  INFO -- : (0.000153s) SELECT * FROM `courses`
+I, [2023-03-20T12:10:35.380787 #230]  INFO -- : (0.000122s) SELECT * FROM `articles`
+I, [2023-03-20T12:10:51.253873 #230]  INFO -- : (0.000150s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-03-20T12:11:02.144936 #230]  INFO -- : (0.000137s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-03-20T12:11:53.990819 #241]  INFO -- : (0.000194s) PRAGMA foreign_keys = 1
+I, [2023-03-20T12:11:53.990900 #241]  INFO -- : (0.000013s) PRAGMA case_sensitive_like = 1
+I, [2023-03-20T12:11:53.991291 #241]  INFO -- : (0.000060s) SELECT sqlite_version()
+I, [2023-03-20T12:11:53.991499 #241]  INFO -- : (0.000102s) PRAGMA table_xinfo('courses')
+I, [2023-03-20T12:11:53.992183 #241]  INFO -- : (0.000099s) PRAGMA table_xinfo('articles')
+I, [2023-03-20T12:11:53.993147 #241]  INFO -- : (0.000090s) PRAGMA table_xinfo('login_details')
+I, [2023-03-20T12:11:56.142317 #241]  INFO -- : (0.000157s) SELECT * FROM `courses`
+I, [2023-03-20T12:11:56.142571 #241]  INFO -- : (0.000100s) SELECT * FROM `articles`
+I, [2023-03-20T12:11:59.683479 #241]  INFO -- : (0.000146s) SELECT * FROM `courses`
+I, [2023-03-20T12:11:59.683693 #241]  INFO -- : (0.000086s) SELECT * FROM `articles`
+I, [2023-03-20T12:12:14.015622 #241]  INFO -- : (0.000143s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-03-20T12:12:22.426727 #241]  INFO -- : (0.000174s) SELECT * FROM `courses`
+I, [2023-03-20T12:12:22.426929 #241]  INFO -- : (0.000079s) SELECT * FROM `articles`
+I, [2023-03-20T12:12:52.454284 #241]  INFO -- : (0.000147s) SELECT * FROM `courses`
+I, [2023-03-20T12:12:52.454470 #241]  INFO -- : (0.000075s) SELECT * FROM `articles`
+I, [2023-03-20T12:13:06.627103 #241]  INFO -- : (0.000139s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-03-20T12:13:14.806069 #241]  INFO -- : (0.000155s) SELECT * FROM `courses`
+I, [2023-03-20T12:13:14.806279 #241]  INFO -- : (0.000085s) SELECT * FROM `articles`
+I, [2023-03-20T12:13:18.802821 #241]  INFO -- : (0.000164s) SELECT * FROM `courses`
+I, [2023-03-20T12:24:21.337592 #258]  INFO -- : (0.000226s) PRAGMA foreign_keys = 1
+I, [2023-03-20T12:24:21.337670 #258]  INFO -- : (0.000013s) PRAGMA case_sensitive_like = 1
+I, [2023-03-20T12:24:21.338094 #258]  INFO -- : (0.000062s) SELECT sqlite_version()
+I, [2023-03-20T12:24:21.338297 #258]  INFO -- : (0.000100s) PRAGMA table_xinfo('courses')
+I, [2023-03-20T12:24:21.339022 #258]  INFO -- : (0.000104s) PRAGMA table_xinfo('articles')
+I, [2023-03-20T12:24:21.339807 #258]  INFO -- : (0.000090s) PRAGMA table_xinfo('login_details')
+I, [2023-03-20T12:24:23.903524 #258]  INFO -- : (0.000170s) SELECT * FROM `courses`
+I, [2023-03-20T12:24:23.903779 #258]  INFO -- : (0.000114s) SELECT * FROM `articles`
+I, [2023-03-20T12:24:30.883713 #258]  INFO -- : (0.000150s) SELECT * FROM `courses`
+I, [2023-03-20T12:24:30.883912 #258]  INFO -- : (0.000085s) SELECT * FROM `articles`
+I, [2023-03-20T12:24:41.685591 #258]  INFO -- : (0.000187s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-03-20T12:24:44.082213 #258]  INFO -- : (0.000144s) SELECT * FROM `courses`
+I, [2023-03-20T12:24:44.082438 #258]  INFO -- : (0.000115s) SELECT * FROM `articles`
+I, [2023-03-20T12:24:48.249985 #258]  INFO -- : (0.000151s) SELECT * FROM `courses`
+I, [2023-03-20T12:24:48.250169 #258]  INFO -- : (0.000077s) SELECT * FROM `articles`
+I, [2023-03-20T12:24:50.203921 #258]  INFO -- : (0.000157s) SELECT * FROM `courses`
+I, [2023-03-20T12:24:52.243476 #258]  INFO -- : (0.000155s) SELECT * FROM `courses`
+I, [2023-03-20T12:24:52.243677 #258]  INFO -- : (0.000084s) SELECT * FROM `articles`
+I, [2023-03-20T12:25:00.022979 #258]  INFO -- : (0.000147s) SELECT * FROM `courses`
+I, [2023-03-20T12:25:00.023154 #258]  INFO -- : (0.000072s) SELECT * FROM `articles`
+I, [2023-03-20T12:25:04.915795 #258]  INFO -- : (0.000147s) SELECT * FROM `courses`
+I, [2023-03-20T12:25:46.559035 #258]  INFO -- : (0.000142s) SELECT * FROM `courses`
+I, [2023-03-20T12:25:46.559211 #258]  INFO -- : (0.000078s) SELECT * FROM `articles`
+I, [2023-03-20T12:25:48.634314 #258]  INFO -- : (0.000192s) SELECT * FROM `courses`
+I, [2023-03-20T12:27:00.499071 #258]  INFO -- : (0.000161s) SELECT * FROM `courses`
+I, [2023-03-20T12:27:00.499325 #258]  INFO -- : (0.000128s) SELECT * FROM `articles`

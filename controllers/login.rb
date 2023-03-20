@@ -3,7 +3,11 @@ require_relative '../models/user'
 
 # Render the login form
 get '/login' do
-  erb :login
+  if session[:logged_in]
+    redirect '/dashboard'
+  else
+    erb :login
+  end
 end
 
 # Handle the login form submission
@@ -23,8 +27,9 @@ post "/login" do
     erb :login
   elsif User.login(username, password)
     session[:logged_in] = true
+    erb :dashboard
     # Attempt to log in the user
-    redirect '/dashboard'
+    # redirect '/dashboard'
   else
       @error = "Incorrect username or password"
       erb :login
