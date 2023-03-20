@@ -7,6 +7,7 @@
   padding: 10px;
   border: 5px solid gray;
   margin: 0;
+  margin-left: 20px;
   }
   .courseProgress img {
   width: 40px;
@@ -24,6 +25,9 @@
     padding: 5px;
     text-align: left;
   }
+  h1, h2 {
+    margin-left: 20px;
+  }
 </style>
   </head>
   <h1>
@@ -33,13 +37,14 @@
     Here is where you can access key functions relating to your courses.
   </h2>
   <table>
+  <caption>User Information</caption>
   <tr>
-    <th>Full Name:</th>
-    <td>Firstname Surname</td>
+    <th>Username:</th>
+    <td><%= @username %></td>
   </tr>
     <tr>
-    <th>Year of Study:</th>
-    <td>32</td>
+    <th>Email Address:</th>
+    <td><%= @email %></td>
   </tr>
     <tr>
     <th>Nationality:</th>
@@ -50,8 +55,8 @@
     <td>Not enough</td>
   </tr>
   <tr>
-    <th>Anything Else:</th>
-    <td>setoudbraowjesdi</td>
+    <th>Year Of Study:</th>
+    <td>Insert Year Here</td>
   </tr>
 </table>
 <div class = "courseProgress">
