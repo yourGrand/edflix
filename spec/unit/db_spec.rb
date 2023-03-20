@@ -4,9 +4,9 @@ require "sequel"
 
 describe "DB" do
   let(:type) { "test" }
-  let(:db_path) { File.dirname(__FILE__) }
+  let(:db_path) { "#{File.dirname(__FILE__)}/../../db/" }
   let(:db) { "#{db_path}/#{type}.sqlite3" }
-  let(:log_path) { "#{File.dirname(__FILE__)}/../log/" }
+  let(:log_path) { "#{File.dirname(__FILE__)}/../../log/" }
   let(:log) { "#{log_path}/#{type}.log" }
 
   before do
