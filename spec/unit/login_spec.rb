@@ -12,8 +12,7 @@ describe 'Login page' do
   context 'when the user enters valid credentials' do
     it 'redirects to the dashboard page' do
       post '/login', { username: 'valid_username', password: 'valid_password' }
-      expect(last_response.status).to eq(200)
-      # expect(last_response.body).to include('Welcome, valid_username!')
+      expect(last_response.status).to eq(302)
     end
   end
 

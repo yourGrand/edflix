@@ -38,5 +38,5 @@ end
 
 get "/logout" do
   session.clear
-  erb :logout
+  erb :login
 end
