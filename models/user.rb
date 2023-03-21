@@ -10,17 +10,33 @@ class User < Sequel::Model(:login_details)
   end
 
   def self.newUser(username, password, email)
-    # Gets most recent login_id
-    if User.max(:login_id).nil?
-      newID = 0
-    else
-      newID = User.max(:login_id) + 1
+  
+
+    DB.transaction do
+
+      # Gets most recent login_id
+      if User.max(:login_id).nil?
+        newID = 0
+      else
+        newID = User.max(:login_id) + 1
+      end
+  
+      # Adds user to login_details
+      User.insert(login_id: newID, email: email, username: username, password: password)
+  
+      # Adds user to users table with the same login_id
+      # UserTable.insert(user_id: newID, role: "null", first_name: "null", surname: "null", gender: "null", date_of_birth: "null", country: "null", degree: "null", course: "null", suspended: "null", login: newID)
+      
+      # THIS WILL NOT WORK AS ALL FIELDS IN users ARE FOREIGN KEYS AND HAVE FOREIGN KEY CONSTRAINTS
+      # see here: https://www.w3schools.com/sql/sql_foreignkey.asp
+
+      return true
+  
     end
+  
+  
 
-    # Adds user to login_details
-    User.insert(login_id: newID, email: email, username: username, password: password)
 
-    true
   end
 
   def self.getEmail(username)
@@ -32,4 +48,7 @@ class User < Sequel::Model(:login_details)
 
     return userEmail
   end
+end
+
+class UserTable < Sequel::Model(:users)
 end
