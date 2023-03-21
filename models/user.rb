@@ -22,4 +22,14 @@ class User < Sequel::Model(:login_details)
 
     true
   end
+
+  def self.getEmail(username)
+    #Find user with given username
+    user = User.first(username: username)
+
+    #Finds user email
+    userEmail = user.email
+
+    return userEmail
+  end
 end

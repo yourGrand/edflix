@@ -26,6 +26,8 @@ post "/login" do
     @error = "Please enter your password"
     erb :login
   elsif User.login(username, password)
+    @dashUsername = username
+    @dashEmail = User.getEmail(username)
     session[:logged_in] = true
     erb :dashboard
     # Attempt to log in the user
