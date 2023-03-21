@@ -6,7 +6,8 @@ require_relative "../spec_helper"
 
 RSpec.describe "Home" do
   describe "Course" do
-    course = Course.new(course_title: "Test Course", course_description: "This is a test course.", course_rating: 5, image_path: "images/Test.png")
+    course = Course.new(course_title: "Test Course", course_description: "This is a test course.", course_rating: 5,
+                        image_path: "images/Test.png")
 
     it "should return the course name" do
       expect(course.name).to eq("Test Course")
@@ -26,7 +27,8 @@ RSpec.describe "Home" do
   end
 
   describe "Article" do
-    article = Article.new(article_title: "Test Article", article_body: "This is a test article.", image_path: "images/Test.png")
+    article = Article.new(article_title: "Test Article", article_body: "This is a test article.",
+                          image_path: "images/Test.png")
 
     it "should return the article title" do
       expect(article.title).to eq("Test Article")
@@ -49,9 +51,12 @@ RSpec.describe "Home" do
 
     it "should display a list of courses sorted by rating" do
       # create some test courses
-      course_a = Course.new(course_title: "Course A", course_description: "Description A", course_rating: 5, image_path: "course_a.jpg")
-      course_b = Course.new(course_title: "Course B", course_description: "Description B", course_rating: 3, image_path: "course_b.jpg")
-      course_c = Course.new(course_title: "Course C", course_description: "Description C", course_rating: 4, image_path: "course_c.jpg")
+      course_a = Course.new(course_title: "Course A", course_description: "Description A", course_rating: 5,
+                            image_path: "course_a.jpg")
+      course_b = Course.new(course_title: "Course B", course_description: "Description B", course_rating: 3,
+                            image_path: "course_b.jpg")
+      course_c = Course.new(course_title: "Course C", course_description: "Description C", course_rating: 4,
+                            image_path: "course_c.jpg")
 
       course_a.save_changes
       course_b.save_changes

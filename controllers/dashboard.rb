@@ -6,6 +6,4 @@ get "/dashboard" do
     else
         redirect '/login'
     end
-
-
 end

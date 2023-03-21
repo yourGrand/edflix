@@ -1,35 +1,36 @@
 <%= erb :"common/header" %>
 <!-- DASHBOARD -->
   <head>
-  <style>
-  .courseProgress {
-  width: 400px;
-  padding: 10px;
-  border: 5px solid gray;
-  margin: 0;
-  margin-left: 20px;
+    <style>
+    .courseProgress {
+      width: 400px;
+      padding: 10px;
+      border: 5px solid gray;
+      margin: 0;
+      margin-left: 20px;
+    }
+    .courseProgress img {
+      width: 40px;
+      height: 60px;
+      object-fit: cover;
   }
-  .courseProgress img {
-  width: 40px;
-  height: 60px;
-  object-fit: cover;
-}
 
-  table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    margin-right: 20px;
-    margin-left: auto;
-  }  
-  th, td {
-    padding: 5px;
-    text-align: left;
-  }
-  h1, h2 {
-    margin-left: 20px;
-  }
-</style>
-  </head>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      margin-right: 20px;
+      margin-left: auto;
+    }  
+    th, td {
+      padding: 5px;
+      text-align: left;
+    }
+    h1, h2 {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
   <h1>
     Welcome to the Edflix dashboard.
   </h1>
@@ -37,36 +38,38 @@
     Here is where you can access key functions relating to your courses.
   </h2>
   <table>
-  <caption>User Information</caption>
-  <tr>
-    <th>Username:</th>
-    <td><%= @username %></td>
-  </tr>
+    <caption>User Information</caption>
     <tr>
-    <th>Email Address:</th>
-    <td><%= @email %></td>
-  </tr>
+      <th>Username:</th>
+      <td><%= @dashUsername %></td>
+    </tr>
+      <tr>
+      <th>Email Address:</th>
+      <td><%= @dashEmail %></td>
+    </tr>
+      <tr>
+      <th>Nationality:</th>
+      <td>aoitnesgrsje</td>
+    </tr>
     <tr>
-    <th>Nationality:</th>
-    <td>aoitnesgrsje</td>
-  </tr>
-  <tr>
-    <th>Courses in Progress:</th>
-    <td>Not enough</td>
-  </tr>
-  <tr>
-    <th>Year Of Study:</th>
-    <td>Insert Year Here</td>
-  </tr>
-</table>
-<div class = "courseProgress">
-<img src="images/CourseSymbol.png" alt="Course Symbol"/>
-<h3>Current course progression:</h3>
-<br>idk: 62%
-<progress id="firstCourseProgress" value="62" max="100"> 32% </progress>
-<br>idk again: 89%
-<progress id="firstCourseProgress" value="89" max="100"> 32% </progress>
-<br>idk one more time: 22%
-<progress id="firstCourseProgress" value="22" max="100"> 32% </progress>
-</div>
+      <th>Courses in Progress:</th>
+      <td>Not enough</td>
+    </tr>
+    <tr>
+      <th>Year Of Study:</th>
+      <td>Insert Year Here</td>
+    </tr>
+  </table>
+  <a href="/logout">Log Out</a>
+  <div class = "courseProgress">
+    <img src="images/CourseSymbol.png" alt="Course Symbol"/>
+    <h3>Current course progression:</h3>
+    <br>idk: 62%
+    <progress id="firstCourseProgress" value="62" max="100"> 32% </progress>
+    <br>idk again: 89%
+    <progress id="firstCourseProgress" value="89" max="100"> 32% </progress>
+    <br>idk one more time: 22%
+    <progress id="firstCourseProgress" value="22" max="100"> 32% </progress>
+  </div>
+</body>
 <%= erb :"common/footer" %>
