@@ -1,19 +1,28 @@
-<%= erb :"common/header" %>
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="/style/login.css">
 <!-- LOGIN -->
-  <form method="post" action="/login">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username">
+<%= erb :"common/header" %>
+<body>
+    <form method="post" action="/login">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username">
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
 
-    <button type="submit">Log In</button>
-  </form>
+      <button type="submit">Log In</button>
+    </form>
 
-  <a href="register">Sign up</a>
+    <a class="register" href="register">Sign up</a>
 
-  <% if @error %>
-    <p><%= @error %></p>
-  <% end %>
+    <% if @error %>
+      <p class = "error"><%= @error %></p>
+    <% end %>
+</body>
 <%= erb :"common/footer" %>
+
+  
+
+  
 
