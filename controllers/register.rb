@@ -28,9 +28,14 @@ post "/register" do
     @password_error = "Please enter a value for your password" if @password.empty?
     if @username_error.nil? && @email_error.nil? && @password_error.nil?
       User.newUser(@username, @password, @email)
+      User.login(@username, @password)
+      @dashUsername = @username
+      @dashEmail = @email
+      session[:logged_in] = true
+      erb :dashboard
     else
       @submission_error = "Please correct the errors below"
     end
   end
-  erb :register
+  #erb :register
 end

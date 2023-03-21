@@ -1,7 +1,7 @@
 <%= erb :"common/header" %>
+<link rel="stylesheet" href="/style/login.css">
 <!-- REGISTER -->
   <body>
-    <h1>Register</h1>
     <% if @form_was_submitted %>
       <% if @submission_error %>
         <p><strong class="error">Please correct the errors below</strong></p>
@@ -28,7 +28,7 @@
           <br /><strong class="error"><%= @password_error %></strong>
         <% end %>
       </p>
-      <p><input type="submit" value="Submit"></p>
+      <p><button type="submit">Submit</button></p>
     </form>
   </body>
 <%= erb :"common/footer" %>
