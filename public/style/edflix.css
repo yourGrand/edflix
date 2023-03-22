@@ -4,6 +4,7 @@
     --black: #000000;
     --green: #48854d;
     --shadow: #0b076e0a;;
+    --error: #ff6347;
 }
 
 /* Reset */
@@ -18,6 +19,8 @@ body {
     font-family: Circular, Arial, sans-serif;
     line-height: 1.5;
 }
+
+/* Navigation bar */
 
 header {
     background: var(--white);
@@ -138,22 +141,85 @@ img.close-menu.show {
     display: flex;
 }
 
+/* Login and Signup */
+
+.signup,
+.login {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.login p {
+    margin: 15px;
+    width: 100%;
+    color: var(--error);
+}
+
+.login label,
+.signup label {
+    display: none;
+}
+
+.signup input[type="text"],
+.signup input[type="password"],
+.login input[type="text"],
+.login input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 2px solid var(--green);
+    margin-bottom: 20px;
+}
+
+.login a {
+    float: right;
+    line-height: 21px;
+}
+
+.signup button[type="submit"],
+.login a,
+.login button[type="submit"] {
+    background: var(--green);
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.signup button[type="submit"]:hover,
+.login a:hover, 
+.login button[type="submit"]:hover {
+    background: #27ae60;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
 /* Footer */
 
 footer {
     clear: both;  /* move past any floated elements */
-  font-size: 14px;
-  text-align: center;
-  padding: 20px 40px 0 40px;
+    font-size: 14px;
+    text-align: center;
+    padding: 20px 40px 0 40px;
 }
 
 footer ul {
-  list-style: none;
-  width: 100%;
-  font-size: 16px;
-  margin-bottom: 16px;
-  display: block;
-  padding: 0;
+    list-style: none;
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 16px;
+    display: block;
+    padding: 0;
 }
 
 footer li {
@@ -169,11 +235,11 @@ footer a {
 footer a:hover { color: var(--green); }
 
 .footer_title {
-  color: var(--black);
-  width: 100%;
-  font-size: 20px;
-  font-weight: bolder;
-  padding: 0.25em 0 0.25em 0;
+    color: var(--black);
+    width: 100%;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 0.25em 0 0.25em 0;
 }
 
 footer p {
