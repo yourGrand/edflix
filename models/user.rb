@@ -25,7 +25,7 @@ class User < Sequel::Model(:login_details)
       User.insert(login_id: newID, email: email, username: username, password: password)
   
       # Adds user to users table with the same login_id
-      # UserTable.insert(user_id: newID, role: "null", first_name: "null", surname: "null", gender: "null", date_of_birth: "null", country: "null", degree: "null", course: "null", suspended: "null", login: newID)
+      UserTable.insert(user_id: newID, role: 4, first_name: "null", surname: "null", gender: 0, date_of_birth: "null", country: 0, degree: 0, course: 1, suspended: 2, login: newID)
       
       # THIS WILL NOT WORK AS ALL FIELDS IN users ARE FOREIGN KEYS AND HAVE FOREIGN KEY CONSTRAINTS
       # see here: https://www.w3schools.com/sql/sql_foreignkey.asp
