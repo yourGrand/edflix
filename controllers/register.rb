@@ -23,6 +23,7 @@ post "/register" do
     @password.strip!
 
     # now proceed to validation
+
     @username_error = "Please enter a value for username" if @username.empty?
 
     @email_error = "Please enter a valid E-mail (example@example.com)" if @email.include?("@") == false || @email.include?(".") == false
@@ -31,6 +32,14 @@ post "/register" do
     @password_error = "Passwords must be at least 8 characters" if @password.size < 8
     @password_error = "Passwords must contain at least 1 number" if !@password.match(/\d/) #if password string does not contain any digits
     @password_error = "Please enter a value for your password" if @password.empty?
+
+    # check if values exist in database
+    if User.checkExisting(@username, @email) == "user"
+      @username_error = "That username is already in use"
+    end
+    if User.checkExisting(@username, @email) == "pass"
+      @email_error = "That E-mail is already in use"
+    end
     
     if @username_error.nil? && @email_error.nil? && @password_error.nil?
       User.newUser(@username, @password, @email)

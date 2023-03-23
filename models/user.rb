@@ -9,6 +9,19 @@ class User < Sequel::Model(:login_details)
     user.password == password
   end
 
+  def self.checkExisting(username, email)
+    # Check if any user has the given username, password, or email
+    existing_username = User.first(username: username)
+    existing_email = User.first(email: email)
+
+    # Return whichever field already exists
+    return "user" if existing_username
+    return "email" if existing_email
+
+    # If not found return null
+    return "null"
+  end
+
   def self.newUser(username, password, email)
   
 
@@ -27,9 +40,6 @@ class User < Sequel::Model(:login_details)
       # Adds user to users table with the same login_id
       UserTable.insert(user_id: newID, role: 4, first_name: "null", surname: "null", gender: 0, date_of_birth: "null", country: 0, degree: 0, course: 1, suspended: 2, login: newID)
       
-      # THIS WILL NOT WORK AS ALL FIELDS IN users ARE FOREIGN KEYS AND HAVE FOREIGN KEY CONSTRAINTS
-      # see here: https://www.w3schools.com/sql/sql_foreignkey.asp
-
       return true
   
     end
