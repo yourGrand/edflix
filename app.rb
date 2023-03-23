@@ -9,4 +9,3 @@ include ERB::Util
 
 # App
 require_rel "db/db", "models", "controllers"
-# DB2 = Sequel.sqlite('db/test.sqlite3')

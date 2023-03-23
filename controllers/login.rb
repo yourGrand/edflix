@@ -25,13 +25,14 @@ post "/login" do
   elsif password.empty?
     @error = "Please enter your password"
     erb :login
+  # Attempt to log in the user
   elsif User.login(username, password)
     @dashUsername = username
     @dashEmail = User.getEmail(username)
+    
+    # redirect '/dashboard'
     session[:logged_in] = true
     erb :dashboard
-    # Attempt to log in the user
-    # redirect '/dashboard'
   else
       @error = "Incorrect username or password"
       erb :login
