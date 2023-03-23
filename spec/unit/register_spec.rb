@@ -12,17 +12,6 @@ RSpec.describe "Register page" do
             expect(last_response).to be_ok
         end
 
-        # check if successful when all fields filled
-        it "says Success when the data is ok" do
-            get "/register"
-
-            add_test_user
-            expect(page).to have_content "Success!"
-
-            # clear database
-            clear
-        end
-
         # check if failure when username not entered
         it "rejects the form when username is not filled out" do
             get "/register"

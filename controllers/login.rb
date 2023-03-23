@@ -32,7 +32,12 @@ post "/login" do
     
     # redirect '/dashboard'
     session[:logged_in] = true
-    erb :dashboard
+    session[:username] = username
+    session[:email] = User.getEmail(username)
+
+    redirect "/dashboard"
+    # Attempt to log in the user
+    # redirect '/dashboard'
   else
       @error = "Incorrect username or password"
       erb :login

@@ -47,7 +47,9 @@ post "/register" do
       @dashUsername = @username
       @dashEmail = @email
       session[:logged_in] = true
-      erb :dashboard
+      session[:username] = @username
+      session[:email] = @email
+      redirect "/dashboard"
     else
       @submission_error = "Please correct the errors below"
       erb :register

@@ -153,7 +153,7 @@ img.close-menu.show {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.login p {
+.error {
     margin: 15px;
     width: 100%;
     color: var(--error);

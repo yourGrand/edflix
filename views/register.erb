@@ -2,33 +2,32 @@
 
 <!-- REGISTER -->
   <main>
-    <% if @form_was_submitted %>
-      <% if @submission_error %>
-        <p><strong class="error">Please correct the errors below</strong></p>
-      <% else %>
-        <p><strong class="success">Success!</strong></p>        
-      <% end %>
-    <% end %>
     <form method="post" action="/register" class="signup">
-      <p>
-        <input type="text" name="username" value="<%= h @username %>" placeholder="Username"/>
-        <% if @username_error %>
-          <br /><strong class="error"><%= @username_error %></strong>
+      <% if @form_was_submitted %>
+        <% if @submission_error %>
+          <p class="error">Please correct the errors below</p>
+        <% else %>
+          <p class="success">Success!</p>        
         <% end %>
-      </p>
-      <p>
-        <input type="text" name="email" value="<%= h @email %>" placeholder="Email"/>
-        <% if @email_error %>
-          <br /><strong class="error"><%= @email_error %></strong>
-        <% end %>
-      </p>
-      <p>
-        <input type="text" name="password" value="<%= h @password %>" placeholder="Password"/>
-        <% if @password_error %>
-          <br /><strong class="error"><%= @password_error %></strong>
-        <% end %>
-      </p>
-      <p><button type="submit">Submit</button></p>
+      <% end %>
+      
+      <% if @username_error %>
+        <p class="error"><%= @username_error %></p>
+      <% end %>
+      <input type="text" name="username" value="<%= h @username %>" placeholder="Username"/>
+      
+      
+      <% if @email_error %>
+        <p class="error"><%= @email_error %></p>
+      <% end %>
+      <input type="text" name="email" value="<%= h @email %>" placeholder="Email"/>
+
+      <% if @password_error %>
+        <p class="error"><%= @password_error %></p>
+      <% end %>
+      <input type="password" name="password" value="<%= h @password %>" placeholder="Password"/>
+
+      <button type="submit">Submit</button>
     </form>
   </main>
 
