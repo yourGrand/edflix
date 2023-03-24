@@ -58,6 +58,19 @@ class User < Sequel::Model(:login_details)
 
     return userEmail
   end
+
+  def self.change_password(username, old_password, new_password)
+    # Find the user with the given username
+    user = User.first(username: username)
+
+    # Return false if the user doesn't exist or the password is incorrect
+    return false unless user && user.password == old_password
+
+    # Update the user's password in the database
+    user.update(password: new_password)
+
+    true
+  end
 end
 
 class UserTable < Sequel::Model(:users)
