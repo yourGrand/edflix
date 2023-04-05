@@ -29,13 +29,31 @@ post "/login" do
   elsif User.login(username, password)
     @dashUsername = username
     @dashEmail = User.getEmail(username)
-    
+    @dashRole = User.getRole(username)    
     # redirect '/dashboard'
     session[:logged_in] = true
     session[:username] = username
     session[:email] = User.getEmail(username)
+    session[:role] = User.getRole(username)
 
-    redirect "/dashboard"
+    if User.getRole(username) == "Learner"
+
+      redirect "/dashboard"
+
+    elsif User.getRole(username) == "Manager"
+
+      redirect "/dashboard_manager"
+
+    elsif User.getRole(username) == "Admin"
+      redirect "/dashboard"
+
+    elsif User.getRole(username) == "Moderator"
+      redirect "/dashboard"
+
+    else 
+      redirect "/dashboard"
+    end
+      
     # Attempt to log in the user
     # redirect '/dashboard'
   else

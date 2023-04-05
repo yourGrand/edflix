@@ -1,4 +1,5 @@
 class User < Sequel::Model(:login_details)
+
   def self.login(username, password)
     # Find the user with the given username
     user = User.first(username: username)
@@ -59,6 +60,19 @@ class User < Sequel::Model(:login_details)
     return userEmail
   end
 
+  def self.getRole(username)
+    # Find the user with the given username
+    user = User.first(username: username)
+    
+    # Get the role associated with the user
+    userRole = DB[:users].join(:roles, role_id: :role).where(user_id: user.login_id).first
+    
+    
+    return userRole[:role]
+  end
+
+
+
   def self.change_password(username, old_password, new_password)
     # Find the user with the given username
     user = User.first(username: username)
@@ -74,4 +88,9 @@ class User < Sequel::Model(:login_details)
 end
 
 class UserTable < Sequel::Model(:users)
+
+
 end
+
+
+
