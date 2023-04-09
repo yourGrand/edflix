@@ -2,18 +2,6 @@
 <!-- DASHBOARD -->
   <head>
     <style>
-    .courseProgress {
-      width: 400px;
-      padding: 10px;
-      border: 5px solid gray;
-      margin: 0;
-      margin-left: 20px;
-    }
-    .courseProgress img {
-      width: 40px;
-      height: 60px;
-      object-fit: cover;
-  }
 
     table, th, td {
       border: 1px solid black;
@@ -25,18 +13,29 @@
       padding: 5px;
       text-align: left;
     }
-    h1, h2 {
+    h1 {
       margin-left: 20px;
     }
+
+    .logout {
+      text-align: right;
+      color: red;
+      margin-right: 50px;
+    }
+
+    table.database {
+      margin-left:auto;
+      margin-right:auto;
+
+    }
+
   </style>
 </head>
 <body>
   <h1>
     Welcome to the Edflix Manager Dashboard.
   </h1>
-  <h2>
-    Here is where you can access key functions relating to your courses.
-  </h2>
+
   <table>
     <caption>User Information</caption>
     <tr>
@@ -60,16 +59,26 @@
       <td>Insert Year Here</td>
     </tr>
   </table>
-  <a href="/logout">Log Out</a>
-  <div class = "courseProgress">
-    <img src="images/CourseSymbol.png" alt="Course Symbol"/>
-    <h3>Current course progression:</h3>
-    <br>idk: 62%
-    <progress id="firstCourseProgress" value="62" max="100"> 32% </progress>
-    <br>idk again: 89%
-    <progress id="firstCourseProgress" value="89" max="100"> 32% </progress>
-    <br>idk one more time: 22%
-    <progress id="firstCourseProgress" value="22" max="100"> 32% </progress>
+  <div class="logout">
+    <a href="/logout">Log Out</a>
   </div>
+
+  <div class = "database_table">
+    <table class="database">
+      <caption><%= @currentTable %> TABLE</caption>
+      <tr>
+        <th>Test</th>
+        <th>Test2</th>
+      </tr>
+      <td>dwa</td>
+      <td>dwadwa</td>
+
+
+    </table>
+  </div>
+  
+  
+  
+
 </body>
 <%= erb :"common/footer" %>
