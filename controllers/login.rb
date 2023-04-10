@@ -29,12 +29,15 @@ post "/login" do
   elsif User.login(username, password)
     @dashUsername = username
     @dashEmail = User.getEmail(username)
-    @dashRole = User.getRole(username)    
+    @dashRole = User.getRole(username)  
+      
     # redirect '/dashboard'
     session[:logged_in] = true
     session[:username] = username
     session[:email] = User.getEmail(username)
     session[:role] = User.getRole(username)
+    session[:nationality] = User.getNationality(username)
+    session[:courses] = User.getCourses(username)
 
     if User.getRole(username) == "Learner"
 

@@ -71,6 +71,28 @@ class User < Sequel::Model(:login_details)
     return userRole[:role]
   end
 
+  def self.getNationality(username)
+    # Find the user with the given username
+    user = User.first(username: username)
+    
+    # Get the nationality associated with the user
+    userNationality = DB[:users].join(:countries, country_id: :country).where(user_id: user.login_id).first
+    
+    
+    return userNationality[:country]
+  end
+
+  def self.getCourses(username)
+    # Find the user with the given username
+    user = User.first(username: username)
+    
+    # Get the courses associated with the user
+    userCourses = DB[:users].join(:courses, course_id: :course).where(user_id: user.login_id).select(:course_title).first
+    
+    
+    return userCourses[:course_title]
+  end
+
 
 
   def self.change_password(username, old_password, new_password)

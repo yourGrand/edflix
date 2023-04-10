@@ -48,34 +48,44 @@
     </tr>
       <tr>
       <th>Nationality:</th>
-      <td>aoitnesgrsje</td>
+      <td><%= @dashNationality %></td>
     </tr>
     <tr>
       <th>Courses in Progress:</th>
-      <td>Not enough</td>
+      <td><%= @dashCourses %></td>
     </tr>
-    <tr>
-      <th>Year Of Study:</th>
-      <td>Insert Year Here</td>
-    </tr>
+
   </table>
+
   <div class="logout">
     <a href="/logout">Log Out</a>
   </div>
 
   <div class = "database_table">
-    <table class="database">
-      <caption><%= @currentTable %> TABLE</caption>
-      <tr>
-        <th>Test</th>
-        <th>Test2</th>
-      </tr>
-      <td>dwa</td>
-      <td>dwadwa</td>
 
-
+    <table class = "database">
+      <thead>
+        <tr>
+          <% @headers.each do |header| %>
+            <th><%= header %></th>
+          <% end %>
+        </tr>
+      </thead>
+      <tbody>
+        <% @rows.each do |row| %>
+          <tr>
+            <% row.each do |column| %>
+              <td><%= column %></td>
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
     </table>
+
   </div>
+
+
+
   
   
   
