@@ -84,6 +84,26 @@
 
   </div>
 
+  <div class="filters">
+    <form method="get" action="/dashboard_manager">
+      <label for="country_filter">Country:</label>
+      <select id="country_filter" name="country">
+        <option value="0,All">All</option>
+        <option value="1,Italy">Italy</option>
+        <option value="2,France">France</option>
+      </select>
+
+      <label for="degree_filter">Degree:</label>
+      <select id="degree_filter" name="degree">
+        <option value="0,All">All</option>
+        <option value="1,Computer Science">Computer Science</option>
+        <option value="2,Software Engineering">Software Engineering</option>
+      </select>
+
+      <button type="submit">Filter</button>
+    </form>
+  </div>
+
 
 
   
