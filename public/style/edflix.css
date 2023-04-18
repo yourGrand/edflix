@@ -20,6 +20,17 @@ body {
     line-height: 1.5;
 }
 
+.padding {
+    padding: 80px;
+}
+
+h1, h2 {
+    text-align: center;
+    padding-top: 20px;
+    color: var(--black);
+    font-weight: lighter;
+}
+
 /* Navigation bar */
 
 header {
@@ -183,6 +194,7 @@ img.close-menu.show {
 
 .signup button[type="submit"],
 .login a,
+.read-more a, 
 .login button[type="submit"] {
     background: var(--green);
     color: #fff;
@@ -198,10 +210,54 @@ img.close-menu.show {
 
 .signup button[type="submit"]:hover,
 .login a:hover, 
+.read-more a:hover,
 .login button[type="submit"]:hover {
     background: #27ae60;
     transform: translateY(-2px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Courses */
+.courses-container {
+	padding-bottom: 30px;
+}
+
+.course-shadow {
+	box-shadow: 0 5px 20px 0 #d1d9e6;
+	border-radius: 50px;
+	padding: 20px;
+    display: flex;
+}
+
+.course-img {
+    margin-left: auto;
+    margin-right: auto;
+    float: right;    
+    padding: 40px;
+    flex: 40%;
+    width: 580px;
+    align-self: center;
+    border-radius: 70px;
+}
+
+.course {
+	text-align: center;
+    background-color: white;
+    padding: 40px;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 18px;
+    flex: 60%;
+}
+
+.course p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.read-more {
+    padding: 20px;
 }
 
 /* Footer */

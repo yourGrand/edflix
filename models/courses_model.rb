@@ -1,4 +1,8 @@
 class Course < Sequel::Model
+  def id
+    course_id.to_i
+  end
+  
   def name
     course_title.to_s
   end

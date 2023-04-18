@@ -1,0 +1,16 @@
+<%= erb :"common/header" %>
+<!-- COURSE -->
+  <main>
+  <div class="padding">
+    <div class="courses-container">
+      <div class="course-shadow">
+        <img src=<%=h url(@course.image) %> class="course-img">
+        <article class="course">
+          <h3><%=h @course.name %></h2>
+          <p><%=h @course.about %></p>
+        </article>
+      </div>
+    </div>
+  </div>
+  </main>
+<%= erb :"common/footer" %>

@@ -6,16 +6,22 @@
   </h1>
 
   <!--<img class="backround" src="images/background.jpeg" alt="background"/>-->
-
-  <div>
+  <h2>Most popular courses</h2>
+  <div class="padding">
     <% if @coursesSortedByRating.count > 0 %>
-      <h2>Most popular courses</h2>
       <% @coursesSortedByRating.each do |course| %>
         <div class="courses-container">
-          <div class="course">
-            <img src=<%=h course.image %>>
-            <h2><%=h course.name %></h2>
-            <p><%=h course.about %></p>
+          <div class="course-shadow">
+            <img src=<%=h course.image %> class="course-img">
+            <article class="course">
+              <h3><%=h course.name %></h3>
+              <p><%=h course.about %></p>
+              <% if session[:logged_in] %>
+                <div class="read-more">
+                  <a href="course/<%=h course.id %>" target="_blank">More</a>
+                </div>
+              <% end %>
+            </article>
           </div>
         </div>
       <% end %>
