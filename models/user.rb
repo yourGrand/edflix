@@ -107,6 +107,130 @@ class User < Sequel::Model(:login_details)
 
     true
   end
+
+  def self.updateDetails(userID, first_name, surname, gender, date_of_birth, country, degree, course)
+    user = DB[:users].first(user_id: userID)
+    user[:first_name] = first_name
+    user[:surname] = surname
+    user[:gender] = gender
+    user[:date_of_birth] = date_of_birth
+    user[:country] = country
+    user[:degree] = degree
+    user[:course] = course
+    user.save 
+    true
+  end
+
+  def self.getUserID(username)
+    #Find user with given username
+    user = User.first(username: username)
+
+    #Finds user ID
+    userID = user[:login_id]
+
+    return userID
+  end
+
+  def self.getFirstName(userID)
+    # Find the user with the given user ID
+    user = DB[:users].first(user_id: userID)
+    
+    # Get the first name of the user
+    if user
+      userFirstName = user[:first_name]
+      return userFirstName
+    else
+      return nil
+    end
+  end
+
+  def self.getSurname(userID)
+    # Find the user with the given user ID
+    user = DB[:users].first(user_id: userID)
+    
+    # Get the surname of the user
+    if user
+      userSurname = user[:surname]
+      return userSurname
+    else
+      return nil
+    end
+  end
+  
+  def self.getGender(userID)
+    # Find the user with the given user ID
+    user = DB[:users].where(user_id: userID).select(:gender).first
+
+    
+    # Get the gender of the user
+    if user
+      userGender = user[:gender]
+      return userGender
+    else
+      return nil
+    end
+  end
+
+  def self.getDateOfBirth(userID)
+    # Find the user with the given user ID
+    user = DB[:users].where(user_id: userID).select(:date_of_birth).first
+
+    
+    # Get the date of birth of the user
+    if user
+      userDateOfBirth = user[:date_of_birth]
+      return userDateOfBirth
+    else
+      return nil
+    end
+  end
+
+  def self.getCountry(userID)
+    # Find the user with the given user ID
+    user = DB[:users].where(user_id: userID).select(:country).first
+
+    
+    # Get the country of the user
+    if user
+      userCountry = user[:country]
+      return userCountry
+    else
+      return nil
+    end
+  end
+
+
+  def self.getDegree(userID)
+    # Find the user with the given user ID
+    user = DB[:users].where(user_id: userID).select(:degree).first
+
+    # Get the degree of the user
+    if user
+      return user[:degree]
+    else
+      return nil
+    end
+  end
+  
+
+  def self.getCourse(userID)
+    # Find the user with the given user ID
+    user = DB[:users].where(user_id: userID).select(:course).first
+
+    
+    # Get the courses of the user
+    if user
+      userCourse = user[:course]
+      return userCourse
+    else
+      return nil
+    end
+  end
+
+
+
+
+
 end
 
 class UserTable < Sequel::Model(:users)
