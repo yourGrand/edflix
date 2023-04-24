@@ -1,0 +1,107 @@
+<%= erb :"common/header" %>
+<!-- DASHBOARD -->
+  <head>
+    <style>
+
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      margin-right: 20px;
+      margin-left: auto;
+    }  
+    th, td {
+      padding: 5px;
+      text-align: left;
+    }
+    h1 {
+      margin-left: 20px;
+    }
+
+    .logout {
+      text-align: right;
+      color: red;
+      margin-right: 50px;
+    }
+
+    table.database {
+      margin-left:auto;
+      margin-right:auto;
+
+    }
+
+  </style>
+</head>
+<body>
+  <h1>
+    Welcome to the Edflix Admin Dashboard.
+  </h1>
+
+  <table>
+    <caption>User Information</caption>
+    <tr>
+      <th>Username:</th>
+      <td><%= @dashUsername %></td>
+    </tr>
+      <tr>
+      <th>Email Address:</th>
+      <td><%= @dashEmail %></td>
+    </tr>
+      <tr>
+      <th>Nationality:</th>
+      <td><%= @dashNationality %></td>
+    </tr>
+    <tr>
+      <th>Courses in Progress:</th>
+      <td><%= @dashCourses %></td>
+    </tr>
+
+  </table>
+
+  <div class="logout">
+    <a href="/logout">Log Out</a>
+  </div>
+
+  <div class = "database_table">
+
+    <table class = "database">
+      <thead>
+        <tr>
+          <th>User ID</th>
+          <th>Role</th>
+          <th>First Name</th>
+          <th>Surname</th>
+          <th>Gender</th>
+          <th>Date of Birth</th>
+          <th>Country</th>
+          <th>Degree</th>
+          <th>Course</th>
+          <th>Suspended</th>
+          <th>Username</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @rows.each do |row| %>
+        <tr>
+          <td><%= row[0] %></td>
+          <td><%= row[1] %></td>
+          <td><%= row[2] %></td>
+          <td><%= row[3] %></td>
+          <td><%= row[4] %></td>
+          <td><%= row[5] %></td>
+          <td><%= row[6] %></td>
+          <td><%= row[7] %></td>
+          <td><%= row[8] %></td>
+          <td><%= row[9] %></td>
+          <td><%= row[10] %></td>
+          <td><a href="/edit-user?id=<%= row[0] %>">Edit</a></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+  </div>
+ 
+
+</body>
+<%= erb :"common/footer" %>
