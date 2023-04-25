@@ -1,0 +1,154 @@
+<%= erb :"common/header" %>
+<!-- DASHBOARD -->
+  <head>
+    <style>
+
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      margin-right: 20px;
+      margin-left: auto;
+    }  
+    th, td {
+      padding: 5px;
+      text-align: left;
+    }
+    h1 {
+      margin-left: 20px;
+    }
+
+    .logout {
+      text-align: right;
+      color: red;
+      margin-right: 50px;
+    }
+
+    table.database {
+      margin-left:auto;
+      margin-right:auto;
+
+    }
+
+  </style>
+</head>
+<body>
+  <h1>
+    Welcome to the Edflix Manager Dashboard.
+  </h1>
+
+  <table>
+    <caption>User Information</caption>
+    <tr>
+      <th>Username:</th>
+      <td><%= @dashUsername %></td>
+    </tr>
+      <tr>
+      <th>Email Address:</th>
+      <td><%= @dashEmail %></td>
+    </tr>
+      <tr>
+      <th>Nationality:</th>
+      <td><%= @dashNationality %></td>
+    </tr>
+    <tr>
+      <th>Courses in Progress:</th>
+      <td><%= @dashCourses %></td>
+    </tr>
+
+  </table>
+
+  <div class="logout">
+    <a href="/logout">Log Out</a>
+  </div>
+
+  <div class = "database_table">
+
+    <table class = "database">
+      <thead>
+        <tr>
+          <% @headers.each do |header| %>
+            <th><%= header %></th>
+          <% end %>
+        </tr>
+      </thead>
+      <tbody>
+        <% @rows.each do |row| %>
+          <tr>
+            <% row.each do |column| %>
+              <td><%= column %></td>
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+  </div>
+
+  <div class="filters">
+    <form method="get" action="/dashboard_manager">
+
+      <label for="id_filter">ID:</label>
+      <select id="id_filter" name="id">
+          <option value="0,All">All</option>
+          <%= @option_tags_id %>
+      </select>
+
+      <label for="role_filter">Role:</label>
+      <select id="role_filter" name="role">
+          <option value="0,All">All</option>
+          <%= @option_tags_role %>
+      </select>
+
+      <label for="fname_filter">Forename:</label>
+      <select id="fname_filter" name="forename">
+          <option value="0,All">All</option>
+          <%= @option_tags_fname %>
+      </select>
+
+      <label for="sname_filter">Surname:</label>
+      <select id="sname_filter" name="surname">
+          <option value="0,All">All</option>
+          <%= @option_tags_surname %>
+      </select>
+
+      <label for="gender_filter">Gender:</label>
+      <select id="gender_filter" name="gender">
+          <option value="0,All">All</option>
+          <%= @option_tags_gender %>
+      </select>
+
+
+      <label for="country_filter">Country:</label>
+      <select id="country_filter" name="country">
+          <option value="0,All">All</option>
+          <%= @option_tags_country %>
+      </select>
+
+      <label for="degree_filter">Degree:</label>
+      <select id="degree_filter" name="degree">
+          <option value="0,All">All</option>
+          <%= @option_tags_degree %>
+      </select>
+
+      <label for="course_filter">Course:</label>
+      <select id="course_filter" name="course">
+          <option value="0,All">All</option>
+          <%= @option_tags_course %>
+      </select>
+
+      <label for="suspended_filter">Suspended:</label>
+      <select id="suspended_filter" name="suspended">
+          <option value="0,All">All</option>
+          <%= @option_tags_suspended %>
+      </select>
+
+      <button type="submit">Filter</button>
+    </form>
+  </div>
+
+
+  
+  
+
+</body>
+<%= erb :"common/footer" %>

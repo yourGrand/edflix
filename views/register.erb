@@ -1,34 +1,34 @@
 <%= erb :"common/header" %>
+
 <!-- REGISTER -->
-  <body>
-    <h1>Register</h1>
-    <% if @form_was_submitted %>
-      <% if @submission_error %>
-        <p><strong class="error">Please correct the errors below</strong></p>
-      <% else %>
-        <p><strong class="success">Success!</strong></p>        
+  <main>
+    <form method="post" action="/register" class="signup">
+      <% if @form_was_submitted %>
+        <% if @submission_error %>
+          <p class="error">Please correct the errors below</p>
+        <% else %>
+          <p class="success">Success!</p>        
+        <% end %>
       <% end %>
-    <% end %>
-    <form>
-      <p>
-        Username: <input type="text" name="username" value="<%= h @username %>" />
-        <% if @username_error %>
-          <br /><strong class="error"><%= @username_error %></strong>
-        <% end %>
-      </p>
-      <p>
-        Email: <input type="text" name="email" value="<%= h @email %>" />
-        <% if @email_error %>
-          <br /><strong class="error"><%= @email_error %></strong>
-        <% end %>
-      </p>
-      <p>
-        Password: <input type="text" name="password" value="<%= h @password %>" />
-        <% if @password_error %>
-          <br /><strong class="error"><%= @password_error %></strong>
-        <% end %>
-      </p>
-      <p><input type="submit" value="Submit"></p>
+      
+      <% if @username_error %>
+        <p class="error"><%= @username_error %></p>
+      <% end %>
+      <input type="text" name="username" value="<%= h @username %>" placeholder="Username"/>
+      
+      
+      <% if @email_error %>
+        <p class="error"><%= @email_error %></p>
+      <% end %>
+      <input type="text" name="email" value="<%= h @email %>" placeholder="Email"/>
+
+      <% if @password_error %>
+        <p class="error"><%= @password_error %></p>
+      <% end %>
+      <input type="password" name="password" value="<%= h @password %>" placeholder="Password"/>
+
+      <button type="submit">Submit</button>
     </form>
-  </body>
+  </main>
+
 <%= erb :"common/footer" %>

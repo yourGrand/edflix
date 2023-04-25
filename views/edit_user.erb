@@ -1,0 +1,32 @@
+<%= erb :"common/header" %>
+
+    <form class="dashboard_details" method="post" action="/dashboard">
+      <% if @error %>
+        <p class = "error"><%= @error %></p>
+      <% end %>
+      <input type="text" id="username" name="username" placeholder="Username" value="<%= h(params[:username]) %>">
+      <input type="text" id="password" name="password" placeholder="Password" value="<%= h(params[:password]) %>">
+      <input type="text" id="email" name="email" placeholder="Email" value="<%= h(params[:email]) %>">
+      <input type="text" id="first_name" name="first_name" placeholder="First Name" value="<%= h(params[:first_name]) %>">
+      <input type="text" id="surname" name="surname" placeholder="Surname" value="<%= h(params[:surname]) %>">
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label>
+      <input type="radio" id="other" name="gender" value="other">
+      <label for="other">Other</label><br><br>
+      <label for="date_of_birth">Date of Birth:</label>
+      <input type="date" id="date_of_birth" name="date_of_birth" placeholder="Date of Birth" value="<%= h(params[:date_of_birth]) %>">
+      <input type="text" id="country" name="country" placeholder="Country" value="<%= h(params[:country]) %>">
+      <input type="text" id="degree" name="degree" placeholder="Degree" value="<%= h(params[:degree]) %>">
+      <input type="text" id="course" name="course" placeholder="Course" value="<%= h(params[:course]) %>">
+      <label>Suspension:</label>
+      <input type="radio" id="TRUE" name="suspension" value="TRUE">
+      <label for="TRUE">TRUE</label>
+      <input type="radio" id="FALSE" name="suspension" value="FALSE">
+      <label for="TRUE">FALSE</label>
+      <button type="submit">Update Details</button>
+    </form>
+
+<%= erb :"common/footer" %>

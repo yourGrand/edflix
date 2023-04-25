@@ -1,15 +1,56 @@
 <%= erb :"common/header" %>
 <!-- HOME -->
-
+<main>
   <h1>
     Welcome to Edflix where you can learn every course you want!
   </h1>
 
-  <img class="backround" src="images/background.jpeg" alt="background" width="400px" height="auto"/>
+<<<<<<< HEAD
+  <img class="backround" src="images/background.jpeg" alt="background" width="100%"/>
+=======
+  <!--<img class="backround" src="images/background.jpeg" alt="background"/>-->
+  <h2>Most popular courses</h2>
+  <div class="padding">
+    <% if @coursesSortedByRating.count > 0 %>
+      <% @coursesSortedByRating.each do |course| %>
+        <div class="courses-container">
+          <div class="course-shadow">
+            <img src=<%=h course.image %> class="course-img">
+            <article class="course">
+              <h3><%=h course.name %></h3>
+              <p><%=h course.about %></p>
+              <% if session[:logged_in] %>
+                <div class="read-more">
+                  <a href="course/<%=h course.id %>" target="_blank">More</a>
+                </div>
+              <% end %>
+            </article>
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      <p>The database is empty!</p>
+    <% end %> 
+  </div>
+>>>>>>> 35820cbf983199580aa7509f270092b0d7288bc1
 
   <div>
-    <h2>Featured articles</h2>
-
+    <% if @articles.count > 0 %>
+      <h2>Featured Articles</h2>
+      <% @articles.each do |article| %>
+        <div class="article-container">
+          <article class="article">
+            <img src=<%=h article.image %>>
+            <h2><%=h article.title %></h2>
+            <p><%=h article.body %></p>
+          </article>
+        </div>
+      <% end %>
+    <% else %>
+      <p>The database is empty!</p>
+    <% end %>   
+    
+    <!--
     <div>
       <h3>A brief history of the UK’s Winchcombe meteorite</h3>
       <p>
@@ -18,7 +59,7 @@
       </p>
       <img class="thumbnail" src="images/meteorite.jpg" alt="meteorite" width="400px" height="auto"/>
     </div>
-    
+
     <div>
       <h3>Why does music bring back memories? What the science says</h3>
       <p>
@@ -44,8 +85,8 @@
       </p>
       <img class="thumbnail" src="images/dinosaur.jpg" alt="dinosaur" width="400px" height="auto"/>
     </div>
-
+    -->
   </div>
 
-
+</main>
 <%= erb :"common/footer" %>

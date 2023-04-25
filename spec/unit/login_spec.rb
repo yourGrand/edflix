@@ -1,22 +1,10 @@
-require_relative '../../app'
-require 'rspec'
-require 'rack/test'
+# set up database
+ENV["APP_ENV"] = "test_empty"
+
+# load helper
+require_relative "../spec_helper"
 
 describe 'Login page' do
-  include Rack::Test::Methods
-
-  def app
-    Sinatra::Application
-  end
-
-  # context 'when the user enters valid credentials' do
-  #   it 'redirects to the dashboard page' do
-  #     post '/login', { username: 'valid_username', password: 'valid_password' }
-  #     expect(last_response.status).to eq(200)
-  #     expect(last_response.body).to include('Welcome, valid_username!')
-  #   end
-  # end
-
   context 'when the user enters an invalid username' do
     it 'shows an error message' do
       post '/login', { username: 'invalid_username', password: 'valid_password' }
@@ -57,5 +45,3 @@ describe 'Login page' do
     end
   end
 end
-
-

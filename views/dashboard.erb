@@ -1,9 +1,113 @@
 <%= erb :"common/header" %>
 <!-- DASHBOARD -->
+  <head>
+    <style>
+    .courseProgress {
+      width: 400px;
+      padding: 10px;
+      border: 5px solid gray;
+      margin: 0;
+      margin-left: 20px;
+    }
+    .courseProgress img {
+      width: 40px;
+      height: 60px;
+      object-fit: cover;
+  }
+
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      margin-right: 20px;
+      margin-left: auto;
+    }  
+    th, td {
+      padding: 5px;
+      text-align: left;
+    }
+    h1, h2 {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
   <h1>
-    Welcome to the Edflix dashboard.
+    Welcome to the student Edflix dashboard.
   </h1>
   <h2>
-    Here is where you can access key functions relating to your courses
+    Here is where you can access key functions relating to your courses.
   </h2>
+  <table>
+    <caption>User Information</caption>
+    <tr>
+      <th>First Name:</th>
+      <td><%= @first_name %></td>
+    </tr>
+    <tr>
+      <th>Surname:</th>
+      <td><%= @surname %></td>
+    </tr>
+    <tr>
+      <th>Username:</th>
+      <td><%= @dashUsername %></td>
+    </tr>
+      <tr>
+      <th>Email Address:</th>
+      <td><%= @dashEmail %></td>
+    </tr>
+    <tr>
+      <th>Gender:</th>
+      <td><%= @dashUserID %></td>
+    </tr>
+    <tr>
+      <th>Date of Birth:</th>
+      <td><%= @date_of_birth %></td>
+    </tr>
+      <tr>
+      <th>Country:</th>
+      <td><%= @country %></td>
+    </tr>
+    <tr>
+      <th>Degree:</th>
+      <td><%= @degree %></td>
+    </tr>
+    <tr>
+      <th>Courses in Progress:</th>
+      <td>Not enough</td>
+    </tr>
+  </table>
+  <a href="/logout">Log Out</a>
+  <div class = "courseProgress">
+    <img src="images/CourseSymbol.png" alt="Course Symbol"/>
+    <h3>Current course progression:</h3>
+    <br>idk: 62%
+    <progress id="firstCourseProgress" value="62" max="100"> 32% </progress>
+    <br>idk again: 89%
+    <progress id="firstCourseProgress" value="89" max="100"> 32% </progress>
+    <br>idk one more time: 22%
+    <progress id="firstCourseProgress" value="22" max="100"> 32% </progress>
+  </div>
+
+   <form class="dashboard_details" method="post" action="/dashboard">
+      <% if @error %>
+        <p class = "error"><%= @error %></p>
+      <% end %>
+      <input type="text" id="first_name" name="first_name" placeholder="First Name" value="<%= h(params[:first_name]) %>">
+      <input type="text" id="surname" name="surname" placeholder="Surname" value="<%= h(params[:surname]) %>">
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label>
+      <input type="radio" id="other" name="gender" value="other">
+      <label for="other">Other</label><br><br>
+      <label for="date_of_birth">Date of Birth:</label>
+      <input type="date" id="date_of_birth" name="date_of_birth" placeholder="Date of Birth" value="<%= h(params[:date_of_birth]) %>">
+      <input type="text" id="country" name="country" placeholder="Country" value="<%= h(params[:country]) %>">
+      <input type="text" id="degree" name="degree" placeholder="Degree" value="<%= h(params[:degree]) %>">
+      <input type="text" id="course" name="course" placeholder="Course" value="<%= h(params[:course]) %>">
+      <button type="submit">Add Details</button>
+    </form>
+</body>
 <%= erb :"common/footer" %>
+
