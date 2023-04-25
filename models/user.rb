@@ -110,14 +110,31 @@ class User < Sequel::Model(:login_details)
   end
 
 
+  def self.getUsername(userID)
+    #Find user with given id
+    login_details = User.first(login_id: userID)
+
+    #Finds username
+    if login_details
+      username = login_details[:username]
+      return username
+    else
+      return nil
+    end
+
+  end
+
   def self.getEmail(username)
     #Find user with given username
-    user = User.first(username: username)
+    login_details = User.first(username: username)
 
-    #Finds user email
-    userEmail = user.email
-
-    return userEmail
+    #Finds username
+    if login_details
+      userEmail = login_details[:email]
+      return userEmail
+    else
+      return nil
+    end
   end
 
   def self.getRole(username)
@@ -304,10 +321,6 @@ class User < Sequel::Model(:login_details)
       return nil
     end
   end
-
-
-
-
 
 end
 
