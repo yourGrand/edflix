@@ -1,15 +1,39 @@
 <%= erb :"common/header" %>
 <!-- contact_us -->
 
-<h1>Contact us</h1>
+<h1>..::: Contact us :::..</h1>
 
+<p>
+You can contact us via our phone number +44 123 456 7890 or email us at support@edflix.com
+</p>
 
+<p>
+Alternatively you can use the form below ↓↓↓
+</p>
+<br/>
 
+<form action="#">
+    <label for="firstName">First name:</label>
+    <input type="text" id="firstName" name="firstName" placeholder="eg. John"/>
+    <br/>
 
+    <label for="lastName">Last name:</label>
+    <input type="text" id="lastName" name="lastName" placeholder="eg. Pork"/>
+    <br/>
 
+    <label for="email">Email:</label>
+    <input type="email" id="Email" name="Email" placeholder="example@email.com" minlength="5"/>
+    <br/>
 
+    <label for="freeform">Tell us what you think:</label>
+    <br/>
+    <textarea id="freeform" name="freeform" rows="4" cols="50" placeholder="Edflix is great!">
+    </textarea>
+    <br/>
 
+    <input type="submit" value="Submit"/>
+</form>
 
-
+<br/><hr/>
 
 <%= erb :"common/footer" %>
