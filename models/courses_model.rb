@@ -16,7 +16,7 @@ class Course < Sequel::Model
   end
 
   def link
-    course_link.to_i
+    course_link.to_s
   end
 
   def image
