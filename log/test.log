@@ -7272,3 +7272,61 @@ I, [2023-04-28T13:31:13.263238 #369]  INFO -- : (0.000186s) PRAGMA table_xinfo('
 I, [2023-04-28T13:31:16.075024 #369]  INFO -- : (0.000186s) SELECT * FROM `courses`
 I, [2023-04-28T13:31:16.075268 #369]  INFO -- : (0.000098s) SELECT * FROM `articles`
 >>>>>>> a5ab4bc8bf8c9f5560356efdc4ba7dac3f921e72
+I, [2023-05-06T23:53:31.264754 #348]  INFO -- : (0.000325s) PRAGMA foreign_keys = 1
+I, [2023-05-06T23:53:31.264910 #348]  INFO -- : (0.000024s) PRAGMA case_sensitive_like = 1
+I, [2023-05-06T23:53:31.265599 #348]  INFO -- : (0.000088s) SELECT sqlite_version()
+I, [2023-05-06T23:53:31.266001 #348]  INFO -- : (0.000149s) PRAGMA table_xinfo('courses')
+I, [2023-05-06T23:53:31.267181 #348]  INFO -- : (0.000114s) PRAGMA table_xinfo('articles')
+I, [2023-05-06T23:53:31.269799 #348]  INFO -- : (0.000209s) PRAGMA table_xinfo('login_details')
+I, [2023-05-06T23:53:31.271269 #348]  INFO -- : (0.000187s) PRAGMA table_xinfo('users')
+I, [2023-05-06T23:53:36.105233 #348]  INFO -- : (0.000183s) SELECT * FROM `courses`
+I, [2023-05-06T23:53:36.105523 #348]  INFO -- : (0.000121s) SELECT * FROM `articles`
+I, [2023-05-06T23:55:38.726128 #348]  INFO -- : (0.000173s) SELECT * FROM `courses`
+I, [2023-05-06T23:55:38.726387 #348]  INFO -- : (0.000096s) SELECT * FROM `articles`
+I, [2023-05-06T23:55:49.950993 #348]  INFO -- : (0.000166s) SELECT * FROM `courses`
+I, [2023-05-06T23:55:49.951331 #348]  INFO -- : (0.000106s) SELECT * FROM `articles`
+I, [2023-05-06T23:55:59.987882 #536]  INFO -- : (0.000266s) PRAGMA foreign_keys = 1
+I, [2023-05-06T23:55:59.988015 #536]  INFO -- : (0.000020s) PRAGMA case_sensitive_like = 1
+I, [2023-05-06T23:55:59.988687 #536]  INFO -- : (0.000080s) SELECT sqlite_version()
+I, [2023-05-06T23:55:59.988990 #536]  INFO -- : (0.000141s) PRAGMA table_xinfo('courses')
+I, [2023-05-06T23:55:59.989947 #536]  INFO -- : (0.000109s) PRAGMA table_xinfo('articles')
+I, [2023-05-06T23:55:59.992359 #536]  INFO -- : (0.000162s) PRAGMA table_xinfo('login_details')
+I, [2023-05-06T23:55:59.993642 #536]  INFO -- : (0.000205s) PRAGMA table_xinfo('users')
+I, [2023-05-06T23:56:04.816128 #536]  INFO -- : (0.000181s) SELECT * FROM `courses`
+I, [2023-05-06T23:56:04.816492 #536]  INFO -- : (0.000176s) SELECT * FROM `articles`
+I, [2023-05-07T00:13:13.092849 #986]  INFO -- : (0.000267s) PRAGMA foreign_keys = 1
+I, [2023-05-07T00:13:13.092986 #986]  INFO -- : (0.000020s) PRAGMA case_sensitive_like = 1
+I, [2023-05-07T00:13:13.093599 #986]  INFO -- : (0.000080s) SELECT sqlite_version()
+I, [2023-05-07T00:13:13.093921 #986]  INFO -- : (0.000161s) PRAGMA table_xinfo('courses')
+I, [2023-05-07T00:13:13.094877 #986]  INFO -- : (0.000111s) PRAGMA table_xinfo('articles')
+I, [2023-05-07T00:13:13.097376 #986]  INFO -- : (0.000174s) PRAGMA table_xinfo('login_details')
+I, [2023-05-07T00:13:13.098618 #986]  INFO -- : (0.000205s) PRAGMA table_xinfo('users')
+I, [2023-05-07T00:13:28.560542 #986]  INFO -- : (0.000229s) SELECT * FROM `courses`
+I, [2023-05-07T00:13:28.560817 #986]  INFO -- : (0.000103s) SELECT * FROM `articles`
+I, [2023-05-07T00:19:10.961218 #1637]  INFO -- : (0.000282s) PRAGMA foreign_keys = 1
+I, [2023-05-07T00:19:10.961361 #1637]  INFO -- : (0.000021s) PRAGMA case_sensitive_like = 1
+I, [2023-05-07T00:19:10.962175 #1637]  INFO -- : (0.000098s) SELECT sqlite_version()
+I, [2023-05-07T00:19:10.962504 #1637]  INFO -- : (0.000143s) PRAGMA table_xinfo('courses')
+I, [2023-05-07T00:19:10.963470 #1637]  INFO -- : (0.000111s) PRAGMA table_xinfo('articles')
+I, [2023-05-07T00:19:10.965827 #1637]  INFO -- : (0.000206s) PRAGMA table_xinfo('login_details')
+I, [2023-05-07T00:19:10.966921 #1637]  INFO -- : (0.000177s) PRAGMA table_xinfo('users')
+I, [2023-05-07T00:19:15.274780 #1637]  INFO -- : (0.000183s) SELECT * FROM `courses`
+I, [2023-05-07T00:19:15.275079 #1637]  INFO -- : (0.000108s) SELECT * FROM `articles`
+I, [2023-05-07T00:19:40.670032 #1637]  INFO -- : (0.000174s) SELECT * FROM `courses`
+I, [2023-05-07T00:19:44.855683 #1637]  INFO -- : (0.000196s) SELECT * FROM `courses`
+I, [2023-05-07T00:19:44.855928 #1637]  INFO -- : (0.000096s) SELECT * FROM `articles`
+I, [2023-05-07T00:19:47.550774 #1637]  INFO -- : (0.000170s) SELECT * FROM `courses`
+I, [2023-05-07T00:19:52.298928 #1637]  INFO -- : (0.000167s) SELECT * FROM `courses`
+I, [2023-05-07T00:19:52.299144 #1637]  INFO -- : (0.000095s) SELECT * FROM `articles`
+I, [2023-05-07T01:33:14.008228 #2750]  INFO -- : (0.000276s) PRAGMA foreign_keys = 1
+I, [2023-05-07T01:33:14.008363 #2750]  INFO -- : (0.000020s) PRAGMA case_sensitive_like = 1
+I, [2023-05-07T01:33:14.009005 #2750]  INFO -- : (0.000083s) SELECT sqlite_version()
+I, [2023-05-07T01:33:14.009324 #2750]  INFO -- : (0.000143s) PRAGMA table_xinfo('courses')
+I, [2023-05-07T01:33:14.010297 #2750]  INFO -- : (0.000112s) PRAGMA table_xinfo('articles')
+I, [2023-05-07T01:33:14.013060 #2750]  INFO -- : (0.000185s) PRAGMA table_xinfo('login_details')
+I, [2023-05-07T01:33:14.014279 #2750]  INFO -- : (0.000207s) PRAGMA table_xinfo('users')
+I, [2023-05-07T01:33:18.196628 #2750]  INFO -- : (0.000291s) SELECT * FROM `courses`
+I, [2023-05-07T01:33:18.196922 #2750]  INFO -- : (0.000108s) SELECT * FROM `articles`
+I, [2023-05-07T01:33:44.574299 #2750]  INFO -- : (0.000191s) SELECT * FROM `courses`
+I, [2023-05-07T01:33:50.194617 #2750]  INFO -- : (0.000175s) SELECT * FROM `courses`
+I, [2023-05-07T01:33:50.194977 #2750]  INFO -- : (0.000101s) SELECT * FROM `articles`
