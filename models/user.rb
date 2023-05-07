@@ -81,7 +81,7 @@ class User < Sequel::Model(:login_details)
       User.insert(login_id: newID, email: email, username: username, password_crypt: password_crypt, iv: iv, salt: salt)
 
       # Adds user to users table with the same login_id
-      UserTable.insert(user_id: newID, role: 4, first_name: "null", surname: "null", gender: 0, date_of_birth: "null", country: 0, degree: 0, course: 1, suspended: 2, login: newID)
+      UserTable.insert(user_id: newID, role: 4, first_name: "null", surname: "null", gender: 0, date_of_birth: "null", region: 0, degree: 0, course: 1, suspended: 2, login: newID)
 
       return true
     end
@@ -153,10 +153,10 @@ class User < Sequel::Model(:login_details)
     user = User.first(username: username)
     
     # Get the nationality associated with the user
-    userNationality = DB[:users].join(:countries, country_id: :country).where(user_id: user.login_id).first
+    userNationality = DB[:users].join(:regions, region_id: :region).where(user_id: user.login_id).first
     
     
-    return userNationality[:country]
+    return userNationality[:region]
   end
 
   def self.getCourses(username)
@@ -203,15 +203,19 @@ class User < Sequel::Model(:login_details)
     return true
   end
 
+<<<<<<< HEAD
   
 
   def self.updateDetails(userID, first_name, surname, gender, date_of_birth, country, degree, course)
+=======
+  def self.updateDetails(userID, first_name, surname, gender, date_of_birth, region, degree, course)
+>>>>>>> 172442da56a08bef4b96433daf2cd75f78f155f4
     user = DB[:users].first(user_id: userID)
     user[:first_name] = first_name
     user[:surname] = surname
     user[:gender] = gender
     user[:date_of_birth] = date_of_birth
-    user[:country] = country
+    user[:region] = region
     user[:degree] = degree
     user[:course] = course
     user.save 
@@ -282,15 +286,15 @@ class User < Sequel::Model(:login_details)
     end
   end
 
-  def self.getCountry(userID)
+  def self.getRegion(userID)
     # Find the user with the given user ID
-    user = DB[:users].where(user_id: userID).select(:country).first
+    user = DB[:users].where(user_id: userID).select(:region).first
 
     
-    # Get the country of the user
+    # Get the region of the user
     if user
-      userCountry = user[:country]
-      return userCountry
+      userRegion = user[:region]
+      return userRegion
     else
       return nil
     end
