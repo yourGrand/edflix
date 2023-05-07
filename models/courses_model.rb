@@ -15,6 +15,10 @@ class Course < Sequel::Model
     course_rating.to_i
   end
 
+  def link
+    course_link.to_i
+  end
+
   def image
     image_path.to_s
   end

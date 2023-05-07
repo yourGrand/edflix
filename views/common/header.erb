@@ -20,8 +20,8 @@
     </div>
 
     <nav class="navigation">
-      <form class="search-field" action="#">
-        <input type="text" placeholder="Search" name="search">
+      <form class="search-field" method="get" action="/search">
+        <input type="text" placeholder="Search" name="search" value="<%= h(params[:query]) %>">
         <button class="search-button" type="submit">
           <img src=<%=h url('images/search.png') %>>
         </button>
