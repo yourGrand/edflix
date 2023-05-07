@@ -9,7 +9,7 @@ get "/edit-user/*" do
     @surname = User.getSurname(@UserID)
     @gender = User.getGender(@UserID)
     @date_of_birth = User.getDateOfBirth(@UserID)
-    @country = User.getCountry(@UserID)
+    @region = User.getRegion(@UserID)
     @degree = User.getDegree(@UserID)
     @course = User.getCourse(@UserID)
     #@suspension = User.getSuspension(@UserID)
@@ -31,7 +31,7 @@ post "/edit-user" do
     @surname = params["surname"] if !params["surname"].nil?
     @gender = params["gender"] if !params["gender"].nil?
     @date_of_birth = params["date_of_birth"] if !params["date_of_birth"].nil?
-    @country = params["country"] if !params["country"].nil?
+    @region = params["region"] if !params["region"].nil?
     @degree = params["degree"] if !params["degree"].nil?
     @course = params["course"] if !params["course"].nil?
     @suspension = params["suspension"] if !params["suspension"].nil?

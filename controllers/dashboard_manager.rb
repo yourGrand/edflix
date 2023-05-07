@@ -9,7 +9,7 @@ get "/dashboard_manager" do
         @dashRole = session[:role]
         @dashNationality = session[:nationality]
         @dashCourses = session[:courses]
-        country_filter = params[:country]
+        region_filter = params[:region]
         degree_filter = params[:degree]
         id_filter = params[:id]
         role_filter = params[:role]
@@ -70,15 +70,15 @@ get "/dashboard_manager" do
         end
         @option_tags_gender = option_tags.join("\n")
 
-        countries = db.execute("SELECT DISTINCT country FROM countries")
+        regions = db.execute("SELECT DISTINCT region FROM regions")
         option_tags = []
         count = 1
-        countries.each do |country|
-          option_tag = "<option value='#{count},#{country[0]}'>#{country[0]}</option>"
+        regions.each do |region|
+          option_tag = "<option value='#{count},#{region[0]}'>#{region[0]}</option>"
           option_tags << option_tag
           count += 1
         end
-        @option_tags_country = option_tags.join("\n")
+        @option_tags_region = option_tags.join("\n")
 
         degrees = db.execute("SELECT DISTINCT degree FROM degrees")
         option_tags = []
@@ -158,12 +158,12 @@ get "/dashboard_manager" do
             end
         end
 
-        if country_filter != nil
-            country_id, country_name = country_filter.split(",")
-            if country_id.to_i > 0
-                country_name = db.execute("SELECT countries.country_id FROM countries WHERE countries.country = '#{country_name}'")
-                where_clauses << "users.country = ?"
-                where_args << country_name
+        if region_filter != nil
+            region_id, region_name = region_filter.split(",")
+            if region_id.to_i > 0
+                region_name = db.execute("SELECT regions.region_id FROM regions WHERE regions.region = '#{region_name}'")
+                where_clauses << "users.region = ?"
+                where_args << region_name
             end
         end
 
@@ -196,11 +196,11 @@ get "/dashboard_manager" do
         
                 
         where_sql = where_clauses.empty? ? "" : "WHERE #{where_clauses.join(" AND ")}"
-        sql = "SELECT users.user_id, roles.role, users.first_name, users.surname, genders.gender, users.date_of_birth, countries.country, degrees.degree, courses.course_title, suspensions.suspended, login_details.username
+        sql = "SELECT users.user_id, roles.role, users.first_name, users.surname, genders.gender, users.date_of_birth, regions.region, degrees.degree, courses.course_title, suspensions.suspended, login_details.username
             FROM users
             JOIN roles ON users.role = roles.role_id
             JOIN genders ON users.gender = genders.gender_id
-            JOIN countries ON users.country = countries.country_id
+            JOIN regions ON users.region = regions.region_id
             JOIN degrees ON users.degree = degrees.degree_id
             JOIN courses ON users.course = courses.course_id
             JOIN suspensions ON users.suspended = suspensions.suspension_id

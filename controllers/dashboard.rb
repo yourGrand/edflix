@@ -9,7 +9,7 @@ get "/dashboard" do
         @surname = User.getSurname(@dashUserID)
         @gender = User.getGender(@dashUserID)
         @date_of_birth = User.getDateOfBirth(@dashUserID)
-        @country = User.getCountry(@dashUserID)
+        @region = User.getRegion(@dashUserID)
         @degree = User.getDegree(@dashUserID)
         @course = User.getCourse(@dashUserID)
         erb :dashboard
@@ -23,7 +23,7 @@ post "/dashboard" do
   @surname = params["surname"]
   @gender = params["gender"]
   @date_of_birth = params["date_of_birth"]
-  @country = params["country"]
+  @region = params["region"]
   @degree = params["degree"]
   @course = params["course"]
 
@@ -33,7 +33,7 @@ post "/dashboard" do
   @surname_error = nil
   @gender_error = nil
   @date_of_birth_error = nil
-  @country_error = nil
+  @region_error = nil
   @degree_error = nil
   @course_error = nil
 
@@ -49,22 +49,22 @@ post "/dashboard" do
 
   @date_of_birth_error = "Please enter a value for date of birth" if @date_of_birth.empty?
 
-  @country_error = "Please enter a value for country" if @country.empty?
+  @region_error = "Please enter a value for region" if @region.empty?
 
   @degree_error = "Please enter a value for degree" if @degree.empty?
 
   @course_error = "Please enter a value for course" if @course.empty?
     
-  if @first_name_error.nil? && @surname_error.nil? && @gender_error.nil? && @date_of_birth_error.nil? && @country_error.nil? && @degree_error.nil? && @course_error.nil?
+  if @first_name_error.nil? && @surname_error.nil? && @gender_error.nil? && @date_of_birth_error.nil? && @region_error.nil? && @degree_error.nil? && @course_error.nil?
     # sanitise the values by removing whitespace
     @first_name.strip!
     @surname.strip!
     @gender.strip!
     @date_of_birth.strip!
-    @country.strip!
+    @region.strip!
     @degree.strip!
     @course.strip!
-    User.updateDetails(@dashUserID, @first_name, @surname, @gender, @date_of_birth, @country, @degree, @course)
+    User.updateDetails(@dashUserID, @first_name, @surname, @gender, @date_of_birth, @region, @degree, @course)
     redirect "/dashboard"
   else
     @submission_error = "Please correct the errors below"

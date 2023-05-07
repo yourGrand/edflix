@@ -9,7 +9,7 @@ get "/dashboard_admin" do
         @dashRole = session[:role]
         @dashNationality = session[:nationality]
         @dashCourses = session[:courses]
-        country_filter = params[:country]
+        region_filter = params[:region]
         degree_filter = params[:degree]
         id_filter = params[:id]
         role_filter = params[:role]
@@ -23,11 +23,11 @@ get "/dashboard_admin" do
         where_args = []
 
         where_sql = where_clauses.empty? ? "" : "WHERE #{where_clauses.join(" AND ")}"
-        sql = "SELECT users.user_id, roles.role, users.first_name, users.surname, genders.gender, users.date_of_birth, countries.country, degrees.degree, courses.course_title, suspensions.suspended, login_details.username
+        sql = "SELECT users.user_id, roles.role, users.first_name, users.surname, genders.gender, users.date_of_birth, regions.region, degrees.degree, courses.course_title, suspensions.suspended, login_details.username
             FROM users
             JOIN roles ON users.role = roles.role_id
             JOIN genders ON users.gender = genders.gender_id
-            JOIN countries ON users.country = countries.country_id
+            JOIN regions ON users.region = regions.region_id
             JOIN degrees ON users.degree = degrees.degree_id
             JOIN courses ON users.course = courses.course_id
             JOIN suspensions ON users.suspended = suspensions.suspension_id
