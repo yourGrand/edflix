@@ -156,7 +156,7 @@ img.close-menu.show {
 
 .signup,
 .login {
-    max-width: 400px;
+    max-width: 500px;
     margin: 50px auto;
     padding: 20px;
     background: #fff;
@@ -188,6 +188,7 @@ img.close-menu.show {
 }
 
 .login a {
+    margin: 0 0 0 10px;
     float: right;
     line-height: 21px;
 }
@@ -216,6 +217,62 @@ img.close-menu.show {
     transform: translateY(-2px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
+
+/*form {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.error {
+    margin: 15px;
+    width: 100%;
+    color: var(--error);
+}
+
+form label {
+    display: none;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 2px solid var(--green);
+    margin-bottom: 20px;
+}
+
+form a {
+    margin: 0 0 0 10px;
+    float: right;
+    line-height: 21px;
+}
+
+form a, .read-more a, 
+form button[type="submit"] {
+    background: var(--green);
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+form a:hover, .read-more a:hover,
+form button[type="submit"]:hover {
+    background: #27ae60;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}*/
 
 /* Courses */
 .courses-container {

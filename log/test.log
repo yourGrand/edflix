@@ -7272,6 +7272,7 @@ I, [2023-04-28T13:31:13.263238 #369]  INFO -- : (0.000186s) PRAGMA table_xinfo('
 I, [2023-04-28T13:31:16.075024 #369]  INFO -- : (0.000186s) SELECT * FROM `courses`
 I, [2023-04-28T13:31:16.075268 #369]  INFO -- : (0.000098s) SELECT * FROM `articles`
 >>>>>>> a5ab4bc8bf8c9f5560356efdc4ba7dac3f921e72
+<<<<<<< HEAD
 I, [2023-04-29T09:44:08.671367 #312]  INFO -- : (0.000278s) PRAGMA foreign_keys = 1
 I, [2023-04-29T09:44:08.671486 #312]  INFO -- : (0.000020s) PRAGMA case_sensitive_like = 1
 I, [2023-04-29T09:44:08.672064 #312]  INFO -- : (0.000075s) SELECT sqlite_version()
@@ -7428,3 +7429,421 @@ I, [2023-05-05T15:11:01.375274 #403]  INFO -- : (0.000083s) SELECT `date_of_birt
 I, [2023-05-05T15:11:01.375525 #403]  INFO -- : (0.000087s) SELECT `country` FROM `users` WHERE (`user_id` = 2) LIMIT 1
 I, [2023-05-05T15:11:01.375809 #403]  INFO -- : (0.000084s) SELECT `degree` FROM `users` WHERE (`user_id` = 2) LIMIT 1
 I, [2023-05-05T15:11:01.376079 #403]  INFO -- : (0.000083s) SELECT `course` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+=======
+I, [2023-05-06T23:53:31.264754 #348]  INFO -- : (0.000325s) PRAGMA foreign_keys = 1
+I, [2023-05-06T23:53:31.264910 #348]  INFO -- : (0.000024s) PRAGMA case_sensitive_like = 1
+I, [2023-05-06T23:53:31.265599 #348]  INFO -- : (0.000088s) SELECT sqlite_version()
+I, [2023-05-06T23:53:31.266001 #348]  INFO -- : (0.000149s) PRAGMA table_xinfo('courses')
+I, [2023-05-06T23:53:31.267181 #348]  INFO -- : (0.000114s) PRAGMA table_xinfo('articles')
+I, [2023-05-06T23:53:31.269799 #348]  INFO -- : (0.000209s) PRAGMA table_xinfo('login_details')
+I, [2023-05-06T23:53:31.271269 #348]  INFO -- : (0.000187s) PRAGMA table_xinfo('users')
+I, [2023-05-06T23:53:36.105233 #348]  INFO -- : (0.000183s) SELECT * FROM `courses`
+I, [2023-05-06T23:53:36.105523 #348]  INFO -- : (0.000121s) SELECT * FROM `articles`
+I, [2023-05-06T23:55:38.726128 #348]  INFO -- : (0.000173s) SELECT * FROM `courses`
+I, [2023-05-06T23:55:38.726387 #348]  INFO -- : (0.000096s) SELECT * FROM `articles`
+I, [2023-05-06T23:55:49.950993 #348]  INFO -- : (0.000166s) SELECT * FROM `courses`
+I, [2023-05-06T23:55:49.951331 #348]  INFO -- : (0.000106s) SELECT * FROM `articles`
+I, [2023-05-06T23:55:59.987882 #536]  INFO -- : (0.000266s) PRAGMA foreign_keys = 1
+I, [2023-05-06T23:55:59.988015 #536]  INFO -- : (0.000020s) PRAGMA case_sensitive_like = 1
+I, [2023-05-06T23:55:59.988687 #536]  INFO -- : (0.000080s) SELECT sqlite_version()
+I, [2023-05-06T23:55:59.988990 #536]  INFO -- : (0.000141s) PRAGMA table_xinfo('courses')
+I, [2023-05-06T23:55:59.989947 #536]  INFO -- : (0.000109s) PRAGMA table_xinfo('articles')
+I, [2023-05-06T23:55:59.992359 #536]  INFO -- : (0.000162s) PRAGMA table_xinfo('login_details')
+I, [2023-05-06T23:55:59.993642 #536]  INFO -- : (0.000205s) PRAGMA table_xinfo('users')
+I, [2023-05-06T23:56:04.816128 #536]  INFO -- : (0.000181s) SELECT * FROM `courses`
+I, [2023-05-06T23:56:04.816492 #536]  INFO -- : (0.000176s) SELECT * FROM `articles`
+I, [2023-05-07T00:13:13.092849 #986]  INFO -- : (0.000267s) PRAGMA foreign_keys = 1
+I, [2023-05-07T00:13:13.092986 #986]  INFO -- : (0.000020s) PRAGMA case_sensitive_like = 1
+I, [2023-05-07T00:13:13.093599 #986]  INFO -- : (0.000080s) SELECT sqlite_version()
+I, [2023-05-07T00:13:13.093921 #986]  INFO -- : (0.000161s) PRAGMA table_xinfo('courses')
+I, [2023-05-07T00:13:13.094877 #986]  INFO -- : (0.000111s) PRAGMA table_xinfo('articles')
+I, [2023-05-07T00:13:13.097376 #986]  INFO -- : (0.000174s) PRAGMA table_xinfo('login_details')
+I, [2023-05-07T00:13:13.098618 #986]  INFO -- : (0.000205s) PRAGMA table_xinfo('users')
+I, [2023-05-07T00:13:28.560542 #986]  INFO -- : (0.000229s) SELECT * FROM `courses`
+I, [2023-05-07T00:13:28.560817 #986]  INFO -- : (0.000103s) SELECT * FROM `articles`
+I, [2023-05-07T00:19:10.961218 #1637]  INFO -- : (0.000282s) PRAGMA foreign_keys = 1
+I, [2023-05-07T00:19:10.961361 #1637]  INFO -- : (0.000021s) PRAGMA case_sensitive_like = 1
+I, [2023-05-07T00:19:10.962175 #1637]  INFO -- : (0.000098s) SELECT sqlite_version()
+I, [2023-05-07T00:19:10.962504 #1637]  INFO -- : (0.000143s) PRAGMA table_xinfo('courses')
+I, [2023-05-07T00:19:10.963470 #1637]  INFO -- : (0.000111s) PRAGMA table_xinfo('articles')
+I, [2023-05-07T00:19:10.965827 #1637]  INFO -- : (0.000206s) PRAGMA table_xinfo('login_details')
+I, [2023-05-07T00:19:10.966921 #1637]  INFO -- : (0.000177s) PRAGMA table_xinfo('users')
+I, [2023-05-07T00:19:15.274780 #1637]  INFO -- : (0.000183s) SELECT * FROM `courses`
+I, [2023-05-07T00:19:15.275079 #1637]  INFO -- : (0.000108s) SELECT * FROM `articles`
+I, [2023-05-07T00:19:40.670032 #1637]  INFO -- : (0.000174s) SELECT * FROM `courses`
+I, [2023-05-07T00:19:44.855683 #1637]  INFO -- : (0.000196s) SELECT * FROM `courses`
+I, [2023-05-07T00:19:44.855928 #1637]  INFO -- : (0.000096s) SELECT * FROM `articles`
+I, [2023-05-07T00:19:47.550774 #1637]  INFO -- : (0.000170s) SELECT * FROM `courses`
+I, [2023-05-07T00:19:52.298928 #1637]  INFO -- : (0.000167s) SELECT * FROM `courses`
+I, [2023-05-07T00:19:52.299144 #1637]  INFO -- : (0.000095s) SELECT * FROM `articles`
+I, [2023-05-07T01:33:14.008228 #2750]  INFO -- : (0.000276s) PRAGMA foreign_keys = 1
+I, [2023-05-07T01:33:14.008363 #2750]  INFO -- : (0.000020s) PRAGMA case_sensitive_like = 1
+I, [2023-05-07T01:33:14.009005 #2750]  INFO -- : (0.000083s) SELECT sqlite_version()
+I, [2023-05-07T01:33:14.009324 #2750]  INFO -- : (0.000143s) PRAGMA table_xinfo('courses')
+I, [2023-05-07T01:33:14.010297 #2750]  INFO -- : (0.000112s) PRAGMA table_xinfo('articles')
+I, [2023-05-07T01:33:14.013060 #2750]  INFO -- : (0.000185s) PRAGMA table_xinfo('login_details')
+I, [2023-05-07T01:33:14.014279 #2750]  INFO -- : (0.000207s) PRAGMA table_xinfo('users')
+I, [2023-05-07T01:33:18.196628 #2750]  INFO -- : (0.000291s) SELECT * FROM `courses`
+I, [2023-05-07T01:33:18.196922 #2750]  INFO -- : (0.000108s) SELECT * FROM `articles`
+I, [2023-05-07T01:33:44.574299 #2750]  INFO -- : (0.000191s) SELECT * FROM `courses`
+I, [2023-05-07T01:33:50.194617 #2750]  INFO -- : (0.000175s) SELECT * FROM `courses`
+I, [2023-05-07T01:33:50.194977 #2750]  INFO -- : (0.000101s) SELECT * FROM `articles`
+I, [2023-05-07T14:43:45.662200 #491]  INFO -- : (0.000361s) PRAGMA foreign_keys = 1
+I, [2023-05-07T14:43:45.668776 #491]  INFO -- : (0.000041s) PRAGMA case_sensitive_like = 1
+I, [2023-05-07T14:43:45.669562 #491]  INFO -- : (0.000097s) SELECT sqlite_version()
+I, [2023-05-07T14:43:45.669928 #491]  INFO -- : (0.000156s) PRAGMA table_xinfo('courses')
+I, [2023-05-07T14:43:45.670975 #491]  INFO -- : (0.000122s) PRAGMA table_xinfo('articles')
+I, [2023-05-07T14:43:45.679438 #491]  INFO -- : (0.000175s) PRAGMA table_xinfo('login_details')
+I, [2023-05-07T14:43:45.680946 #491]  INFO -- : (0.000201s) PRAGMA table_xinfo('users')
+I, [2023-05-07T14:43:50.586173 #491]  INFO -- : (0.000190s) SELECT * FROM `courses`
+I, [2023-05-07T14:43:50.586482 #491]  INFO -- : (0.000121s) SELECT * FROM `articles`
+I, [2023-05-07T15:16:55.840883 #1283]  INFO -- : (0.000260s) PRAGMA foreign_keys = 1
+I, [2023-05-07T15:16:55.841019 #1283]  INFO -- : (0.000020s) PRAGMA case_sensitive_like = 1
+I, [2023-05-07T15:16:55.841611 #1283]  INFO -- : (0.000076s) SELECT sqlite_version()
+I, [2023-05-07T15:16:55.841912 #1283]  INFO -- : (0.000141s) PRAGMA table_xinfo('courses')
+I, [2023-05-07T15:16:55.842852 #1283]  INFO -- : (0.000110s) PRAGMA table_xinfo('articles')
+I, [2023-05-07T15:16:55.845348 #1283]  INFO -- : (0.000146s) PRAGMA table_xinfo('login_details')
+I, [2023-05-07T15:16:55.846433 #1283]  INFO -- : (0.000186s) PRAGMA table_xinfo('users')
+I, [2023-05-07T15:17:00.454954 #1283]  INFO -- : (0.000190s) SELECT * FROM `courses`
+I, [2023-05-07T15:17:00.455242 #1283]  INFO -- : (0.000118s) SELECT * FROM `articles`
+I, [2023-05-07T15:17:10.915405 #1283]  INFO -- : (0.000206s) SELECT * FROM `courses` WHERE (UPPER(`course_title`) LIKE UPPER('%%') ESCAPE '\')
+I, [2023-05-07T15:17:33.525001 #1283]  INFO -- : (0.000179s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:17:33.533915 #1283]  INFO -- : (0.000030s) BEGIN
+I, [2023-05-07T15:17:33.534529 #1283]  INFO -- : (0.000338s) UPDATE `login_details` SET `salt` = X'db453de1df4a5e58abf01e6a92d7bda5', `password_crypt` = X'd67b6c915546ddbf72aea475b3e0a148' WHERE (`login_id` = 2)
+I, [2023-05-07T15:17:33.611827 #1283]  INFO -- : (0.077154s) COMMIT
+I, [2023-05-07T15:17:33.612508 #1283]  INFO -- : (0.000205s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:17:33.612827 #1283]  INFO -- : (0.000094s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:17:33.613216 #1283]  INFO -- : (0.000140s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:17:33.613449 #1283]  INFO -- : (0.000095s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:17:33.613645 #1283]  INFO -- : (0.000086s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:17:33.613934 #1283]  INFO -- : (0.000109s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:17:33.614130 #1283]  INFO -- : (0.000086s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:17:33.617489 #1283]  INFO -- : (0.003165s) SELECT * FROM `users` INNER JOIN `countries` ON (`countries`.`country_id` = `users`.`country`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:17:33.617778 #1283]  INFO -- : (0.000114s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:17:33.618081 #1283]  INFO -- : (0.000078s) SELECT `course_title` FROM `users` INNER JOIN `courses` ON (`courses`.`course_id` = `users`.`course`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:17:33.618280 #1283]  INFO -- : (0.000088s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:17:33.618681 #1283]  INFO -- : (0.000225s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:17:34.060651 #1283]  INFO -- : (0.000182s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:17:34.060989 #1283]  INFO -- : (0.000113s) SELECT * FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:17:34.061238 #1283]  INFO -- : (0.000101s) SELECT * FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:17:34.061467 #1283]  INFO -- : (0.000064s) SELECT `gender` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:17:34.061678 #1283]  INFO -- : (0.000062s) SELECT `date_of_birth` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:17:34.061888 #1283]  INFO -- : (0.000062s) SELECT `country` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:17:34.062120 #1283]  INFO -- : (0.000062s) SELECT `degree` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:17:34.062330 #1283]  INFO -- : (0.000063s) SELECT `course` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:17:40.669590 #1283]  INFO -- : (0.000193s) SELECT * FROM `courses` WHERE (UPPER(`course_title`) LIKE UPPER('%%') ESCAPE '\')
+I, [2023-05-07T15:18:50.656561 #1457]  INFO -- : (0.000314s) PRAGMA foreign_keys = 1
+I, [2023-05-07T15:18:50.656689 #1457]  INFO -- : (0.000020s) PRAGMA case_sensitive_like = 1
+I, [2023-05-07T15:18:50.657291 #1457]  INFO -- : (0.000076s) SELECT sqlite_version()
+I, [2023-05-07T15:18:50.657592 #1457]  INFO -- : (0.000140s) PRAGMA table_xinfo('courses')
+I, [2023-05-07T15:18:50.658528 #1457]  INFO -- : (0.000109s) PRAGMA table_xinfo('articles')
+I, [2023-05-07T15:18:50.660877 #1457]  INFO -- : (0.000152s) PRAGMA table_xinfo('login_details')
+I, [2023-05-07T15:18:50.661972 #1457]  INFO -- : (0.000179s) PRAGMA table_xinfo('users')
+I, [2023-05-07T15:19:02.640331 #1457]  INFO -- : (0.000386s) SELECT * FROM `courses`
+I, [2023-05-07T15:19:02.640726 #1457]  INFO -- : (0.000125s) SELECT * FROM `articles`
+I, [2023-05-07T15:19:13.906975 #1457]  INFO -- : (0.000231s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:19:13.922283 #1457]  INFO -- : (0.000050s) BEGIN
+I, [2023-05-07T15:19:13.923592 #1457]  INFO -- : (0.000821s) UPDATE `login_details` SET `salt` = X'2e8fec2f9aa4ffd73b57e11aa87d8299', `password_crypt` = X'a64b143f16c353ec7cdd121c5441b272' WHERE (`login_id` = 2)
+I, [2023-05-07T15:19:13.997566 #1457]  INFO -- : (0.073744s) COMMIT
+I, [2023-05-07T15:19:13.998098 #1457]  INFO -- : (0.000190s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:19:13.998463 #1457]  INFO -- : (0.000115s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:19:13.998900 #1457]  INFO -- : (0.000160s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:19:13.999146 #1457]  INFO -- : (0.000111s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:19:13.999362 #1457]  INFO -- : (0.000107s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:19:13.999720 #1457]  INFO -- : (0.000152s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:19:13.999966 #1457]  INFO -- : (0.000132s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:19:14.000340 #1457]  INFO -- : (0.000158s) SELECT * FROM `users` INNER JOIN `countries` ON (`countries`.`country_id` = `users`.`country`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:19:14.000686 #1457]  INFO -- : (0.000127s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:19:14.001132 #1457]  INFO -- : (0.000111s) SELECT `course_title` FROM `users` INNER JOIN `courses` ON (`courses`.`course_id` = `users`.`course`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:19:14.001416 #1457]  INFO -- : (0.000125s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:19:14.001801 #1457]  INFO -- : (0.000146s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:19:14.253700 #1457]  INFO -- : (0.000199s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:19:14.254225 #1457]  INFO -- : (0.000144s) SELECT * FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:19:14.254644 #1457]  INFO -- : (0.000124s) SELECT * FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:19:14.255001 #1457]  INFO -- : (0.000084s) SELECT `gender` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:19:14.255351 #1457]  INFO -- : (0.000083s) SELECT `date_of_birth` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:19:14.256301 #1457]  INFO -- : (0.000101s) SELECT `country` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:19:14.256707 #1457]  INFO -- : (0.000088s) SELECT `degree` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:19:14.257068 #1457]  INFO -- : (0.000085s) SELECT `course` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:19:22.388593 #1457]  INFO -- : (0.001447s) SELECT * FROM `courses` WHERE (UPPER(`course_title`) LIKE UPPER('%CS50%') ESCAPE '\')
+I, [2023-05-07T15:20:25.989870 #1457]  INFO -- : (0.000242s) SELECT * FROM `courses` WHERE (UPPER(`course_title`) LIKE UPPER('%CS50%') ESCAPE '\')
+I, [2023-05-07T15:20:42.654247 #1457]  INFO -- : (0.000342s) SELECT * FROM `courses` WHERE (UPPER(`course_title`) LIKE UPPER('%AI%') ESCAPE '\')
+I, [2023-05-07T15:23:35.113676 #1457]  INFO -- : (0.000179s) SELECT * FROM `courses` WHERE (UPPER(`course_title`) LIKE UPPER('%AI%') ESCAPE '\')
+I, [2023-05-07T15:23:48.947373 #1457]  INFO -- : (0.000178s) SELECT * FROM `courses`
+I, [2023-05-07T15:23:48.947761 #1457]  INFO -- : (0.000135s) SELECT * FROM `articles`
+I, [2023-05-07T15:24:02.537484 #1457]  INFO -- : (0.000170s) SELECT * FROM `courses` WHERE (UPPER(`course_title`) LIKE UPPER('%AI%') ESCAPE '\')
+I, [2023-05-07T15:24:20.273261 #1457]  INFO -- : (0.000179s) SELECT * FROM `courses`
+I, [2023-05-07T15:24:20.273498 #1457]  INFO -- : (0.000098s) SELECT * FROM `articles`
+I, [2023-05-07T15:25:49.147970 #1457]  INFO -- : (0.000204s) SELECT * FROM `courses` WHERE (UPPER(`course_title`) LIKE UPPER('%AI%') ESCAPE '\')
+I, [2023-05-07T15:26:07.217653 #1457]  INFO -- : (0.000167s) SELECT * FROM `courses` WHERE (UPPER(`course_title`) LIKE UPPER('%AI%') ESCAPE '\')
+I, [2023-05-07T15:27:11.552354 #1457]  INFO -- : (0.000170s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:27:11.552880 #1457]  INFO -- : (0.000123s) SELECT * FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:27:11.553166 #1457]  INFO -- : (0.000100s) SELECT * FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:27:11.553441 #1457]  INFO -- : (0.000072s) SELECT `gender` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:27:11.553686 #1457]  INFO -- : (0.000071s) SELECT `date_of_birth` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:27:11.553948 #1457]  INFO -- : (0.000089s) SELECT `country` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:27:11.554219 #1457]  INFO -- : (0.000069s) SELECT `degree` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:27:11.554456 #1457]  INFO -- : (0.000071s) SELECT `course` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:27:17.768725 #1457]  INFO -- : (0.000177s) SELECT * FROM `courses` WHERE (UPPER(`course_title`) LIKE UPPER('%AI%') ESCAPE '\')
+I, [2023-05-07T15:27:33.900053 #1457]  INFO -- : (0.000198s) SELECT * FROM `courses` WHERE (UPPER(`course_title`) LIKE UPPER('%AI%') ESCAPE '\')
+I, [2023-05-07T15:27:42.255247 #1457]  INFO -- : (0.000173s) SELECT * FROM `courses`
+I, [2023-05-07T15:27:42.255526 #1457]  INFO -- : (0.000123s) SELECT * FROM `articles`
+I, [2023-05-07T15:29:12.682791 #1457]  INFO -- : (0.000172s) SELECT * FROM `courses` WHERE (UPPER(`course_title`) LIKE UPPER('%AI%') ESCAPE '\')
+I, [2023-05-07T15:29:43.823338 #1457]  INFO -- : (0.000163s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:29:43.832038 #1457]  INFO -- : (0.000042s) BEGIN
+I, [2023-05-07T15:29:43.832860 #1457]  INFO -- : (0.000468s) UPDATE `login_details` SET `salt` = X'640be7d379ffd2d2460893b846b7cc23', `password_crypt` = X'550fccb2ec131d4d20c1611d4d02e973' WHERE (`login_id` = 2)
+I, [2023-05-07T15:29:43.894516 #1457]  INFO -- : (0.061526s) COMMIT
+I, [2023-05-07T15:29:43.894933 #1457]  INFO -- : (0.000156s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:29:43.895174 #1457]  INFO -- : (0.000093s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:29:43.895618 #1457]  INFO -- : (0.000165s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:29:43.895880 #1457]  INFO -- : (0.000092s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:29:43.896264 #1457]  INFO -- : (0.000092s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:29:43.896655 #1457]  INFO -- : (0.000134s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:29:43.896889 #1457]  INFO -- : (0.000091s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:29:43.897278 #1457]  INFO -- : (0.000175s) SELECT * FROM `users` INNER JOIN `countries` ON (`countries`.`country_id` = `users`.`country`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:29:43.897514 #1457]  INFO -- : (0.000091s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:29:43.897824 #1457]  INFO -- : (0.000082s) SELECT `course_title` FROM `users` INNER JOIN `courses` ON (`courses`.`course_id` = `users`.`course`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:29:43.898070 #1457]  INFO -- : (0.000107s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:29:43.898409 #1457]  INFO -- : (0.000116s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:29:44.198337 #1457]  INFO -- : (0.000163s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:29:44.198606 #1457]  INFO -- : (0.000101s) SELECT * FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:29:44.198819 #1457]  INFO -- : (0.000097s) SELECT * FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:29:44.199071 #1457]  INFO -- : (0.000065s) SELECT `gender` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:29:44.199279 #1457]  INFO -- : (0.000063s) SELECT `date_of_birth` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:29:44.199484 #1457]  INFO -- : (0.000063s) SELECT `country` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:29:44.199686 #1457]  INFO -- : (0.000061s) SELECT `degree` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:29:44.199901 #1457]  INFO -- : (0.000062s) SELECT `course` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:29:48.848681 #1457]  INFO -- : (0.000265s) SELECT * FROM `courses` WHERE (UPPER(`course_title`) LIKE UPPER('%AI%') ESCAPE '\')
+I, [2023-05-07T15:31:03.749545 #1457]  INFO -- : (0.000172s) SELECT * FROM `courses` WHERE (UPPER(`course_title`) LIKE UPPER('%AI%') ESCAPE '\')
+I, [2023-05-07T15:31:07.850946 #1457]  INFO -- : (0.000166s) SELECT * FROM `courses` WHERE (UPPER(`course_title`) LIKE UPPER('%AI%') ESCAPE '\')
+I, [2023-05-07T15:31:53.553931 #1457]  INFO -- : (0.000174s) SELECT * FROM `courses` WHERE (UPPER(`course_title`) LIKE UPPER('%AI%') ESCAPE '\')
+I, [2023-05-07T15:31:59.269188 #1457]  INFO -- : (0.000201s) SELECT * FROM `courses` WHERE (UPPER(`course_title`) LIKE UPPER('%AI%') ESCAPE '\')
+I, [2023-05-07T15:32:09.812927 #1457]  INFO -- : (0.000174s) SELECT * FROM `courses` WHERE (UPPER(`course_title`) LIKE UPPER('%AI%') ESCAPE '\')
+I, [2023-05-07T15:43:10.710389 #2313]  INFO -- : (0.000327s) PRAGMA foreign_keys = 1
+I, [2023-05-07T15:43:10.710521 #2313]  INFO -- : (0.000020s) PRAGMA case_sensitive_like = 1
+I, [2023-05-07T15:43:10.711133 #2313]  INFO -- : (0.000079s) SELECT sqlite_version()
+I, [2023-05-07T15:43:10.711436 #2313]  INFO -- : (0.000143s) PRAGMA table_xinfo('courses')
+I, [2023-05-07T15:43:10.712395 #2313]  INFO -- : (0.000110s) PRAGMA table_xinfo('articles')
+I, [2023-05-07T15:43:10.714738 #2313]  INFO -- : (0.000158s) PRAGMA table_xinfo('login_details')
+I, [2023-05-07T15:43:10.715816 #2313]  INFO -- : (0.000175s) PRAGMA table_xinfo('users')
+I, [2023-05-07T15:43:18.963152 #2313]  INFO -- : (0.000188s) SELECT * FROM `courses`
+I, [2023-05-07T15:43:18.963439 #2313]  INFO -- : (0.000096s) SELECT * FROM `articles`
+I, [2023-05-07T15:43:33.012929 #2313]  INFO -- : (0.000173s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:43:33.021486 #2313]  INFO -- : (0.000023s) BEGIN
+I, [2023-05-07T15:43:33.022132 #2313]  INFO -- : (0.000373s) UPDATE `login_details` SET `salt` = X'031447b63cd5cfe19dd3448eca9cf960', `password_crypt` = X'6f82f141009e33caa5eea98260604d8f' WHERE (`login_id` = 2)
+I, [2023-05-07T15:43:33.095090 #2313]  INFO -- : (0.072850s) COMMIT
+I, [2023-05-07T15:43:33.095543 #2313]  INFO -- : (0.000165s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:43:33.095839 #2313]  INFO -- : (0.000097s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:43:33.096235 #2313]  INFO -- : (0.000132s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:43:33.096524 #2313]  INFO -- : (0.000162s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:43:33.096745 #2313]  INFO -- : (0.000106s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:43:33.097039 #2313]  INFO -- : (0.000114s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:43:33.097237 #2313]  INFO -- : (0.000085s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:43:33.097538 #2313]  INFO -- : (0.000115s) SELECT * FROM `users` INNER JOIN `countries` ON (`countries`.`country_id` = `users`.`country`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:43:33.097736 #2313]  INFO -- : (0.000086s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:43:33.098004 #2313]  INFO -- : (0.000074s) SELECT `course_title` FROM `users` INNER JOIN `courses` ON (`courses`.`course_id` = `users`.`course`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:43:33.098201 #2313]  INFO -- : (0.000086s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:43:33.098475 #2313]  INFO -- : (0.000105s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:43:33.560566 #2313]  INFO -- : (0.000213s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:43:33.560873 #2313]  INFO -- : (0.000097s) SELECT * FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:43:33.561103 #2313]  INFO -- : (0.000099s) SELECT * FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:43:33.561321 #2313]  INFO -- : (0.000064s) SELECT `gender` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:43:33.561523 #2313]  INFO -- : (0.000062s) SELECT `date_of_birth` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:43:33.561761 #2313]  INFO -- : (0.000066s) SELECT `country` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:43:33.562005 #2313]  INFO -- : (0.000065s) SELECT `degree` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:43:33.562236 #2313]  INFO -- : (0.000065s) SELECT `course` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:43:38.048895 #2313]  INFO -- : (0.000199s) SELECT * FROM `courses` WHERE (UPPER(`course_title`) LIKE UPPER('%AI%') ESCAPE '\')
+I, [2023-05-07T15:44:16.494994 #2313]  INFO -- : (0.000187s) SELECT * FROM `courses` WHERE (UPPER(`course_title`) LIKE UPPER('%AI%') ESCAPE '\')
+I, [2023-05-07T15:44:22.807047 #2313]  INFO -- : (0.000170s) SELECT * FROM `courses` WHERE (UPPER(`course_title`) LIKE UPPER('%AI%') ESCAPE '\')
+I, [2023-05-07T15:46:55.371725 #2851]  INFO -- : (0.000269s) PRAGMA foreign_keys = 1
+I, [2023-05-07T15:46:55.371886 #2851]  INFO -- : (0.000025s) PRAGMA case_sensitive_like = 1
+I, [2023-05-07T15:46:55.372593 #2851]  INFO -- : (0.000080s) SELECT sqlite_version()
+I, [2023-05-07T15:46:55.372931 #2851]  INFO -- : (0.000143s) PRAGMA table_xinfo('courses')
+I, [2023-05-07T15:46:55.373916 #2851]  INFO -- : (0.000110s) PRAGMA table_xinfo('articles')
+I, [2023-05-07T15:46:55.376336 #2851]  INFO -- : (0.000164s) PRAGMA table_xinfo('login_details')
+I, [2023-05-07T15:46:55.377498 #2851]  INFO -- : (0.000176s) PRAGMA table_xinfo('users')
+I, [2023-05-07T15:47:00.957496 #2851]  INFO -- : (0.000186s) SELECT * FROM `courses`
+I, [2023-05-07T15:47:00.957752 #2851]  INFO -- : (0.000096s) SELECT * FROM `articles`
+I, [2023-05-07T15:47:06.371111 #2851]  INFO -- : (0.000159s) SELECT * FROM `courses` WHERE (UPPER(`course_title`) LIKE UPPER('%wcdiabk%') ESCAPE '\')
+I, [2023-05-07T15:47:16.885167 #2851]  INFO -- : (0.000183s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:47:16.893715 #2851]  INFO -- : (0.000027s) BEGIN
+I, [2023-05-07T15:47:16.894250 #2851]  INFO -- : (0.000310s) UPDATE `login_details` SET `salt` = X'fd65c7a55f136cfc694372882c2343b5', `password_crypt` = X'1d0747847f094e4643f002a362d91a40' WHERE (`login_id` = 2)
+I, [2023-05-07T15:47:16.956684 #2851]  INFO -- : (0.062334s) COMMIT
+I, [2023-05-07T15:47:16.957179 #2851]  INFO -- : (0.000160s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:47:16.957544 #2851]  INFO -- : (0.000096s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:47:16.957996 #2851]  INFO -- : (0.000160s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:47:16.958275 #2851]  INFO -- : (0.000099s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:47:16.958535 #2851]  INFO -- : (0.000096s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:47:16.958880 #2851]  INFO -- : (0.000113s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:47:16.959148 #2851]  INFO -- : (0.000091s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:47:16.959503 #2851]  INFO -- : (0.000119s) SELECT * FROM `users` INNER JOIN `countries` ON (`countries`.`country_id` = `users`.`country`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:47:16.963128 #2851]  INFO -- : (0.000156s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:47:16.963499 #2851]  INFO -- : (0.000084s) SELECT `course_title` FROM `users` INNER JOIN `courses` ON (`courses`.`course_id` = `users`.`course`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:47:16.963750 #2851]  INFO -- : (0.000091s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:47:16.964267 #2851]  INFO -- : (0.000230s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:47:17.169381 #2851]  INFO -- : (0.000159s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:47:17.169807 #2851]  INFO -- : (0.000106s) SELECT * FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:47:17.170092 #2851]  INFO -- : (0.000098s) SELECT * FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:47:17.170365 #2851]  INFO -- : (0.000068s) SELECT `gender` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:47:17.170647 #2851]  INFO -- : (0.000086s) SELECT `date_of_birth` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:47:17.170937 #2851]  INFO -- : (0.000089s) SELECT `country` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:47:17.171228 #2851]  INFO -- : (0.000088s) SELECT `degree` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:47:17.171553 #2851]  INFO -- : (0.000091s) SELECT `course` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:47:22.585071 #2851]  INFO -- : (0.000194s) SELECT * FROM `courses` WHERE (UPPER(`course_title`) LIKE UPPER('%wind%') ESCAPE '\')
+I, [2023-05-07T15:47:46.718025 #2851]  INFO -- : (0.000150s) SELECT * FROM `courses` WHERE (UPPER(`course_title`) LIKE UPPER('%wind%') ESCAPE '\')
+I, [2023-05-07T15:59:31.347085 #3291]  INFO -- : (0.000265s) PRAGMA foreign_keys = 1
+I, [2023-05-07T15:59:31.347221 #3291]  INFO -- : (0.000020s) PRAGMA case_sensitive_like = 1
+I, [2023-05-07T15:59:31.347914 #3291]  INFO -- : (0.000111s) SELECT sqlite_version()
+I, [2023-05-07T15:59:31.348266 #3291]  INFO -- : (0.000178s) PRAGMA table_xinfo('courses')
+I, [2023-05-07T15:59:31.349251 #3291]  INFO -- : (0.000113s) PRAGMA table_xinfo('articles')
+I, [2023-05-07T15:59:31.351657 #3291]  INFO -- : (0.000152s) PRAGMA table_xinfo('login_details')
+I, [2023-05-07T15:59:31.352949 #3291]  INFO -- : (0.000194s) PRAGMA table_xinfo('users')
+I, [2023-05-07T15:59:35.309839 #3291]  INFO -- : (0.000192s) SELECT * FROM `courses`
+I, [2023-05-07T15:59:35.310114 #3291]  INFO -- : (0.000121s) SELECT * FROM `articles`
+I, [2023-05-07T15:59:47.982540 #3291]  INFO -- : (0.000214s) SELECT * FROM `courses` WHERE (UPPER(`course_title`) LIKE UPPER('%Intro%') ESCAPE '\')
+I, [2023-05-07T15:59:59.275099 #3291]  INFO -- : (0.000187s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:59:59.285294 #3291]  INFO -- : (0.000048s) BEGIN
+I, [2023-05-07T15:59:59.286194 #3291]  INFO -- : (0.000588s) UPDATE `login_details` SET `salt` = X'727c58b6d06ef4619261ccde1aa2ba83', `password_crypt` = X'89e139cbb1a05aa429a296675877ff04' WHERE (`login_id` = 2)
+I, [2023-05-07T15:59:59.370250 #3291]  INFO -- : (0.083886s) COMMIT
+I, [2023-05-07T15:59:59.370675 #3291]  INFO -- : (0.000155s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:59:59.370970 #3291]  INFO -- : (0.000093s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:59:59.371331 #3291]  INFO -- : (0.000131s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:59:59.371530 #3291]  INFO -- : (0.000089s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:59:59.371744 #3291]  INFO -- : (0.000093s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:59:59.372191 #3291]  INFO -- : (0.000118s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:59:59.372393 #3291]  INFO -- : (0.000089s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:59:59.376191 #3291]  INFO -- : (0.003498s) SELECT * FROM `users` INNER JOIN `countries` ON (`countries`.`country_id` = `users`.`country`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:59:59.376663 #3291]  INFO -- : (0.000156s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:59:59.377033 #3291]  INFO -- : (0.000084s) SELECT `course_title` FROM `users` INNER JOIN `courses` ON (`courses`.`course_id` = `users`.`course`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T15:59:59.377276 #3291]  INFO -- : (0.000095s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T15:59:59.377759 #3291]  INFO -- : (0.000263s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:00:00.411953 #3291]  INFO -- : (0.000232s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T16:00:00.412574 #3291]  INFO -- : (0.000204s) SELECT * FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:00:00.412918 #3291]  INFO -- : (0.000143s) SELECT * FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:00:00.413318 #3291]  INFO -- : (0.000102s) SELECT `gender` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:00:00.413829 #3291]  INFO -- : (0.000107s) SELECT `date_of_birth` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:00:00.414196 #3291]  INFO -- : (0.000095s) SELECT `country` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:00:00.414605 #3291]  INFO -- : (0.000099s) SELECT `degree` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:00:00.414982 #3291]  INFO -- : (0.000095s) SELECT `course` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:00:06.460723 #3291]  INFO -- : (0.000185s) SELECT * FROM `courses` WHERE (UPPER(`course_title`) LIKE UPPER('%Intro%') ESCAPE '\')
+I, [2023-05-07T16:00:38.549767 #3291]  INFO -- : (0.000177s) SELECT * FROM `courses`
+I, [2023-05-07T16:00:38.550053 #3291]  INFO -- : (0.000124s) SELECT * FROM `articles`
+I, [2023-05-07T16:00:45.121722 #3291]  INFO -- : (0.000181s) SELECT * FROM `courses`
+I, [2023-05-07T16:00:51.900537 #3291]  INFO -- : (0.000222s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T16:00:51.900935 #3291]  INFO -- : (0.000107s) SELECT * FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:00:51.901193 #3291]  INFO -- : (0.000107s) SELECT * FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:00:51.901470 #3291]  INFO -- : (0.000068s) SELECT `gender` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:00:51.901731 #3291]  INFO -- : (0.000076s) SELECT `date_of_birth` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:00:51.902003 #3291]  INFO -- : (0.000071s) SELECT `country` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:00:51.902241 #3291]  INFO -- : (0.000074s) SELECT `degree` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:00:51.902479 #3291]  INFO -- : (0.000076s) SELECT `course` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:01:23.738415 #3291]  INFO -- : (0.000176s) SELECT * FROM `courses`
+I, [2023-05-07T16:01:23.738653 #3291]  INFO -- : (0.000095s) SELECT * FROM `articles`
+I, [2023-05-07T16:02:33.666605 #3291]  INFO -- : (0.000151s) SELECT * FROM `courses` WHERE (`course_id` = '3') LIMIT 1
+I, [2023-05-07T16:04:16.213284 #3291]  INFO -- : (0.000131s) SELECT * FROM `courses` WHERE (`course_id` = 'contact_us') LIMIT 1
+I, [2023-05-07T16:04:44.972272 #3291]  INFO -- : (0.000152s) SELECT * FROM `courses` WHERE (`course_id` = '3') LIMIT 1
+I, [2023-05-07T16:04:47.597778 #3291]  INFO -- : (0.000178s) SELECT * FROM `courses`
+I, [2023-05-07T16:04:47.598057 #3291]  INFO -- : (0.000122s) SELECT * FROM `articles`
+I, [2023-05-07T16:04:50.466590 #3291]  INFO -- : (0.000166s) SELECT * FROM `courses` WHERE (`course_id` = '3') LIMIT 1
+I, [2023-05-07T16:04:53.072626 #3291]  INFO -- : (0.000276s) SELECT * FROM `courses` WHERE (`course_id` = 'courses') LIMIT 1
+I, [2023-05-07T16:05:04.572326 #3291]  INFO -- : (0.000185s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T16:05:04.572638 #3291]  INFO -- : (0.000103s) SELECT * FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:05:04.572848 #3291]  INFO -- : (0.000091s) SELECT * FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:05:04.573097 #3291]  INFO -- : (0.000069s) SELECT `gender` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:05:04.573304 #3291]  INFO -- : (0.000064s) SELECT `date_of_birth` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:05:04.573504 #3291]  INFO -- : (0.000063s) SELECT `country` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:05:04.573703 #3291]  INFO -- : (0.000063s) SELECT `degree` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:05:04.573904 #3291]  INFO -- : (0.000064s) SELECT `course` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:05:11.162197 #3291]  INFO -- : (0.000131s) SELECT * FROM `courses` WHERE (`course_id` = 'contact_us') LIMIT 1
+I, [2023-05-07T16:05:25.529330 #3291]  INFO -- : (0.000202s) SELECT * FROM `courses`
+I, [2023-05-07T16:05:25.529599 #3291]  INFO -- : (0.000101s) SELECT * FROM `articles`
+I, [2023-05-07T16:07:05.584724 #3291]  INFO -- : (0.000178s) SELECT * FROM `courses`
+I, [2023-05-07T16:07:29.409729 #3291]  INFO -- : (0.000174s) SELECT * FROM `courses` WHERE (`course_id` = '1') LIMIT 1
+I, [2023-05-07T16:07:40.441599 #3291]  INFO -- : (0.000127s) SELECT * FROM `courses` WHERE (`course_id` = 'courses') LIMIT 1
+I, [2023-05-07T16:38:21.061627 #326]  INFO -- : (0.000279s) PRAGMA foreign_keys = 1
+I, [2023-05-07T16:38:21.061833 #326]  INFO -- : (0.000027s) PRAGMA case_sensitive_like = 1
+I, [2023-05-07T16:38:21.062470 #326]  INFO -- : (0.000078s) SELECT sqlite_version()
+I, [2023-05-07T16:38:21.062824 #326]  INFO -- : (0.000155s) PRAGMA table_xinfo('courses')
+I, [2023-05-07T16:38:21.063834 #326]  INFO -- : (0.000110s) PRAGMA table_xinfo('articles')
+I, [2023-05-07T16:38:21.066397 #326]  INFO -- : (0.000152s) PRAGMA table_xinfo('login_details')
+I, [2023-05-07T16:38:21.067623 #326]  INFO -- : (0.000203s) PRAGMA table_xinfo('users')
+I, [2023-05-07T16:38:25.668388 #326]  INFO -- : (0.000285s) SELECT * FROM `courses`
+I, [2023-05-07T16:38:25.668803 #326]  INFO -- : (0.000141s) SELECT * FROM `articles`
+I, [2023-05-07T16:38:40.449148 #326]  INFO -- : (0.000189s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T16:38:40.458589 #326]  INFO -- : (0.000044s) BEGIN
+I, [2023-05-07T16:38:40.459222 #326]  INFO -- : (0.000294s) UPDATE `login_details` SET `salt` = X'37f214c609548d70e1a1623e30891b5f', `password_crypt` = X'690a1e922727dce3b153a98c3f623292' WHERE (`login_id` = 2)
+I, [2023-05-07T16:38:40.520157 #326]  INFO -- : (0.060807s) COMMIT
+I, [2023-05-07T16:38:40.520644 #326]  INFO -- : (0.000156s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T16:38:40.520965 #326]  INFO -- : (0.000095s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T16:38:40.521337 #326]  INFO -- : (0.000129s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:38:40.521554 #326]  INFO -- : (0.000089s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T16:38:40.521749 #326]  INFO -- : (0.000086s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T16:38:40.522040 #326]  INFO -- : (0.000115s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:38:40.522237 #326]  INFO -- : (0.000086s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T16:38:40.522540 #326]  INFO -- : (0.000118s) SELECT * FROM `users` INNER JOIN `countries` ON (`countries`.`country_id` = `users`.`country`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:38:40.522737 #326]  INFO -- : (0.000087s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T16:38:40.523017 #326]  INFO -- : (0.000076s) SELECT `course_title` FROM `users` INNER JOIN `courses` ON (`courses`.`course_id` = `users`.`course`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:38:40.523213 #326]  INFO -- : (0.000087s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T16:38:40.523496 #326]  INFO -- : (0.000113s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:38:40.685765 #326]  INFO -- : (0.000164s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T16:38:40.686202 #326]  INFO -- : (0.000110s) SELECT * FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:38:40.686506 #326]  INFO -- : (0.000101s) SELECT * FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:38:40.686789 #326]  INFO -- : (0.000070s) SELECT `gender` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:38:40.687068 #326]  INFO -- : (0.000068s) SELECT `date_of_birth` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:38:40.687332 #326]  INFO -- : (0.000068s) SELECT `country` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:38:40.687616 #326]  INFO -- : (0.000067s) SELECT `degree` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:38:40.687863 #326]  INFO -- : (0.000067s) SELECT `course` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:40:36.681013 #326]  INFO -- : (0.000192s) SELECT * FROM `courses`
+I, [2023-05-07T16:40:43.343554 #326]  INFO -- : (0.000164s) SELECT * FROM `courses` WHERE (`course_id` = '1') LIMIT 1
+I, [2023-05-07T16:40:47.584397 #326]  INFO -- : (0.000137s) SELECT * FROM `courses` WHERE (`course_id` = 'courses') LIMIT 1
+I, [2023-05-07T16:41:47.670451 #326]  INFO -- : (0.000176s) SELECT * FROM `courses`
+I, [2023-05-07T16:41:53.195798 #326]  INFO -- : (0.000168s) SELECT * FROM `courses` WHERE (`course_id` = '1') LIMIT 1
+I, [2023-05-07T16:42:01.245400 #326]  INFO -- : (0.000159s) SELECT * FROM `courses` WHERE (`course_id` = '1') LIMIT 1
+I, [2023-05-07T16:42:01.731136 #326]  INFO -- : (0.000150s) SELECT * FROM `courses` WHERE (`course_id` = '2') LIMIT 1
+I, [2023-05-07T16:42:05.981838 #326]  INFO -- : (0.000165s) SELECT * FROM `courses` WHERE (`course_id` = '3') LIMIT 1
+I, [2023-05-07T16:42:55.924212 #326]  INFO -- : (0.000287s) SELECT * FROM `courses` WHERE (`course_id` = '1') LIMIT 1
+I, [2023-05-07T16:42:58.956336 #326]  INFO -- : (0.000130s) SELECT * FROM `courses` WHERE (`course_id` = 'courses') LIMIT 1
+I, [2023-05-07T16:43:58.573837 #326]  INFO -- : (0.000174s) SELECT * FROM `courses`
+I, [2023-05-07T16:43:58.574085 #326]  INFO -- : (0.000097s) SELECT * FROM `articles`
+I, [2023-05-07T16:44:16.314247 #326]  INFO -- : (0.000176s) SELECT * FROM `courses`
+I, [2023-05-07T16:44:16.314594 #326]  INFO -- : (0.000098s) SELECT * FROM `articles`
+I, [2023-05-07T16:45:08.209288 #326]  INFO -- : (0.000169s) SELECT * FROM `courses` WHERE (`course_id` = '1') LIMIT 1
+I, [2023-05-07T16:45:12.729363 #326]  INFO -- : (0.000175s) SELECT * FROM `courses`
+I, [2023-05-07T16:45:12.729717 #326]  INFO -- : (0.000100s) SELECT * FROM `articles`
+I, [2023-05-07T16:46:40.553183 #748]  INFO -- : (0.000296s) PRAGMA foreign_keys = 1
+I, [2023-05-07T16:46:40.553457 #748]  INFO -- : (0.000028s) PRAGMA case_sensitive_like = 1
+I, [2023-05-07T16:46:40.554171 #748]  INFO -- : (0.000087s) SELECT sqlite_version()
+I, [2023-05-07T16:46:40.554536 #748]  INFO -- : (0.000157s) PRAGMA table_xinfo('courses')
+I, [2023-05-07T16:46:40.555624 #748]  INFO -- : (0.000116s) PRAGMA table_xinfo('articles')
+I, [2023-05-07T16:46:40.558288 #748]  INFO -- : (0.000184s) PRAGMA table_xinfo('login_details')
+I, [2023-05-07T16:46:40.559837 #748]  INFO -- : (0.000255s) PRAGMA table_xinfo('users')
+I, [2023-05-07T16:46:44.475253 #748]  INFO -- : (0.000189s) SELECT * FROM `courses`
+I, [2023-05-07T16:46:44.475507 #748]  INFO -- : (0.000097s) SELECT * FROM `articles`
+I, [2023-05-07T16:46:55.694554 #748]  INFO -- : (0.000175s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T16:46:55.703092 #748]  INFO -- : (0.000036s) BEGIN
+I, [2023-05-07T16:46:55.703693 #748]  INFO -- : (0.000324s) UPDATE `login_details` SET `salt` = X'2c0fb7cb33bcfc7749ec2d59d15e5b19', `password_crypt` = X'c14e6a42461d4bf311a9929fa3d5caaa' WHERE (`login_id` = 2)
+I, [2023-05-07T16:46:55.770459 #748]  INFO -- : (0.066659s) COMMIT
+I, [2023-05-07T16:46:55.770965 #748]  INFO -- : (0.000157s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T16:46:55.771397 #748]  INFO -- : (0.000129s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T16:46:55.771915 #748]  INFO -- : (0.000173s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:46:55.772327 #748]  INFO -- : (0.000120s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T16:46:55.772636 #748]  INFO -- : (0.000124s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T16:46:55.772971 #748]  INFO -- : (0.000120s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:46:55.773207 #748]  INFO -- : (0.000092s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T16:46:55.773550 #748]  INFO -- : (0.000126s) SELECT * FROM `users` INNER JOIN `countries` ON (`countries`.`country_id` = `users`.`country`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:46:55.773800 #748]  INFO -- : (0.000091s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T16:46:55.774109 #748]  INFO -- : (0.000078s) SELECT `course_title` FROM `users` INNER JOIN `courses` ON (`courses`.`course_id` = `users`.`course`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:46:55.774347 #748]  INFO -- : (0.000091s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T16:46:55.774665 #748]  INFO -- : (0.000111s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:46:55.982051 #748]  INFO -- : (0.000162s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-07T16:46:55.982459 #748]  INFO -- : (0.000105s) SELECT * FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:46:55.982736 #748]  INFO -- : (0.000107s) SELECT * FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:46:55.983026 #748]  INFO -- : (0.000067s) SELECT `gender` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:46:55.983352 #748]  INFO -- : (0.000070s) SELECT `date_of_birth` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:46:55.983596 #748]  INFO -- : (0.000066s) SELECT `country` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:46:55.983874 #748]  INFO -- : (0.000065s) SELECT `degree` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:46:55.984224 #748]  INFO -- : (0.000066s) SELECT `course` FROM `users` WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-07T16:46:59.426083 #748]  INFO -- : (0.000175s) SELECT * FROM `courses`
+I, [2023-05-07T16:47:01.868642 #748]  INFO -- : (0.000248s) SELECT * FROM `courses` WHERE (`course_id` = '1') LIMIT 1
+I, [2023-05-07T16:47:04.509266 #748]  INFO -- : (0.000174s) SELECT * FROM `courses`
+>>>>>>> 97b4ec2f44733d0eac813f50af455e3e6c107f1e
