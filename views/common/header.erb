@@ -30,7 +30,16 @@
       <a href="/courses">Courses</a>
       <a href="#">About us</a>
 
-      <% if session[:logged_in] %>
+      <% if session[:logged_in] && session[:role] == "Admin"  %>
+        <a href="/dashboard_admin">Dashboard</a>
+      <% elsif session[:logged_in] && session[:role] == "Manager" %>
+        <a href="/dashboard_manager">Dashboard</a>
+
+      <!--WHEN MODERATOR ROLE IS DONE REDIRECT TO dashboard_moderator-->
+
+      <% elsif session[:logged_in] && session[:role] == "Moderator" %>
+        <a href="/dashboard">Dashboard</a>
+      <% elsif session[:logged_in] && session[:role] == "Learner" %>
         <a href="/dashboard">Dashboard</a>
       <% else %>
         <a href="/login">Log In</a>
