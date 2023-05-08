@@ -22,7 +22,6 @@ get "/edit-user/*" do
 end
 
 post "/edit-user" do
-    
 
     @username = params["username"] if !params["username"].nil?
     @password = params["password"] if !params["password"].nil?
@@ -36,6 +35,7 @@ post "/edit-user" do
     @course = params["course"] if !params["course"].nil?
     @suspension = params["suspension"] if !params["suspension"].nil?
 
+    
 end
 
 

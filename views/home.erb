@@ -5,6 +5,34 @@
     Welcome to Edflix where you can learn every course you want!
   </h1>
 
+  <h2>About us</h2>
+  <p class="aboutus">
+    Welcome to edflix, the free and open platform that brings 
+    together the best Computer Science courses available online. 
+    At edflix, our mission is to make it easy for students to find the courses 
+    that are right for them and to create a community-driven resource that 
+    everyone can benefit from. Unlike other platforms that include every 
+    course under the sun, we carefully curate our selection to only include 
+    the best of the best. Our platform is entirely community-driven, with courses 
+    ranked based on user upvotes and downvotes, so you can trust that you're 
+    getting high-quality recommendations from other students just like you.
+  </p>
+  <p class="aboutus">
+    We're passionate about empowering students to take charge of 
+    their own education and achieve their goals, and we believe that 
+    technology can play a key role in making this a reality. With edflix, 
+    you can learn Computer Science from anywhere in the world, on your own 
+    schedule and at your own pace. Whether you're a beginner looking to 
+    explore the field or an experienced programmer looking to expand your skills, 
+    we have courses that are right for you.
+  </p>
+  <p class="aboutus">
+    We're always updating our platform with the latest and greatest courses, 
+    so be sure to check back often to see what's new. And if you have any feedback or suggestions, 
+    we'd love to hear from you - just use the contact form on our site to get in touch. 
+    Thanks for choosing edflix - we're excited to be part of your learning journey!
+  </p>
+
   <h2>Most popular courses</h2>
   <div class="padding">
     <% if @coursesSortedByRating.count > 0 %>
@@ -28,23 +56,5 @@
       <p>The database is empty!</p>
     <% end %> 
   </div>
-
-  <div>
-    <% if @articles.count > 0 %>
-      <h2>Featured Articles</h2>
-      <% @articles.each do |article| %>
-        <div class="article-container">
-          <article class="article">
-            <img src=<%=h article.image %>>
-            <h2><%=h article.title %></h2>
-            <p><%=h article.body %></p>
-          </article>
-        </div>
-      <% end %>
-    <% else %>
-      <p>The database is empty!</p>
-    <% end %>   
-  </div>
-
 </main>
 <%= erb :"common/footer" %>
