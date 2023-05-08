@@ -222,6 +222,24 @@ class User < Sequel::Model(:login_details)
     true
   end
 
+  def self.adminUpdate(userID, username, email, first_name, surname, gender, date_of_birth, region, degree, suspended)
+    user = DB[:users].first(user_id: userID)
+    user[:first_name] = first_name
+    user[:surname] = surname
+    user[:gender] = gender
+    user[:date_of_birth] = date_of_birth
+    user[:region] = region
+    user[:degree] = degree
+    user[:suspended] = suspended
+
+    userDetails = DB[:login_details].first(login_id: userID)
+    userDetails[:email] = email
+    userDetails[:username] = username
+
+    user.save
+    true
+  end
+
   def self.getUserID(username)
     #Find user with given username
     user = User.first(username: username)
