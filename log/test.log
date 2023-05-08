@@ -8047,3 +8047,48 @@ I, [2023-05-07T20:16:01.296935 #8395]  INFO -- : (0.000185s) SELECT * FROM `cour
 I, [2023-05-07T20:16:01.297269 #8395]  INFO -- : (0.000122s) SELECT * FROM `articles`
 I, [2023-05-07T20:16:03.764363 #8395]  INFO -- : (0.000184s) SELECT * FROM `courses`
 >>>>>>> 172442da56a08bef4b96433daf2cd75f78f155f4
+I, [2023-05-08T07:54:50.186255 #237]  INFO -- : (0.000268s) PRAGMA foreign_keys = 1
+I, [2023-05-08T07:54:50.191292 #237]  INFO -- : (0.000023s) PRAGMA case_sensitive_like = 1
+I, [2023-05-08T07:54:50.191991 #237]  INFO -- : (0.000086s) SELECT sqlite_version()
+I, [2023-05-08T07:54:50.192304 #237]  INFO -- : (0.000148s) PRAGMA table_xinfo('courses')
+I, [2023-05-08T07:54:50.193302 #237]  INFO -- : (0.000109s) PRAGMA table_xinfo('articles')
+I, [2023-05-08T07:55:32.934090 #238]  INFO -- : (0.000241s) PRAGMA foreign_keys = 1
+I, [2023-05-08T07:55:32.934226 #238]  INFO -- : (0.000024s) PRAGMA case_sensitive_like = 1
+I, [2023-05-08T07:55:32.934881 #238]  INFO -- : (0.000077s) SELECT sqlite_version()
+I, [2023-05-08T07:55:32.935208 #238]  INFO -- : (0.000143s) PRAGMA table_xinfo('courses')
+I, [2023-05-08T07:55:32.936148 #238]  INFO -- : (0.000107s) PRAGMA table_xinfo('articles')
+I, [2023-05-08T07:56:04.733142 #239]  INFO -- : (0.000297s) PRAGMA foreign_keys = 1
+I, [2023-05-08T07:56:04.733277 #239]  INFO -- : (0.000021s) PRAGMA case_sensitive_like = 1
+I, [2023-05-08T07:56:04.733947 #239]  INFO -- : (0.000089s) SELECT sqlite_version()
+I, [2023-05-08T07:56:04.734259 #239]  INFO -- : (0.000146s) PRAGMA table_xinfo('courses')
+I, [2023-05-08T07:56:04.735306 #239]  INFO -- : (0.000116s) PRAGMA table_xinfo('articles')
+I, [2023-05-08T07:56:58.780768 #243]  INFO -- : (0.000268s) PRAGMA foreign_keys = 1
+I, [2023-05-08T07:56:58.780892 #243]  INFO -- : (0.000019s) PRAGMA case_sensitive_like = 1
+I, [2023-05-08T07:56:58.781589 #243]  INFO -- : (0.000168s) SELECT sqlite_version()
+I, [2023-05-08T07:56:58.781890 #243]  INFO -- : (0.000143s) PRAGMA table_xinfo('courses')
+I, [2023-05-08T07:56:58.782826 #243]  INFO -- : (0.000107s) PRAGMA table_xinfo('articles')
+I, [2023-05-08T07:56:58.785145 #243]  INFO -- : (0.000152s) PRAGMA table_xinfo('login_details')
+I, [2023-05-08T07:56:58.786410 #243]  INFO -- : (0.000176s) PRAGMA table_xinfo('users')
+I, [2023-05-08T07:57:01.201241 #243]  INFO -- : (0.000185s) SELECT * FROM `courses`
+I, [2023-05-08T07:57:01.201519 #243]  INFO -- : (0.000126s) SELECT * FROM `articles`
+I, [2023-05-08T08:00:00.118076 #254]  INFO -- : (0.000270s) PRAGMA foreign_keys = 1
+I, [2023-05-08T08:00:00.118199 #254]  INFO -- : (0.000020s) PRAGMA case_sensitive_like = 1
+I, [2023-05-08T08:00:00.118780 #254]  INFO -- : (0.000075s) SELECT sqlite_version()
+I, [2023-05-08T08:00:00.119079 #254]  INFO -- : (0.000142s) PRAGMA table_xinfo('courses')
+I, [2023-05-08T08:00:00.120011 #254]  INFO -- : (0.000111s) PRAGMA table_xinfo('articles')
+I, [2023-05-08T08:00:00.122353 #254]  INFO -- : (0.000151s) PRAGMA table_xinfo('login_details')
+I, [2023-05-08T08:00:00.123479 #254]  INFO -- : (0.000180s) PRAGMA table_xinfo('users')
+I, [2023-05-08T08:00:02.031469 #254]  INFO -- : (0.000203s) SELECT * FROM `courses`
+I, [2023-05-08T08:00:02.031770 #254]  INFO -- : (0.000150s) SELECT * FROM `articles`
+I, [2023-05-08T08:00:17.771835 #254]  INFO -- : (0.000180s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-08T08:00:17.781768 #254]  INFO -- : (0.000033s) BEGIN
+I, [2023-05-08T08:00:17.782354 #254]  INFO -- : (0.000313s) UPDATE `login_details` SET `salt` = X'39707f4c15f92cdea4943992e42dfa08', `password_crypt` = X'a9137c4b187e251b0d1fe5c446209d7f' WHERE (`login_id` = 2)
+I, [2023-05-08T08:00:17.879575 #254]  INFO -- : (0.097111s) COMMIT
+I, [2023-05-08T08:00:17.880012 #254]  INFO -- : (0.000154s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-08T08:00:17.880304 #254]  INFO -- : (0.000092s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-08T08:00:17.880747 #254]  INFO -- : (0.000134s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-08T08:00:17.880982 #254]  INFO -- : (0.000093s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-08T08:00:17.881204 #254]  INFO -- : (0.000096s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-08T08:00:17.881522 #254]  INFO -- : (0.000139s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 2) LIMIT 1
+I, [2023-05-08T08:00:17.881762 #254]  INFO -- : (0.000092s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+E, [2023-05-08T08:00:17.882039 #254] ERROR -- : SQLite3::SQLException: no such table: regions: SELECT * FROM `users` INNER JOIN `regions` ON (`regions`.`region_id` = `users`.`region`) WHERE (`user_id` = 2) LIMIT 1
