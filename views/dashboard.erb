@@ -93,37 +93,37 @@
       <input type="text" id="first_name" name="first_name" placeholder="First Name" value="<%= h(params[:first_name]) %>">
       <input type="text" id="surname" name="surname" placeholder="Surname" value="<%= h(params[:surname]) %>">
       <label>Gender:</label>
-      <input type="radio" id="male" name="gender" value="Male">
+      <input type="radio" id="male" name="gender" value="1">
       <label for="male">Male</label>
-      <input type="radio" id="female" name="gender" value="Female">
+      <input type="radio" id="female" name="gender" value="2">
       <label for="female">Female</label>
-      <input type="radio" id="other" name="gender" value="Other">
+      <input type="radio" id="other" name="gender" value="3">
       <label for="other">Other</label><br><br>
       <label for="date_of_birth">Date of Birth:</label>
       <input type="date" id="date_of_birth" name="date_of_birth" placeholder="Date of Birth" value="<%= h(params[:date_of_birth]) %>">
       <label for="regions">Select a region:</label>
       <select id="region" name="region">
-        <option value="North America">North America</option>
-        <option value="South America">South America</option>
-        <option value="Central & South Asia">Central & South Asia</option>
-        <option value="Southeastern Asia">Southeastern Asia</option>
-        <option value="Northeastern Asia">Northeastern Asia</option>
-        <option value="Australia and Oceania">Australia and Oceania </option>
-        <option value="Northern Europe">Northern Europe</option>
-        <option value="Southern Europe">Southern Europe</option>
-        <option value="Eastern Europe">Eastern Europe</option>
-        <option value="Western Europe">Western Europe</option>
-        <option value="Middle East">Middle East</option>
-        <option value="Northern Africa">Northern Africa</option>
-        <option value="Southern Africa">Southern Africa</option>
-        <option value="Central America">Central America</option>
-        <option value="Caribbean">Caribbean</option>
+        <option value="1">North America</option>
+        <option value="2">South America</option>
+        <option value="3">Central & South Asia</option>
+        <option value="4">Southeastern Asia</option>
+        <option value="5">Northeastern Asia</option>
+        <option value="6">Australia and Oceania </option>
+        <option value="7">Northern Europe</option>
+        <option value="8">Southern Europe</option>
+        <option value="9">Eastern Europe</option>
+        <option value="10">Western Europe</option>
+        <option value="11">Middle East</option>
+        <option value="12">Northern Africa</option>
+        <option value="13">Southern Africa</option>
+        <option value="14">Central America</option>
+        <option value="15">Caribbean</option>
       </select>
       <label for="degrees">Select a degree type:</label>
       <select id="degrees" name="degree">
-        <option value="Undergraduate">Undergraduate</option>
-        <option value="Postgraduate">Postgraduate</option>
-        <option value="PHD">PHD</option>
+        <option value="1">Undergraduate</option>
+        <option value="2">Postgraduate</option>
+        <option value="3">PHD</option>
       </select>
       <input type="submit" value="Submit">
     </form>

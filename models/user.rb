@@ -228,7 +228,7 @@ class User < Sequel::Model(:login_details)
 # =======
   def self.updateDetails(userID, first_name, surname, gender, date_of_birth, region, degree)
 # >>>>>>> 172442da56a08bef4b96433daf2cd75f78f155f4
-    user = DB[:users].first(user_id: userID)
+    user = UserTable.first(user_id: userID)
     user.update(first_name: first_name, surname: surname, gender: gender, date_of_birth: date_of_birth, region: region, degree: degree)
     return true
   end
