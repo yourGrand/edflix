@@ -51,7 +51,7 @@ post "/login" do
       redirect "/dashboard_admin"
 
     elsif User.getRole(username) == "Moderator"
-      redirect "/dashboard"
+      redirect "/dashboard_moderator"
 
     else 
       redirect "/dashboard"
