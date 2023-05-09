@@ -117,7 +117,7 @@ class User < Sequel::Model(:login_details)
       if contact.max(:ID).nil?
         newID = 0
       else
-        newID = User.max(:ID) + 1
+        newID = contact.max(:ID) + 1
       end
 
       # Adds message to database table
