@@ -11523,3 +11523,30 @@ I, [2023-05-09T02:31:07.926177 #1006]  INFO -- : (0.000111s) SELECT * FROM `user
 I, [2023-05-09T02:31:07.926406 #1006]  INFO -- : (0.000066s) SELECT `course` FROM `users` WHERE (`user_id` = 2) LIMIT 1
 I, [2023-05-09T02:31:07.926744 #1006]  INFO -- : (0.000135s) SELECT * FROM `users` INNER JOIN `courses` ON (`courses`.`course_id` = `users`.`course`) WHERE (`user_id` = 2) LIMIT 1
 >>>>>>> 01a67adbabe81a3b68db8ad6cc80441e91dff934
+I, [2023-05-09T17:04:07.120723 #546]  INFO -- : (0.000375s) PRAGMA foreign_keys = 1
+I, [2023-05-09T17:04:07.120855 #546]  INFO -- : (0.000020s) PRAGMA case_sensitive_like = 1
+I, [2023-05-09T17:04:07.121513 #546]  INFO -- : (0.000081s) SELECT sqlite_version()
+I, [2023-05-09T17:04:07.121838 #546]  INFO -- : (0.000164s) PRAGMA table_xinfo('courses')
+I, [2023-05-09T17:04:07.122987 #546]  INFO -- : (0.000188s) PRAGMA table_xinfo('votes')
+I, [2023-05-09T17:04:07.126020 #546]  INFO -- : (0.000188s) PRAGMA table_xinfo('login_details')
+I, [2023-05-09T17:04:07.127189 #546]  INFO -- : (0.000178s) PRAGMA table_xinfo('users')
+I, [2023-05-09T17:04:13.015987 #546]  INFO -- : (0.000200s) SELECT * FROM `courses`
+I, [2023-05-09T18:14:01.402254 #930]  INFO -- : (0.000306s) PRAGMA foreign_keys = 1
+I, [2023-05-09T18:14:01.405230 #930]  INFO -- : (0.000049s) PRAGMA case_sensitive_like = 1
+I, [2023-05-09T18:14:01.406052 #930]  INFO -- : (0.000103s) SELECT sqlite_version()
+I, [2023-05-09T18:14:01.406468 #930]  INFO -- : (0.000221s) PRAGMA table_xinfo('courses')
+I, [2023-05-09T18:14:01.407784 #930]  INFO -- : (0.000362s) PRAGMA table_xinfo('votes')
+I, [2023-05-09T18:14:01.417944 #930]  INFO -- : (0.000232s) PRAGMA table_xinfo('login_details')
+I, [2023-05-09T18:14:01.419570 #930]  INFO -- : (0.000220s) PRAGMA table_xinfo('users')
+I, [2023-05-09T18:14:06.636672 #930]  INFO -- : (0.000340s) SELECT * FROM `courses`
+I, [2023-05-09T18:52:54.726782 #1569]  INFO -- : (0.000360s) PRAGMA foreign_keys = 1
+I, [2023-05-09T18:52:54.726959 #1569]  INFO -- : (0.000025s) PRAGMA case_sensitive_like = 1
+I, [2023-05-09T18:52:54.727912 #1569]  INFO -- : (0.000108s) SELECT sqlite_version()
+I, [2023-05-09T18:52:54.728360 #1569]  INFO -- : (0.000219s) PRAGMA table_xinfo('courses')
+I, [2023-05-09T18:52:54.729792 #1569]  INFO -- : (0.000229s) PRAGMA table_xinfo('votes')
+I, [2023-05-09T18:52:54.738083 #1569]  INFO -- : (0.000290s) PRAGMA table_xinfo('login_details')
+I, [2023-05-09T18:52:54.740111 #1569]  INFO -- : (0.000335s) PRAGMA table_xinfo('users')
+I, [2023-05-09T18:52:56.585666 #1569]  INFO -- : (0.000204s) SELECT * FROM `courses`
+I, [2023-05-09T18:54:25.046497 #1569]  INFO -- : (0.000186s) SELECT * FROM `courses`
+I, [2023-05-09T18:54:26.141606 #1569]  INFO -- : (0.000231s) SELECT * FROM `courses`
+I, [2023-05-09T18:54:29.570758 #1569]  INFO -- : (0.000192s) SELECT * FROM `courses`
