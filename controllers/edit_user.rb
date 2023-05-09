@@ -1,18 +1,8 @@
 require "sinatra"
 
 get "/edit-user/*" do
-    userID = params[:splat][0]
-    @userID = userID
-    @username = User.getUsername(@UserID)
-    @email = User.getEmail(@username)
-    @first_name = User.getFirstName(@UserID)
-    @surname = User.getSurname(@UserID)
-    @gender = User.getGender(@UserID)
-    @date_of_birth = User.getDateOfBirth(@UserID)
-    @region = User.getRegion(@UserID)
-    @degree = User.getDegree(@UserID)
-    @course = User.getCourse(@UserID)
-    #@suspension = User.getSuspension(@UserID)
+    $userID = params[:splat][0]
+    @userID = $userID
 
     if !session[:logged_in] || User.getRole(session[:username]) != "Admin"
         redirect "/login"
@@ -23,21 +13,37 @@ end
 
 post "/edit-user" do
 
-    @username = params["username"] if !params["username"].nil?
-    @password = params["password"] if !params["password"].nil?
-    @email = params["email"] if !params["email"].nil?
-    @first_name = params["first_name"] if !params["first_name"].nil?
-    @surname = params["surname"] if !params["surname"].nil?
-    @gender = params["gender"] if !params["gender"].nil?
-    @date_of_birth = params["date_of_birth"] if !params["date_of_birth"].nil?
-    @region = params["region"] if !params["region"].nil?
-    @degree = params["degree"] if !params["degree"].nil?
-    @course = params["course"] if !params["course"].nil?
-    @suspension = params["suspension"] if !params["suspension"].nil?
+    @userID = $userID
 
-    
+    @username = params["username"]
+    @email = params["email"]
+    @first_name = params["first_name"]
+    @surname = params["surname"]
+
+    if params["gender"] = "male"
+        @gender = 1
+    elsif params["gender"] = "female"
+        @gender = 2
+    elsif params["gender"] = "other"
+        @gender = 3
+    else
+        @gender = 0
+    end
+
+    @gender = params["gender"]
+    @date_of_birth = params["date_of_birth"]
+    @region = params["region"]
+    @degree = params["degree"]
+
+    if params["suspension"] = "TRUE"
+        @suspension = "1"
+    elsif params["suspension"] = "FALSE"
+        @suspension = "2"
+    else
+        @suspension = "2"
+    end
+
+    User.adminUpdate(@userID, @username, @email, @first_name, @surname, @gender, @date_of_birth, @region, @degree, @suspension)
+
+    erb :edit_user
 end
-
-
-
-

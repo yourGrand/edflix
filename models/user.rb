@@ -217,19 +217,41 @@ class User < Sequel::Model(:login_details)
 
   def self.adminUpdate(userID, username, email, first_name, surname, gender, date_of_birth, region, degree, suspended)
     user = DB[:users].first(user_id: userID)
-    user[:first_name] = first_name
-    user[:surname] = surname
-    user[:gender] = gender
-    user[:date_of_birth] = date_of_birth
-    user[:region] = region
-    user[:degree] = degree
-    user[:suspended] = suspended
+    #return false unless user
+    if first_name != ""
+      DB[:users].where(user_id: userID).update(first_name: first_name)
+    end
 
-    userDetails = DB[:login_details].first(login_id: userID)
-    userDetails[:email] = email
-    userDetails[:username] = username
+    if surname != ""
+      DB[:users].where(user_id: userID).update(surname: surname)
+    end
 
-    user.save
+    if date_of_birth != ""
+      DB[:users].where(user_id: userID).update(date_of_birth: date_of_birth)
+    end
+
+    if region != ""
+      DB[:users].where(user_id: userID).update(region: region)
+    end
+
+    if degree != ""
+      DB[:users].where(user_id: userID).update(degree: degree)
+    end
+
+    if suspended != ""
+      DB[:users].where(user_id: userID).update(suspended: suspended)
+    end
+
+    #user = DB[:login_details].first(login_id: userID)
+    #return false unless user
+    if username != ""
+      DB[:login_details].where(login_id: userID).update(username: username)
+    end
+
+    if email != ""
+      DB[:login_details].where(login_id: userID).update(email: email)
+    end
+
     true
   end
 

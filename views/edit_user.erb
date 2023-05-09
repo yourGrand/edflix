@@ -1,11 +1,10 @@
 <%= erb :"common/header" %>
 
-    <form class="dashboard_details" method="post" action="/dashboard">
+    <form class="dashboard_details" method="post" action="/edit-user">
       <% if @error %>
         <p class = "error"><%= @error %></p>
       <% end %>
       <input type="text" id="username" name="username" placeholder="Username" value="<%= h(params[:username]) %>">
-      <input type="text" id="password" name="password" placeholder="Password" value="<%= h(params[:password]) %>">
       <input type="text" id="email" name="email" placeholder="Email" value="<%= h(params[:email]) %>">
       <input type="text" id="first_name" name="first_name" placeholder="First Name" value="<%= h(params[:first_name]) %>">
       <input type="text" id="surname" name="surname" placeholder="Surname" value="<%= h(params[:surname]) %>">
@@ -20,12 +19,11 @@
       <input type="date" id="date_of_birth" name="date_of_birth" placeholder="Date of Birth" value="<%= h(params[:date_of_birth]) %>">
       <input type="text" id="region" name="region" placeholder="Region" value="<%= h(params[:region]) %>">
       <input type="text" id="degree" name="degree" placeholder="Degree" value="<%= h(params[:degree]) %>">
-      <input type="text" id="course" name="course" placeholder="Course" value="<%= h(params[:course]) %>">
       <label>Suspension:</label>
       <input type="radio" id="TRUE" name="suspension" value="TRUE">
       <label for="TRUE">TRUE</label>
       <input type="radio" id="FALSE" name="suspension" value="FALSE">
-      <label for="TRUE">FALSE</label>
+      <label for="FALSE">FALSE</label>
       <button type="submit">Update Details</button>
     </form>
 
