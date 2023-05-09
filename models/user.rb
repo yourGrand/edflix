@@ -52,7 +52,7 @@ class User < Sequel::Model(:login_details)
     return "null"
   end
 
-  def self.newUser(username, password, email)
+  def self.newUser(username, password, email,trusted_provider)
     # Set up AES for encryption.
     aes = OpenSSL::Cipher.new('AES-128-CBC').encrypt
 
@@ -68,6 +68,9 @@ class User < Sequel::Model(:login_details)
     # Encrypt the password.
     password_crypt = Sequel.blob(aes.update(password) + aes.final)
 
+    # Set trusted_provider to 1 if checked, 0 otherwise
+    trusted_provider = trusted_provider ? 1 : 0
+
 
     DB.transaction do
       # Gets most recent login_id
@@ -78,7 +81,7 @@ class User < Sequel::Model(:login_details)
       end
 
       # Adds user to login_details
-      User.insert(login_id: newID, email: email, username: username, password_crypt: password_crypt, iv: iv, salt: salt)
+      User.insert(login_id: newID, email: email, username: username, password_crypt: password_crypt, iv: iv, salt: salt,trusted_provider: trusted_provider)
 
       # Adds user to users table with the same login_id
       UserTable.insert(user_id: newID, role: 4, first_name: "null", surname: "null", gender: 0, date_of_birth: "null", region: 0, degree: 0, course: 1, suspended: 2, login: newID)

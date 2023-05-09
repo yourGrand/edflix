@@ -8,6 +8,7 @@ post "/register" do
   @username = params["username"]
   @email = params["email"]
   @password = params["password"]
+  @trusted_provider = params['trusted_provider'] == '1' ? 1 : 0  # Convert checkbox value to 1 or 0
 
   @form_was_submitted = !@username.nil? || !@email.nil? || !@password.nil?
 
@@ -42,7 +43,7 @@ post "/register" do
     end
     
     if @username_error.nil? && @email_error.nil? && @password_error.nil?
-      User.newUser(@username, @password, @email)
+      User.newUser(@username, @password, @email,@trusted_provider)
       User.login(@username, @password)
       @dashUsername = @username
       @dashEmail = @email

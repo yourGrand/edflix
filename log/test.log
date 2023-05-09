@@ -11523,3 +11523,87 @@ I, [2023-05-09T02:31:07.926177 #1006]  INFO -- : (0.000111s) SELECT * FROM `user
 I, [2023-05-09T02:31:07.926406 #1006]  INFO -- : (0.000066s) SELECT `course` FROM `users` WHERE (`user_id` = 2) LIMIT 1
 I, [2023-05-09T02:31:07.926744 #1006]  INFO -- : (0.000135s) SELECT * FROM `users` INNER JOIN `courses` ON (`courses`.`course_id` = `users`.`course`) WHERE (`user_id` = 2) LIMIT 1
 >>>>>>> 01a67adbabe81a3b68db8ad6cc80441e91dff934
+I, [2023-05-09T18:22:59.503480 #329]  INFO -- : (0.000295s) PRAGMA foreign_keys = 1
+I, [2023-05-09T18:22:59.503993 #329]  INFO -- : (0.000181s) PRAGMA case_sensitive_like = 1
+I, [2023-05-09T18:22:59.505259 #329]  INFO -- : (0.000125s) SELECT sqlite_version()
+I, [2023-05-09T18:22:59.505845 #329]  INFO -- : (0.000204s) PRAGMA table_xinfo('courses')
+I, [2023-05-09T18:22:59.507456 #329]  INFO -- : (0.000340s) PRAGMA table_xinfo('votes')
+I, [2023-05-09T18:22:59.524348 #329]  INFO -- : (0.000340s) PRAGMA table_xinfo('login_details')
+I, [2023-05-09T18:22:59.529035 #329]  INFO -- : (0.000683s) PRAGMA table_xinfo('users')
+I, [2023-05-09T18:23:02.252787 #329]  INFO -- : (0.000421s) SELECT * FROM `courses`
+I, [2023-05-09T18:23:37.322390 #329]  INFO -- : (0.000204s) SELECT * FROM `login_details` WHERE (`username` = 'trusted123') LIMIT 1
+I, [2023-05-09T18:23:37.323067 #329]  INFO -- : (0.000175s) SELECT * FROM `login_details` WHERE (`email` = 'trusted123@gmail.com') LIMIT 1
+I, [2023-05-09T18:23:37.323712 #329]  INFO -- : (0.000141s) SELECT * FROM `login_details` WHERE (`username` = 'trusted123') LIMIT 1
+I, [2023-05-09T18:23:37.324087 #329]  INFO -- : (0.000112s) SELECT * FROM `login_details` WHERE (`email` = 'trusted123@gmail.com') LIMIT 1
+I, [2023-05-09T18:23:37.336003 #329]  INFO -- : (0.000059s) BEGIN
+I, [2023-05-09T18:23:37.336810 #329]  INFO -- : (0.000175s) SELECT max(`login_id`) AS 'max' FROM `login_details` LIMIT 1
+I, [2023-05-09T18:23:37.337331 #329]  INFO -- : (0.000102s) SELECT max(`login_id`) AS 'max' FROM `login_details` LIMIT 1
+I, [2023-05-09T18:23:37.338700 #329]  INFO -- : (0.000934s) INSERT INTO `login_details` (`login_id`, `email`, `username`, `password_crypt`, `iv`, `salt`) VALUES (23, 'trusted123@gmail.com', 'trusted123', X'3a17efec304520d1d90c76138d7fa955', X'7dc65e6e2aaf4cb538a85c572d7c5842', X'99652cd66f7c84024536ab96cd1d23b2')
+I, [2023-05-09T18:23:37.339975 #329]  INFO -- : (0.000792s) INSERT INTO `users` (`user_id`, `role`, `first_name`, `surname`, `gender`, `date_of_birth`, `region`, `degree`, `course`, `suspended`, `login`) VALUES (23, 4, 'null', 'null', 0, 'null', 0, 0, 1, 2, 23)
+I, [2023-05-09T18:23:37.423095 #329]  INFO -- : (0.082881s) COMMIT
+I, [2023-05-09T18:23:37.423645 #329]  INFO -- : (0.000228s) SELECT * FROM `login_details` WHERE (`username` = 'trusted123') LIMIT 1
+I, [2023-05-09T18:23:37.657447 #329]  INFO -- : (0.000222s) SELECT * FROM `login_details` WHERE (`username` = 'trusted123') LIMIT 1
+I, [2023-05-09T18:23:37.661105 #329]  INFO -- : (0.000297s) SELECT * FROM `login_details` WHERE (`username` = 'trusted123') LIMIT 1
+I, [2023-05-09T18:23:37.661717 #329]  INFO -- : (0.000187s) SELECT * FROM `users` WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-09T18:23:37.662622 #329]  INFO -- : (0.000184s) SELECT * FROM `users` WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-09T18:23:37.663065 #329]  INFO -- : (0.000096s) SELECT `gender` FROM `users` WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-09T18:23:37.663715 #329]  INFO -- : (0.000248s) SELECT * FROM `users` INNER JOIN `genders` ON (`genders`.`gender_id` = `users`.`gender`) WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-09T18:23:37.664233 #329]  INFO -- : (0.000116s) SELECT `date_of_birth` FROM `users` WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-09T18:23:37.664841 #329]  INFO -- : (0.000094s) SELECT `region` FROM `users` WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-09T18:23:37.665551 #329]  INFO -- : (0.000241s) SELECT * FROM `users` INNER JOIN `regions` ON (`regions`.`region_id` = `users`.`region`) WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-09T18:23:37.665958 #329]  INFO -- : (0.000093s) SELECT `degree` FROM `users` WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-09T18:23:37.666678 #329]  INFO -- : (0.000198s) SELECT * FROM `users` INNER JOIN `degrees` ON (`degrees`.`degree_id` = `users`.`degree`) WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-09T18:23:37.667085 #329]  INFO -- : (0.000092s) SELECT `course` FROM `users` WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-09T18:23:37.667677 #329]  INFO -- : (0.000221s) SELECT * FROM `users` INNER JOIN `courses` ON (`courses`.`course_id` = `users`.`course`) WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-09T18:30:32.935507 #544]  INFO -- : (0.000352s) PRAGMA foreign_keys = 1
+I, [2023-05-09T18:30:32.935690 #544]  INFO -- : (0.000026s) PRAGMA case_sensitive_like = 1
+I, [2023-05-09T18:30:32.936606 #544]  INFO -- : (0.000102s) SELECT sqlite_version()
+I, [2023-05-09T18:30:32.936960 #544]  INFO -- : (0.000170s) PRAGMA table_xinfo('courses')
+I, [2023-05-09T18:30:32.938053 #544]  INFO -- : (0.000171s) PRAGMA table_xinfo('votes')
+I, [2023-05-09T18:30:32.941327 #544]  INFO -- : (0.000194s) PRAGMA table_xinfo('login_details')
+I, [2023-05-09T18:30:32.942688 #544]  INFO -- : (0.000252s) PRAGMA table_xinfo('users')
+I, [2023-05-09T18:30:35.682263 #544]  INFO -- : (0.000208s) SELECT * FROM `courses`
+I, [2023-05-09T18:30:58.508679 #544]  INFO -- : (0.000277s) SELECT * FROM `login_details` WHERE (`username` = 'trusted123') LIMIT 1
+I, [2023-05-09T18:30:58.509068 #544]  INFO -- : (0.000099s) SELECT * FROM `login_details` WHERE (`email` = 'trusted123@gmail.com') LIMIT 1
+I, [2023-05-09T18:30:58.509399 #544]  INFO -- : (0.000107s) SELECT * FROM `login_details` WHERE (`username` = 'trusted123') LIMIT 1
+I, [2023-05-09T18:30:58.509627 #544]  INFO -- : (0.000086s) SELECT * FROM `login_details` WHERE (`email` = 'trusted123@gmail.com') LIMIT 1
+I, [2023-05-09T18:30:58.518949 #544]  INFO -- : (0.000032s) BEGIN
+I, [2023-05-09T18:30:58.519340 #544]  INFO -- : (0.000125s) SELECT max(`login_id`) AS 'max' FROM `login_details` LIMIT 1
+I, [2023-05-09T18:30:58.519568 #544]  INFO -- : (0.000052s) SELECT max(`login_id`) AS 'max' FROM `login_details` LIMIT 1
+I, [2023-05-09T18:30:58.520135 #544]  INFO -- : (0.000368s) INSERT INTO `login_details` (`login_id`, `email`, `username`, `password_crypt`, `iv`, `salt`, `trusted_provider`) VALUES (23, 'trusted123@gmail.com', 'trusted123', X'e31b04d25cb0dc1ffb591eb7f1dd8f39', X'c151b7ea74a33922a027c3a124dcb515', X'f1cb73da0864289a7794c3c0e1caebb3', 1)
+E, [2023-05-09T18:30:58.520408 #544] ERROR -- : SQLite3::ConstraintException: UNIQUE constraint failed: users.user_id: INSERT INTO `users` (`user_id`, `role`, `first_name`, `surname`, `gender`, `date_of_birth`, `region`, `degree`, `course`, `suspended`, `login`) VALUES (23, 4, 'null', 'null', 0, 'null', 0, 0, 1, 2, 23)
+I, [2023-05-09T18:30:58.521001 #544]  INFO -- : (0.000187s) ROLLBACK
+I, [2023-05-09T18:35:59.659954 #685]  INFO -- : (0.000329s) PRAGMA foreign_keys = 1
+I, [2023-05-09T18:35:59.660386 #685]  INFO -- : (0.000029s) PRAGMA case_sensitive_like = 1
+I, [2023-05-09T18:35:59.661214 #685]  INFO -- : (0.000097s) SELECT sqlite_version()
+I, [2023-05-09T18:35:59.661616 #685]  INFO -- : (0.000189s) PRAGMA table_xinfo('courses')
+I, [2023-05-09T18:35:59.662654 #685]  INFO -- : (0.000177s) PRAGMA table_xinfo('votes')
+I, [2023-05-09T18:35:59.666165 #685]  INFO -- : (0.000283s) PRAGMA table_xinfo('login_details')
+I, [2023-05-09T18:35:59.668167 #685]  INFO -- : (0.000299s) PRAGMA table_xinfo('users')
+I, [2023-05-09T18:36:02.054690 #685]  INFO -- : (0.000298s) SELECT * FROM `courses`
+I, [2023-05-09T18:36:34.555988 #685]  INFO -- : (0.000200s) SELECT * FROM `courses`
+I, [2023-05-09T18:37:21.649393 #685]  INFO -- : (0.000220s) SELECT * FROM `login_details` WHERE (`username` = 'trusted123') LIMIT 1
+I, [2023-05-09T18:37:21.649935 #685]  INFO -- : (0.000139s) SELECT * FROM `login_details` WHERE (`email` = 'trusted123@gmail.com') LIMIT 1
+I, [2023-05-09T18:37:21.650396 #685]  INFO -- : (0.000089s) SELECT * FROM `login_details` WHERE (`username` = 'trusted123') LIMIT 1
+I, [2023-05-09T18:37:21.650634 #685]  INFO -- : (0.000082s) SELECT * FROM `login_details` WHERE (`email` = 'trusted123@gmail.com') LIMIT 1
+I, [2023-05-09T18:37:21.659238 #685]  INFO -- : (0.000032s) BEGIN
+I, [2023-05-09T18:37:21.659710 #685]  INFO -- : (0.000121s) SELECT max(`login_id`) AS 'max' FROM `login_details` LIMIT 1
+I, [2023-05-09T18:37:21.659995 #685]  INFO -- : (0.000053s) SELECT max(`login_id`) AS 'max' FROM `login_details` LIMIT 1
+I, [2023-05-09T18:37:21.660810 #685]  INFO -- : (0.000433s) INSERT INTO `login_details` (`login_id`, `email`, `username`, `password_crypt`, `iv`, `salt`, `trusted_provider`) VALUES (23, 'trusted123@gmail.com', 'trusted123', X'19189f12bcfe95e96bc6dfb08e01660a', X'24a79776c1650c26778dd0aa547a1e62', X'3ea157aeeb28dda576d718af7ef0af9f', 1)
+I, [2023-05-09T18:37:21.661184 #685]  INFO -- : (0.000165s) INSERT INTO `users` (`user_id`, `role`, `first_name`, `surname`, `gender`, `date_of_birth`, `region`, `degree`, `course`, `suspended`, `login`) VALUES (23, 4, 'null', 'null', 0, 'null', 0, 0, 1, 2, 23)
+I, [2023-05-09T18:37:21.735215 #685]  INFO -- : (0.073914s) COMMIT
+I, [2023-05-09T18:37:21.735661 #685]  INFO -- : (0.000186s) SELECT * FROM `login_details` WHERE (`username` = 'trusted123') LIMIT 1
+I, [2023-05-09T18:37:21.867967 #685]  INFO -- : (0.000173s) SELECT * FROM `login_details` WHERE (`username` = 'trusted123') LIMIT 1
+I, [2023-05-09T18:37:21.868541 #685]  INFO -- : (0.000175s) SELECT * FROM `login_details` WHERE (`username` = 'trusted123') LIMIT 1
+I, [2023-05-09T18:37:21.868911 #685]  INFO -- : (0.000117s) SELECT * FROM `users` WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-09T18:37:21.869194 #685]  INFO -- : (0.000096s) SELECT * FROM `users` WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-09T18:37:21.869410 #685]  INFO -- : (0.000064s) SELECT `gender` FROM `users` WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-09T18:37:21.869772 #685]  INFO -- : (0.000120s) SELECT * FROM `users` INNER JOIN `genders` ON (`genders`.`gender_id` = `users`.`gender`) WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-09T18:37:21.869992 #685]  INFO -- : (0.000066s) SELECT `date_of_birth` FROM `users` WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-09T18:37:21.870753 #685]  INFO -- : (0.000575s) SELECT `region` FROM `users` WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-09T18:37:21.871246 #685]  INFO -- : (0.000158s) SELECT * FROM `users` INNER JOIN `regions` ON (`regions`.`region_id` = `users`.`region`) WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-09T18:37:21.871460 #685]  INFO -- : (0.000063s) SELECT `degree` FROM `users` WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-09T18:37:21.871763 #685]  INFO -- : (0.000118s) SELECT * FROM `users` INNER JOIN `degrees` ON (`degrees`.`degree_id` = `users`.`degree`) WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-09T18:37:21.872012 #685]  INFO -- : (0.000084s) SELECT `course` FROM `users` WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-09T18:37:21.872392 #685]  INFO -- : (0.000151s) SELECT * FROM `users` INNER JOIN `courses` ON (`courses`.`course_id` = `users`.`course`) WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-09T19:18:05.015579 #685]  INFO -- : (0.000199s) SELECT * FROM `courses`
