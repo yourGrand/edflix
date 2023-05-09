@@ -27,6 +27,12 @@
       <% end %>
       <input type="password" name="password" value="<%= h @password %>" placeholder="Password"/>
 
+      <label style="display: block; margin-top: 10px;">
+        <input type="checkbox" name="trusted_provider" value="1">
+        Are you signing up as a trusted course provider?
+      </label>
+
+
       <button type="submit">Submit</button>
     </form>
   </main>
