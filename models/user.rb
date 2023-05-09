@@ -110,24 +110,21 @@ class User < Sequel::Model(:login_details)
   end
 
   #Contact us
-  def self.contact (firstName, lastName, email, message)
+  def self.contact (firstname, lastname, email, message)
 
-    # DB.transaction do
-    #   # Gets most recent login_id
-    #   if User.max(:login_id).nil?
-    #     newID = 0
-    #   else
-    #     newID = User.max(:login_id) + 1
-    #   end
+    DB.transaction do
+      # Gets most recent contact id
+      if contact.max(:ID).nil?
+        newID = 0
+      else
+        newID = User.max(:ID) + 1
+      end
 
-    #   # Adds user to login_details
-    #   User.insert(login_id: newID, email: email, username: username, password_crypt: password_crypt, iv: iv, salt: salt)
+      # Adds message to database table
+      contact.insert(ID: newID, firstname: firstname, lastname: lastname, email: email, message: message)
 
-    #   # Adds user to users table with the same login_id
-    #   UserTable.insert(user_id: newID, role: 4, first_name: "null", surname: "null", gender: 0, date_of_birth: "null", region: 0, degree: 0, course: 1, suspended: 2, login: newID)
-
-    #   return true
-    # end
+      return true
+    end
 
   end
 
