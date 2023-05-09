@@ -31,3 +31,13 @@ class Course < Sequel::Model
     course_pre.to_s
   end
 end
+
+class Vote < Sequel::Model
+  def upvote_state
+    upvote.to_i
+  end
+
+  def downvote_state
+    downvote.to_i
+  end
+end
