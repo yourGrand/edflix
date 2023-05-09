@@ -3,7 +3,7 @@ require "sinatra"
 get "/dashboard" do
     if session[:logged_in]
         @dashUsername = session[:username]
-        @dashEmail = session[:email]
+        @dashEmail = User.getEmail(@dashUsername)
         @dashUserID = User.getUserID(@dashUsername)
         @first_name = User.getFirstName(@dashUserID)
         @surname = User.getSurname(@dashUserID)
@@ -19,13 +19,16 @@ get "/dashboard" do
 end
 
 post "/dashboard" do
+  @dashUsername = session[:username]
+  @dashEmail = User.getEmail(@dashUsername)
+  @dashUserID = User.getUserID(@dashUsername)
   @first_name = params["first_name"]
   @surname = params["surname"]
   @gender = params["gender"]
   @date_of_birth = params["date_of_birth"]
   @region = params["region"]
   @degree = params["degree"]
-  @course = params["course"]
+  @course = User.getCourse(@dashUserID)
 
 
   @submission_error = nil
@@ -39,23 +42,21 @@ post "/dashboard" do
 
 
 
-    # now proceed to validation
+  # now proceed to validation
 
   @first_name_error = "Please enter a value for first name" if @first_name.empty?
 
   @surname_error = "Please enter a value for surname" if @surname.empty?
    
-  @gender_error = "Please select a gender" if @gender.empty?
+  @gender_error = "Please select a gender" if @gender.nil?
 
   @date_of_birth_error = "Please enter a value for date of birth" if @date_of_birth.empty?
 
   @region_error = "Please enter a value for region" if @region.empty?
 
   @degree_error = "Please enter a value for degree" if @degree.empty?
-
-  @course_error = "Please enter a value for course" if @course.empty?
     
-  if @first_name_error.nil? && @surname_error.nil? && @gender_error.nil? && @date_of_birth_error.nil? && @region_error.nil? && @degree_error.nil? && @course_error.nil?
+  if @first_name_error.nil? && @surname_error.nil? && @gender_error.nil? && @date_of_birth_error.nil? && @region_error.nil? && @degree_error.nil?
     # sanitise the values by removing whitespace
     @first_name.strip!
     @surname.strip!
@@ -63,11 +64,10 @@ post "/dashboard" do
     @date_of_birth.strip!
     @region.strip!
     @degree.strip!
-    @course.strip!
-    User.updateDetails(@dashUserID, @first_name, @surname, @gender, @date_of_birth, @region, @degree, @course)
-    redirect "/dashboard"
+    User.updateDetails(@dashUserID, @first_name, @surname, @gender, @date_of_birth, @region, @degree)
+    erb :dashboard
   else
     @submission_error = "Please correct the errors below"
-    redirect "/dashboard"
+    redirect '/dashboard'
   end
 end

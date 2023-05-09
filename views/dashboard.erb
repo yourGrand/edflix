@@ -57,7 +57,7 @@
     </tr>
     <tr>
       <th>Gender:</th>
-      <td><%= @dashUserID %></td>
+      <td><%= @gender %></td>
     </tr>
     <tr>
       <th>Date of Birth:</th>
@@ -77,9 +77,9 @@
   <a href="/change_password">Reset password</a>
   <div class = "courseProgress">
     <img src="images/CourseSymbol.png" alt="Course Symbol"/>
-    <h3>Current course progression:</h3>
-    <br>
-    <progress id="firstCourseProgress" value="Course Name" max="100"> Course in progress </progress>
+    <h3>Current course in progress:</h3>
+    <br><%= @course %>
+    <progress id="firstCourseProgress" value="50" max="100"> Course in progress </progress>
 
   </div>
 
@@ -122,6 +122,7 @@
         <option value="Postgraduate">Postgraduate</option>
         <option value="PHD">PHD</option>
       </select>
+      <input type="submit" value="Submit">
     </form>
 </body>
 <%= erb :"common/footer" %>
