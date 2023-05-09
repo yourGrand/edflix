@@ -22,4 +22,12 @@ class Course < Sequel::Model
   def image
     image_path.to_s
   end
+
+  def duration
+    course_duration.to_s
+  end
+
+  def pre
+    course_pre.to_s
+  end
 end
