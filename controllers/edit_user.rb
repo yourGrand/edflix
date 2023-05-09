@@ -20,17 +20,16 @@ post "/edit-user" do
     @first_name = params["first_name"]
     @surname = params["surname"]
 
-    if params["gender"] == "male"
+    if params[:gender] == "male"
         @gender = 1
-    elsif params["gender"] == "female"
+    elsif params[:gender] == "female"
         @gender = 2
-    elsif params["gender"] == "other"
+    elsif params[:gender] == "other"
         @gender = 3
     else
-        @gender = 0
+        @gender = 1
     end
 
-    @gender = params["gender"]
     @date_of_birth = params["date_of_birth"]
     @region = params["region"]
     @degree = params["degree"]
