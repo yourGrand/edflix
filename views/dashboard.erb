@@ -57,7 +57,7 @@
     </tr>
     <tr>
       <th>Gender:</th>
-      <td><%= @dashUserID %></td>
+      <td><%= @gender %></td>
     </tr>
     <tr>
       <th>Date of Birth:</th>
@@ -71,22 +71,19 @@
       <th>Degree:</th>
       <td><%= @degree %></td>
     </tr>
-    <tr>
-      <th>Courses in Progress:</th>
-      <td>Not enough</td>
-    </tr>
   </table>
   <a href="/logout">Log Out</a>
+  
   <a href="/change_password" target = "_blank">Reset password</a>
+
+  <a href="/change_email">Reset Email</a>
+>>>>>>> 8a40975536f0ce63060e82afb3b277ec51637c24
   <div class = "courseProgress">
     <img src="images/CourseSymbol.png" alt="Course Symbol"/>
-    <h3>Current course progression:</h3>
-    <br>idk: 62%
-    <progress id="firstCourseProgress" value="62" max="100"> 32% </progress>
-    <br>idk again: 89%
-    <progress id="firstCourseProgress" value="89" max="100"> 32% </progress>
-    <br>idk one more time: 22%
-    <progress id="firstCourseProgress" value="22" max="100"> 32% </progress>
+    <h3>Current course in progress:</h3>
+    <br><%= @course %>
+    <progress id="firstCourseProgress" value="50" max="100"> Course in progress </progress>
+
   </div>
 
    <form class="dashboard_details" method="post" action="/dashboard">
@@ -96,18 +93,39 @@
       <input type="text" id="first_name" name="first_name" placeholder="First Name" value="<%= h(params[:first_name]) %>">
       <input type="text" id="surname" name="surname" placeholder="Surname" value="<%= h(params[:surname]) %>">
       <label>Gender:</label>
-      <input type="radio" id="male" name="gender" value="male">
+      <input type="radio" id="male" name="gender" value="Male">
       <label for="male">Male</label>
-      <input type="radio" id="female" name="gender" value="female">
+      <input type="radio" id="female" name="gender" value="Female">
       <label for="female">Female</label>
-      <input type="radio" id="other" name="gender" value="other">
+      <input type="radio" id="other" name="gender" value="Other">
       <label for="other">Other</label><br><br>
       <label for="date_of_birth">Date of Birth:</label>
       <input type="date" id="date_of_birth" name="date_of_birth" placeholder="Date of Birth" value="<%= h(params[:date_of_birth]) %>">
-      <input type="text" id="region" name="region" placeholder="Region" value="<%= h(params[:region]) %>">
-      <input type="text" id="degree" name="degree" placeholder="Degree" value="<%= h(params[:degree]) %>">
-      <input type="text" id="course" name="course" placeholder="Course" value="<%= h(params[:course]) %>">
-      <button type="submit">Add Details</button>
+      <label for="regions">Select a region:</label>
+      <select id="region" name="region">
+        <option value="North America">North America</option>
+        <option value="South America">South America</option>
+        <option value="Central & South Asia">Central & South Asia</option>
+        <option value="Southeastern Asia">Southeastern Asia</option>
+        <option value="Northeastern Asia">Northeastern Asia</option>
+        <option value="Australia and Oceania">Australia and Oceania </option>
+        <option value="Northern Europe">Northern Europe</option>
+        <option value="Southern Europe">Southern Europe</option>
+        <option value="Eastern Europe">Eastern Europe</option>
+        <option value="Western Europe">Western Europe</option>
+        <option value="Middle East">Middle East</option>
+        <option value="Northern Africa">Northern Africa</option>
+        <option value="Southern Africa">Southern Africa</option>
+        <option value="Central America">Central America</option>
+        <option value="Caribbean">Caribbean</option>
+      </select>
+      <label for="degrees">Select a degree type:</label>
+      <select id="degrees" name="degree">
+        <option value="Undergraduate">Undergraduate</option>
+        <option value="Postgraduate">Postgraduate</option>
+        <option value="PHD">PHD</option>
+      </select>
+      <input type="submit" value="Submit">
     </form>
 </body>
 <%= erb :"common/footer" %>
