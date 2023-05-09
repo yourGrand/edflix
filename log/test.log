@@ -11995,4 +11995,320 @@ I, [2023-05-09T19:30:59.813431 #338]  INFO -- : (0.000473s) SELECT * FROM `login
 I, [2023-05-09T19:30:59.814823 #338]  INFO -- : (0.000598s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
 I, [2023-05-09T19:30:59.815954 #338]  INFO -- : (0.000556s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
 I, [2023-05-09T19:30:59.818787 #338]  INFO -- : (0.000708s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+<<<<<<< Updated upstream
 >>>>>>> 119137a5305eca785eaea23e14ac7f6a6aa5d8df
+=======
+I, [2023-05-09T20:07:03.885015 #397]  INFO -- : (0.000324s) PRAGMA foreign_keys = 1
+I, [2023-05-09T20:07:03.885314 #397]  INFO -- : (0.000024s) PRAGMA case_sensitive_like = 1
+I, [2023-05-09T20:07:03.886132 #397]  INFO -- : (0.000088s) SELECT sqlite_version()
+I, [2023-05-09T20:07:03.886544 #397]  INFO -- : (0.000168s) PRAGMA table_xinfo('courses')
+I, [2023-05-09T20:07:03.887606 #397]  INFO -- : (0.000183s) PRAGMA table_xinfo('votes')
+I, [2023-05-09T20:07:03.890747 #397]  INFO -- : (0.000170s) PRAGMA table_xinfo('login_details')
+I, [2023-05-09T20:07:03.892018 #397]  INFO -- : (0.000203s) PRAGMA table_xinfo('users')
+I, [2023-05-09T20:07:07.100628 #397]  INFO -- : (0.000255s) SELECT * FROM `courses`
+I, [2023-05-09T20:07:35.068003 #397]  INFO -- : (0.000193s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T20:07:35.078500 #397]  INFO -- : (0.000051s) BEGIN
+I, [2023-05-09T20:07:35.079483 #397]  INFO -- : (0.000549s) UPDATE `login_details` SET `salt` = X'a49a7bda1559e17368510e3e4a8c4aa7', `password_crypt` = X'a6957b0151295e1f9b876b60cf034fd0' WHERE (`login_id` = 4)
+I, [2023-05-09T20:07:35.158271 #397]  INFO -- : (0.078631s) COMMIT
+I, [2023-05-09T20:07:35.158878 #397]  INFO -- : (0.000220s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T20:07:35.159416 #397]  INFO -- : (0.000139s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T20:07:35.160035 #397]  INFO -- : (0.000187s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T20:07:35.160487 #397]  INFO -- : (0.000176s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T20:07:35.160844 #397]  INFO -- : (0.000121s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T20:07:35.161273 #397]  INFO -- : (0.000132s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T20:07:35.161555 #397]  INFO -- : (0.000094s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T20:07:35.162158 #397]  INFO -- : (0.000123s) SELECT * FROM `users` INNER JOIN `regions` ON (`regions`.`region_id` = `users`.`region`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T20:07:35.162433 #397]  INFO -- : (0.000094s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T20:07:35.162766 #397]  INFO -- : (0.000079s) SELECT `course_title` FROM `users` INNER JOIN `courses` ON (`courses`.`course_id` = `users`.`course`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T20:07:35.163030 #397]  INFO -- : (0.000092s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T20:07:35.163386 #397]  INFO -- : (0.000116s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T20:07:35.163644 #397]  INFO -- : (0.000092s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T20:07:35.163996 #397]  INFO -- : (0.000113s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T20:07:35.164269 #397]  INFO -- : (0.000092s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T20:07:35.164699 #397]  INFO -- : (0.000122s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T20:07:35.164974 #397]  INFO -- : (0.000093s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T20:07:35.165334 #397]  INFO -- : (0.000114s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T21:08:57.249075 #397]  INFO -- : (0.019102s) SELECT * FROM `courses`
+I, [2023-05-09T21:26:54.244872 #3072]  INFO -- : (0.000374s) PRAGMA foreign_keys = 1
+I, [2023-05-09T21:26:54.245098 #3072]  INFO -- : (0.000027s) PRAGMA case_sensitive_like = 1
+I, [2023-05-09T21:26:54.245998 #3072]  INFO -- : (0.000101s) SELECT sqlite_version()
+I, [2023-05-09T21:26:54.246449 #3072]  INFO -- : (0.000235s) PRAGMA table_xinfo('courses')
+I, [2023-05-09T21:26:54.247862 #3072]  INFO -- : (0.000214s) PRAGMA table_xinfo('votes')
+I, [2023-05-09T21:26:54.252001 #3072]  INFO -- : (0.000246s) PRAGMA table_xinfo('login_details')
+I, [2023-05-09T21:26:54.253851 #3072]  INFO -- : (0.000308s) PRAGMA table_xinfo('users')
+I, [2023-05-09T21:30:05.366576 #3160]  INFO -- : (0.000277s) PRAGMA foreign_keys = 1
+I, [2023-05-09T21:30:05.366711 #3160]  INFO -- : (0.000020s) PRAGMA case_sensitive_like = 1
+I, [2023-05-09T21:30:05.367502 #3160]  INFO -- : (0.000077s) SELECT sqlite_version()
+I, [2023-05-09T21:30:05.367832 #3160]  INFO -- : (0.000160s) PRAGMA table_xinfo('courses')
+I, [2023-05-09T21:30:05.368854 #3160]  INFO -- : (0.000154s) PRAGMA table_xinfo('votes')
+I, [2023-05-09T21:30:05.371540 #3160]  INFO -- : (0.000150s) PRAGMA table_xinfo('login_details')
+I, [2023-05-09T21:30:05.372683 #3160]  INFO -- : (0.000196s) PRAGMA table_xinfo('users')
+I, [2023-05-09T21:30:53.197018 #3213]  INFO -- : (0.000280s) PRAGMA foreign_keys = 1
+I, [2023-05-09T21:30:53.197158 #3213]  INFO -- : (0.000020s) PRAGMA case_sensitive_like = 1
+I, [2023-05-09T21:30:53.197811 #3213]  INFO -- : (0.000074s) SELECT sqlite_version()
+I, [2023-05-09T21:30:53.198147 #3213]  INFO -- : (0.000168s) PRAGMA table_xinfo('courses')
+I, [2023-05-09T21:30:53.199131 #3213]  INFO -- : (0.000161s) PRAGMA table_xinfo('votes')
+I, [2023-05-09T21:30:53.201867 #3213]  INFO -- : (0.000153s) PRAGMA table_xinfo('login_details')
+I, [2023-05-09T21:30:53.203106 #3213]  INFO -- : (0.000327s) PRAGMA table_xinfo('users')
+I, [2023-05-09T21:31:14.017512 #3278]  INFO -- : (0.000277s) PRAGMA foreign_keys = 1
+I, [2023-05-09T21:31:14.017642 #3278]  INFO -- : (0.000019s) PRAGMA case_sensitive_like = 1
+I, [2023-05-09T21:31:14.018281 #3278]  INFO -- : (0.000078s) SELECT sqlite_version()
+I, [2023-05-09T21:31:14.018618 #3278]  INFO -- : (0.000162s) PRAGMA table_xinfo('courses')
+I, [2023-05-09T21:31:14.019601 #3278]  INFO -- : (0.000157s) PRAGMA table_xinfo('votes')
+I, [2023-05-09T21:31:14.022354 #3278]  INFO -- : (0.000155s) PRAGMA table_xinfo('login_details')
+I, [2023-05-09T21:31:14.023475 #3278]  INFO -- : (0.000191s) PRAGMA table_xinfo('users')
+I, [2023-05-09T21:31:40.329455 #3318]  INFO -- : (0.000295s) PRAGMA foreign_keys = 1
+I, [2023-05-09T21:31:40.329737 #3318]  INFO -- : (0.000028s) PRAGMA case_sensitive_like = 1
+I, [2023-05-09T21:31:40.330552 #3318]  INFO -- : (0.000109s) SELECT sqlite_version()
+I, [2023-05-09T21:31:40.331125 #3318]  INFO -- : (0.000324s) PRAGMA table_xinfo('courses')
+I, [2023-05-09T21:31:40.332344 #3318]  INFO -- : (0.000195s) PRAGMA table_xinfo('votes')
+I, [2023-05-09T21:31:40.335410 #3318]  INFO -- : (0.000178s) PRAGMA table_xinfo('login_details')
+I, [2023-05-09T21:31:40.336800 #3318]  INFO -- : (0.000198s) PRAGMA table_xinfo('users')
+I, [2023-05-09T21:31:44.604074 #3318]  INFO -- : (0.000195s) SELECT * FROM `courses`
+I, [2023-05-09T21:31:58.628269 #3318]  INFO -- : (0.000183s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T21:31:58.637733 #3318]  INFO -- : (0.000045s) BEGIN
+I, [2023-05-09T21:31:58.638339 #3318]  INFO -- : (0.000266s) UPDATE `login_details` SET `salt` = X'18cdc2ed48003b8aa3e9c352292babe9', `password_crypt` = X'53383bb6c8e8ac4b1ea0cc2e1b6b341e' WHERE (`login_id` = 4)
+I, [2023-05-09T21:31:58.736458 #3318]  INFO -- : (0.097979s) COMMIT
+I, [2023-05-09T21:31:58.736920 #3318]  INFO -- : (0.000153s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T21:31:58.737234 #3318]  INFO -- : (0.000093s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T21:31:58.737612 #3318]  INFO -- : (0.000132s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T21:31:58.737823 #3318]  INFO -- : (0.000089s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T21:31:58.738015 #3318]  INFO -- : (0.000085s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T21:31:58.738305 #3318]  INFO -- : (0.000110s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T21:31:58.738507 #3318]  INFO -- : (0.000086s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T21:31:58.738963 #3318]  INFO -- : (0.000132s) SELECT * FROM `users` INNER JOIN `regions` ON (`regions`.`region_id` = `users`.`region`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T21:31:58.739178 #3318]  INFO -- : (0.000090s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T21:31:58.739464 #3318]  INFO -- : (0.000076s) SELECT `course_title` FROM `users` INNER JOIN `courses` ON (`courses`.`course_id` = `users`.`course`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T21:31:58.739667 #3318]  INFO -- : (0.000086s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T21:31:58.739959 #3318]  INFO -- : (0.000114s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T21:31:58.740158 #3318]  INFO -- : (0.000085s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T21:31:58.740500 #3318]  INFO -- : (0.000157s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T21:31:58.740707 #3318]  INFO -- : (0.000087s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T21:31:58.741028 #3318]  INFO -- : (0.000122s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T21:31:58.741253 #3318]  INFO -- : (0.000108s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T21:31:58.741547 #3318]  INFO -- : (0.000117s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:04:31.702837 #3878]  INFO -- : (0.001016s) PRAGMA foreign_keys = 1
+I, [2023-05-09T22:04:31.706358 #3878]  INFO -- : (0.000070s) PRAGMA case_sensitive_like = 1
+I, [2023-05-09T22:04:31.707401 #3878]  INFO -- : (0.000135s) SELECT sqlite_version()
+I, [2023-05-09T22:04:31.707875 #3878]  INFO -- : (0.000229s) PRAGMA table_xinfo('courses')
+I, [2023-05-09T22:04:31.709213 #3878]  INFO -- : (0.000252s) PRAGMA table_xinfo('votes')
+I, [2023-05-09T22:04:31.712712 #3878]  INFO -- : (0.000290s) PRAGMA table_xinfo('login_details')
+I, [2023-05-09T22:04:31.714554 #3878]  INFO -- : (0.000329s) PRAGMA table_xinfo('users')
+I, [2023-05-09T22:04:36.642968 #3878]  INFO -- : (0.000204s) SELECT * FROM `courses`
+I, [2023-05-09T22:04:47.673249 #3878]  INFO -- : (0.000318s) SELECT * FROM `login_details` WHERE (`username` = 'admin1') LIMIT 1
+I, [2023-05-09T22:04:47.688876 #3878]  INFO -- : (0.000057s) BEGIN
+I, [2023-05-09T22:04:47.690243 #3878]  INFO -- : (0.000845s) UPDATE `login_details` SET `salt` = X'eaa59958037d15fa71f911c74366df27', `password_crypt` = X'0fe07becf43f3a2c09b0bd86a9fe26b4' WHERE (`login_id` = 1)
+I, [2023-05-09T22:04:47.759021 #3878]  INFO -- : (0.068445s) COMMIT
+I, [2023-05-09T22:04:47.759605 #3878]  INFO -- : (0.000187s) SELECT * FROM `login_details` WHERE (`username` = 'admin1') LIMIT 1
+I, [2023-05-09T22:04:47.759959 #3878]  INFO -- : (0.000110s) SELECT * FROM `login_details` WHERE (`username` = 'admin1') LIMIT 1
+I, [2023-05-09T22:04:47.760386 #3878]  INFO -- : (0.000157s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 1) LIMIT 1
+I, [2023-05-09T22:04:47.760946 #3878]  INFO -- : (0.000120s) SELECT * FROM `login_details` WHERE (`username` = 'admin1') LIMIT 1
+I, [2023-05-09T22:04:47.761256 #3878]  INFO -- : (0.000101s) SELECT * FROM `login_details` WHERE (`username` = 'admin1') LIMIT 1
+I, [2023-05-09T22:04:47.762004 #3878]  INFO -- : (0.000453s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 1) LIMIT 1
+I, [2023-05-09T22:04:47.762435 #3878]  INFO -- : (0.000106s) SELECT * FROM `login_details` WHERE (`username` = 'admin1') LIMIT 1
+I, [2023-05-09T22:04:47.762852 #3878]  INFO -- : (0.000126s) SELECT * FROM `users` INNER JOIN `regions` ON (`regions`.`region_id` = `users`.`region`) WHERE (`user_id` = 1) LIMIT 1
+I, [2023-05-09T22:04:47.763149 #3878]  INFO -- : (0.000110s) SELECT * FROM `login_details` WHERE (`username` = 'admin1') LIMIT 1
+I, [2023-05-09T22:04:47.765013 #3878]  INFO -- : (0.001225s) SELECT `course_title` FROM `users` INNER JOIN `courses` ON (`courses`.`course_id` = `users`.`course`) WHERE (`user_id` = 1) LIMIT 1
+I, [2023-05-09T22:04:47.765828 #3878]  INFO -- : (0.000280s) SELECT * FROM `login_details` WHERE (`username` = 'admin1') LIMIT 1
+I, [2023-05-09T22:04:47.767946 #3878]  INFO -- : (0.001045s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 1) LIMIT 1
+I, [2023-05-09T22:04:47.769455 #3878]  INFO -- : (0.000310s) SELECT * FROM `login_details` WHERE (`username` = 'admin1') LIMIT 1
+I, [2023-05-09T22:04:47.770231 #3878]  INFO -- : (0.000175s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 1) LIMIT 1
+I, [2023-05-09T22:04:47.770580 #3878]  INFO -- : (0.000124s) SELECT * FROM `login_details` WHERE (`username` = 'admin1') LIMIT 1
+I, [2023-05-09T22:04:47.771041 #3878]  INFO -- : (0.000149s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 1) LIMIT 1
+I, [2023-05-09T22:04:51.978972 #3878]  INFO -- : (0.000178s) SELECT * FROM `login_details` WHERE (`username` = 'admin1') LIMIT 1
+I, [2023-05-09T22:04:51.979493 #3878]  INFO -- : (0.000160s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 1) LIMIT 1
+I, [2023-05-09T22:05:14.930302 #3878]  INFO -- : (0.000540s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:05:14.939629 #3878]  INFO -- : (0.000047s) BEGIN
+I, [2023-05-09T22:05:14.940617 #3878]  INFO -- : (0.000534s) UPDATE `login_details` SET `salt` = X'14cbd3f23516a0a0d6c6fb69ee8aff92', `password_crypt` = X'f7eeac358e6ffed27d20391a66e69fa6' WHERE (`login_id` = 4)
+I, [2023-05-09T22:05:15.026350 #3878]  INFO -- : (0.085549s) COMMIT
+I, [2023-05-09T22:05:15.026846 #3878]  INFO -- : (0.000192s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:05:15.027120 #3878]  INFO -- : (0.000140s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:05:15.027570 #3878]  INFO -- : (0.000151s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:05:15.027844 #3878]  INFO -- : (0.000109s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:05:15.028070 #3878]  INFO -- : (0.000103s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:05:15.028480 #3878]  INFO -- : (0.000189s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:05:15.028744 #3878]  INFO -- : (0.000106s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:05:15.029093 #3878]  INFO -- : (0.000133s) SELECT * FROM `users` INNER JOIN `regions` ON (`regions`.`region_id` = `users`.`region`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:05:15.029319 #3878]  INFO -- : (0.000103s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:05:15.029630 #3878]  INFO -- : (0.000092s) SELECT `course_title` FROM `users` INNER JOIN `courses` ON (`courses`.`course_id` = `users`.`course`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:05:15.029855 #3878]  INFO -- : (0.000103s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:05:15.030189 #3878]  INFO -- : (0.000132s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:05:15.030408 #3878]  INFO -- : (0.000102s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:05:15.030741 #3878]  INFO -- : (0.000131s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:05:15.030961 #3878]  INFO -- : (0.000102s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:05:15.031288 #3878]  INFO -- : (0.000129s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:05:15.031535 #3878]  INFO -- : (0.000104s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:05:15.031866 #3878]  INFO -- : (0.000131s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:15:18.912321 #4325]  INFO -- : (0.000396s) PRAGMA foreign_keys = 1
+I, [2023-05-09T22:15:18.912547 #4325]  INFO -- : (0.000028s) PRAGMA case_sensitive_like = 1
+I, [2023-05-09T22:15:18.913580 #4325]  INFO -- : (0.000120s) SELECT sqlite_version()
+I, [2023-05-09T22:15:18.914083 #4325]  INFO -- : (0.000252s) PRAGMA table_xinfo('courses')
+I, [2023-05-09T22:15:18.915693 #4325]  INFO -- : (0.000266s) PRAGMA table_xinfo('votes')
+I, [2023-05-09T22:15:18.920085 #4325]  INFO -- : (0.000267s) PRAGMA table_xinfo('login_details')
+I, [2023-05-09T22:15:18.922284 #4325]  INFO -- : (0.000319s) PRAGMA table_xinfo('users')
+I, [2023-05-09T22:15:23.305431 #4325]  INFO -- : (0.000202s) SELECT * FROM `courses`
+I, [2023-05-09T22:16:58.011820 #4325]  INFO -- : (0.000178s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:16:58.021230 #4325]  INFO -- : (0.000035s) BEGIN
+I, [2023-05-09T22:16:58.021976 #4325]  INFO -- : (0.000400s) UPDATE `login_details` SET `salt` = X'b0bb58ca172c7c9b3899e3b4174ae5e0', `password_crypt` = X'fb763164a98f3d70295f4b63928970ea' WHERE (`login_id` = 4)
+I, [2023-05-09T22:16:58.102120 #4325]  INFO -- : (0.080024s) COMMIT
+I, [2023-05-09T22:16:58.102652 #4325]  INFO -- : (0.000151s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:16:58.103047 #4325]  INFO -- : (0.000101s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:16:58.103492 #4325]  INFO -- : (0.000153s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:16:58.103861 #4325]  INFO -- : (0.000103s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:16:58.104242 #4325]  INFO -- : (0.000130s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:16:58.104768 #4325]  INFO -- : (0.000171s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:16:58.105022 #4325]  INFO -- : (0.000094s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:16:58.105383 #4325]  INFO -- : (0.000117s) SELECT * FROM `users` INNER JOIN `regions` ON (`regions`.`region_id` = `users`.`region`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:16:58.105626 #4325]  INFO -- : (0.000098s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:16:58.105972 #4325]  INFO -- : (0.000105s) SELECT `course_title` FROM `users` INNER JOIN `courses` ON (`courses`.`course_id` = `users`.`course`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:16:58.106254 #4325]  INFO -- : (0.000121s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:16:58.106607 #4325]  INFO -- : (0.000138s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:16:58.106835 #4325]  INFO -- : (0.000090s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:16:58.107160 #4325]  INFO -- : (0.000120s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:16:58.107389 #4325]  INFO -- : (0.000090s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:16:58.107717 #4325]  INFO -- : (0.000119s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:16:58.107943 #4325]  INFO -- : (0.000089s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:16:58.108265 #4325]  INFO -- : (0.000118s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:17:02.192948 #4325]  INFO -- : (0.000168s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:17:02.193527 #4325]  INFO -- : (0.000150s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:19:01.357090 #4325]  INFO -- : (0.000175s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:19:01.357546 #4325]  INFO -- : (0.000134s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:25:32.664628 #4522]  INFO -- : (0.000349s) PRAGMA foreign_keys = 1
+I, [2023-05-09T22:25:32.664862 #4522]  INFO -- : (0.000024s) PRAGMA case_sensitive_like = 1
+I, [2023-05-09T22:25:32.665612 #4522]  INFO -- : (0.000085s) SELECT sqlite_version()
+I, [2023-05-09T22:25:32.666006 #4522]  INFO -- : (0.000182s) PRAGMA table_xinfo('courses')
+I, [2023-05-09T22:25:32.666998 #4522]  INFO -- : (0.000161s) PRAGMA table_xinfo('votes')
+I, [2023-05-09T22:25:32.669995 #4522]  INFO -- : (0.000168s) PRAGMA table_xinfo('login_details')
+I, [2023-05-09T22:25:32.671760 #4522]  INFO -- : (0.000386s) PRAGMA table_xinfo('users')
+I, [2023-05-09T22:25:36.443945 #4522]  INFO -- : (0.000199s) SELECT * FROM `courses`
+I, [2023-05-09T22:26:44.225911 #4522]  INFO -- : (0.000175s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:26:44.234921 #4522]  INFO -- : (0.000025s) BEGIN
+I, [2023-05-09T22:26:44.235475 #4522]  INFO -- : (0.000316s) UPDATE `login_details` SET `salt` = X'9ba2e600b33d0773b4ecc0b7abb3dc87', `password_crypt` = X'2fd704050f74a263157c8ad8268a4f0d' WHERE (`login_id` = 4)
+I, [2023-05-09T22:26:44.305927 #4522]  INFO -- : (0.070310s) COMMIT
+I, [2023-05-09T22:26:44.308806 #4522]  INFO -- : (0.000170s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:26:44.309221 #4522]  INFO -- : (0.000098s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:26:44.309653 #4522]  INFO -- : (0.000147s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:26:44.309903 #4522]  INFO -- : (0.000095s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:26:44.310154 #4522]  INFO -- : (0.000092s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:26:44.310488 #4522]  INFO -- : (0.000115s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:26:44.310733 #4522]  INFO -- : (0.000095s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:26:44.311074 #4522]  INFO -- : (0.000116s) SELECT * FROM `users` INNER JOIN `regions` ON (`regions`.`region_id` = `users`.`region`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:26:44.311318 #4522]  INFO -- : (0.000095s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:26:44.311655 #4522]  INFO -- : (0.000079s) SELECT `course_title` FROM `users` INNER JOIN `courses` ON (`courses`.`course_id` = `users`.`course`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:26:44.312006 #4522]  INFO -- : (0.000097s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:26:44.312335 #4522]  INFO -- : (0.000112s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:26:44.312600 #4522]  INFO -- : (0.000091s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:26:44.312926 #4522]  INFO -- : (0.000112s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:26:44.313163 #4522]  INFO -- : (0.000098s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:26:44.313486 #4522]  INFO -- : (0.000113s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:26:44.313720 #4522]  INFO -- : (0.000096s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:26:44.314038 #4522]  INFO -- : (0.000112s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:26:47.279278 #4522]  INFO -- : (0.000166s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:26:47.279733 #4522]  INFO -- : (0.000127s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:26:51.959236 #4522]  INFO -- : (0.000037s) BEGIN
+I, [2023-05-09T22:26:51.960022 #4522]  INFO -- : (0.000350s) INSERT INTO `courses` (`course_title`, `course_description`, `course_rating`, `course_link`, `image_path`, `course_duration`, `course_pre`) VALUES ('', '', '0', '', 'images/', '', '') RETURNING *
+I, [2023-05-09T22:26:52.036075 #4522]  INFO -- : (0.075913s) COMMIT
+I, [2023-05-09T22:27:03.289102 #4522]  INFO -- : (0.000046s) BEGIN
+I, [2023-05-09T22:27:03.291637 #4522]  INFO -- : (0.002081s) INSERT INTO `courses` (`course_title`, `course_description`, `course_rating`, `course_link`, `image_path`, `course_duration`, `course_pre`) VALUES ('tartar', '', '0', '', 'images/', '', '') RETURNING *
+I, [2023-05-09T22:27:03.363262 #4522]  INFO -- : (0.071371s) COMMIT
+I, [2023-05-09T22:35:04.521541 #4522]  INFO -- : (0.000041s) BEGIN
+I, [2023-05-09T22:35:04.522190 #4522]  INFO -- : (0.000399s) INSERT INTO `courses` (`course_title`, `course_description`, `course_rating`, `course_link`, `image_path`, `course_duration`, `course_pre`) VALUES ('Introduction to Machine Learning on AWS', 'In this course, we start with some services where the training model and raw inference is handled for you by Amazon. We''ll cover services which do the heavy lifting of computer vision, data extraction and analysis, language processing, speech recognition, translation, ML model training and virtual agents. You''ll think of your current solutions and see where you can improve these solutions using AI, ML or Deep Learning. All of these solutions can work with your current applications to make some improvements in your user experience or the business needs of your application.', '0', 'https://www.edx.org/course/introduction-to-machine-learning-on-aws?webview=false&campaign=Introduction+to+Machine+Learning+on+AWS&source=edx&product_category=course&placement_url=https%3A%2F%2Fwww.edx.org%2Fschool%2Faws', 'images/ML_AWS.jpeg', '2 weeks', 'Prior application development experience') RETURNING *
+I, [2023-05-09T22:35:04.593028 #4522]  INFO -- : (0.070715s) COMMIT
+I, [2023-05-09T22:36:32.541218 #4522]  INFO -- : (0.000034s) BEGIN
+I, [2023-05-09T22:36:32.541879 #4522]  INFO -- : (0.000420s) INSERT INTO `courses` (`course_title`, `course_description`, `course_rating`, `course_link`, `image_path`, `course_duration`, `course_pre`) VALUES ('Introduction to Machine Learning on AWS', 'In this course, we start with some services where the training model and raw inference is handled for you by Amazon. We''ll cover services which do the heavy lifting of computer vision, data extraction and analysis, language processing, speech recognition, translation, ML model training and virtual agents. You''ll think of your current solutions and see where you can improve these solutions using AI, ML or Deep Learning. All of these solutions can work with your current applications to make some improvements in your user experience or the business needs of your application.', '0', 'https://www.edx.org/course/introduction-to-machine-learning-on-aws?webview=false&campaign=Introduction+to+Machine+Learning+on+AWS&source=edx&product_category=course&placement_url=https%3A%2F%2Fwww.edx.org%2Fschool%2Faws', 'images/ML_AWS.jpeg', '2 weeks', 'Prior application development experience') RETURNING *
+I, [2023-05-09T22:36:32.619421 #4522]  INFO -- : (0.077431s) COMMIT
+I, [2023-05-09T22:37:13.181823 #4522]  INFO -- : (0.000035s) BEGIN
+I, [2023-05-09T22:37:13.182477 #4522]  INFO -- : (0.000410s) INSERT INTO `courses` (`course_title`, `course_description`, `course_rating`, `course_link`, `image_path`, `course_duration`, `course_pre`) VALUES ('Introduction to Machine Learning on AWS', 'In this course, we start with some services where the training model and raw inference is handled for you by Amazon. We''ll cover services which do the heavy lifting of computer vision, data extraction and analysis, language processing, speech recognition, translation, ML model training and virtual agents. You''ll think of your current solutions and see where you can improve these solutions using AI, ML or Deep Learning. All of these solutions can work with your current applications to make some improvements in your user experience or the business needs of your application.', '0', 'https://www.edx.org/course/introduction-to-machine-learning-on-aws?webview=false&campaign=Introduction+to+Machine+Learning+on+AWS&source=edx&product_category=course&placement_url=https%3A%2F%2Fwww.edx.org%2Fschool%2Faws', 'images/ML_AWS.jpeg', '2 weeks', 'Prior application development experience') RETURNING *
+I, [2023-05-09T22:37:13.251160 #4522]  INFO -- : (0.068587s) COMMIT
+I, [2023-05-09T22:44:00.039295 #4813]  INFO -- : (0.000280s) PRAGMA foreign_keys = 1
+I, [2023-05-09T22:44:00.039435 #4813]  INFO -- : (0.000021s) PRAGMA case_sensitive_like = 1
+I, [2023-05-09T22:44:00.040100 #4813]  INFO -- : (0.000078s) SELECT sqlite_version()
+I, [2023-05-09T22:44:00.040470 #4813]  INFO -- : (0.000199s) PRAGMA table_xinfo('courses')
+I, [2023-05-09T22:44:00.041420 #4813]  INFO -- : (0.000158s) PRAGMA table_xinfo('votes')
+I, [2023-05-09T22:44:00.044091 #4813]  INFO -- : (0.000152s) PRAGMA table_xinfo('login_details')
+I, [2023-05-09T22:44:00.045252 #4813]  INFO -- : (0.000188s) PRAGMA table_xinfo('users')
+I, [2023-05-09T22:44:04.276602 #4813]  INFO -- : (0.000285s) SELECT * FROM `courses`
+I, [2023-05-09T22:45:10.390219 #4813]  INFO -- : (0.000227s) SELECT * FROM `courses`
+I, [2023-05-09T22:51:42.153833 #5568]  INFO -- : (0.000281s) PRAGMA foreign_keys = 1
+I, [2023-05-09T22:51:42.154078 #5568]  INFO -- : (0.000023s) PRAGMA case_sensitive_like = 1
+I, [2023-05-09T22:51:42.154780 #5568]  INFO -- : (0.000078s) SELECT sqlite_version()
+I, [2023-05-09T22:51:42.155171 #5568]  INFO -- : (0.000165s) PRAGMA table_xinfo('courses')
+I, [2023-05-09T22:51:42.156190 #5568]  INFO -- : (0.000158s) PRAGMA table_xinfo('votes')
+I, [2023-05-09T22:51:42.159004 #5568]  INFO -- : (0.000152s) PRAGMA table_xinfo('login_details')
+I, [2023-05-09T22:51:42.160177 #5568]  INFO -- : (0.000194s) PRAGMA table_xinfo('users')
+I, [2023-05-09T22:51:45.797017 #5568]  INFO -- : (0.000194s) SELECT * FROM `courses`
+I, [2023-05-09T22:52:09.376627 #5568]  INFO -- : (0.000245s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:52:09.386257 #5568]  INFO -- : (0.000027s) BEGIN
+I, [2023-05-09T22:52:09.386847 #5568]  INFO -- : (0.000344s) UPDATE `login_details` SET `salt` = X'4e8dff1eb780e18986658cd02cf43635', `password_crypt` = X'7972abf034281d55445a2e38fa4b6bb8' WHERE (`login_id` = 4)
+I, [2023-05-09T22:52:09.445224 #5568]  INFO -- : (0.058260s) COMMIT
+I, [2023-05-09T22:52:09.445727 #5568]  INFO -- : (0.000159s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:52:09.446085 #5568]  INFO -- : (0.000097s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:52:09.446499 #5568]  INFO -- : (0.000133s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:52:09.446751 #5568]  INFO -- : (0.000094s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:52:09.446992 #5568]  INFO -- : (0.000092s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:52:09.447327 #5568]  INFO -- : (0.000118s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:52:09.447568 #5568]  INFO -- : (0.000094s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:52:09.447939 #5568]  INFO -- : (0.000120s) SELECT * FROM `users` INNER JOIN `regions` ON (`regions`.`region_id` = `users`.`region`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:52:09.448206 #5568]  INFO -- : (0.000102s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:52:09.448576 #5568]  INFO -- : (0.000081s) SELECT `course_title` FROM `users` INNER JOIN `courses` ON (`courses`.`course_id` = `users`.`course`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:52:09.448821 #5568]  INFO -- : (0.000097s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:52:09.449144 #5568]  INFO -- : (0.000112s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:52:09.449373 #5568]  INFO -- : (0.000092s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:52:09.449691 #5568]  INFO -- : (0.000111s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:52:09.449919 #5568]  INFO -- : (0.000091s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:52:09.450248 #5568]  INFO -- : (0.000124s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:52:09.450469 #5568]  INFO -- : (0.000092s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:52:09.450792 #5568]  INFO -- : (0.000110s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:52:12.372889 #5568]  INFO -- : (0.000174s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:52:12.373396 #5568]  INFO -- : (0.000129s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:53:35.854739 #5568]  INFO -- : (0.000163s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:53:35.855207 #5568]  INFO -- : (0.000127s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:53:54.482664 #5568]  INFO -- : (0.000216s) SELECT * FROM `courses`
+I, [2023-05-09T22:54:00.890471 #5568]  INFO -- : (0.000168s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:54:00.890982 #5568]  INFO -- : (0.000127s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 4) LIMIT 1
+I, [2023-05-09T22:55:05.037633 #5568]  INFO -- : (0.000037s) BEGIN
+I, [2023-05-09T22:55:05.038440 #5568]  INFO -- : (0.000456s) INSERT INTO `courses` (`course_title`, `course_description`, `course_rating`, `course_link`, `image_path`, `course_duration`, `course_pre`) VALUES ('Introduction to Machine Learning on AWS', 'In this course, we start with some services where the training model and raw inference is handled for you by Amazon. We''ll cover services which do the heavy lifting of computer vision, data extraction and analysis, language processing, speech recognition, translation, ML model training and virtual agents. You''ll think of your current solutions and see where you can improve these solutions using AI, ML or Deep Learning. All of these solutions can work with your current applications to make some improvements in your user experience or the business needs of your application.', '0', 'https://www.edx.org/course/introduction-to-machine-learning-on-aws?webview=false&campaign=Introduction+to+Machine+Learning+on+AWS&source=edx&product_category=course&placement_url=https%3A%2F%2Fwww.edx.org%2Fschool%2Faws', 'images/ML_AWS.jpeg', '2 weeks', 'Prior application development experience') RETURNING *
+I, [2023-05-09T22:55:05.113837 #5568]  INFO -- : (0.075248s) COMMIT
+I, [2023-05-09T22:55:14.807345 #5568]  INFO -- : (0.000197s) SELECT * FROM `courses`
+I, [2023-05-09T22:55:19.774612 #5568]  INFO -- : (0.000195s) SELECT * FROM `courses` WHERE (`course_id` = '5') LIMIT 1
+I, [2023-05-09T22:55:19.774965 #5568]  INFO -- : (0.000107s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:55:19.775403 #5568]  INFO -- : (0.000113s) SELECT * FROM `votes` WHERE ((UPPER(`course`) LIKE UPPER('%5%') ESCAPE '\') AND (UPPER(`user`) LIKE UPPER('%4%') ESCAPE '\')) LIMIT 1
+I, [2023-05-09T22:55:58.274583 #5568]  INFO -- : (0.000194s) SELECT * FROM `courses`
+I, [2023-05-09T22:56:07.940826 #5568]  INFO -- : (0.000200s) SELECT * FROM `courses` WHERE (`course_id` = '4') LIMIT 1
+I, [2023-05-09T22:56:07.941175 #5568]  INFO -- : (0.000132s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:56:07.941631 #5568]  INFO -- : (0.000128s) SELECT * FROM `votes` WHERE ((UPPER(`course`) LIKE UPPER('%4%') ESCAPE '\') AND (UPPER(`user`) LIKE UPPER('%4%') ESCAPE '\')) LIMIT 1
+I, [2023-05-09T22:56:10.194982 #5568]  INFO -- : (0.000162s) SELECT * FROM `courses` WHERE (`course_id` = '4') LIMIT 1
+I, [2023-05-09T22:56:10.195345 #5568]  INFO -- : (0.000104s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:56:10.195688 #5568]  INFO -- : (0.000099s) SELECT * FROM `votes` WHERE ((UPPER(`course`) LIKE UPPER('%4%') ESCAPE '\') AND (UPPER(`user`) LIKE UPPER('%4%') ESCAPE '\')) LIMIT 1
+I, [2023-05-09T22:56:10.196126 #5568]  INFO -- : (0.000021s) BEGIN
+I, [2023-05-09T22:56:10.197092 #5568]  INFO -- : (0.000754s) INSERT INTO `votes` (`user`, `course`, `upvote`, `downvote`) VALUES (4, 4, 0, 0) RETURNING *
+I, [2023-05-09T22:56:10.261643 #5568]  INFO -- : (0.064403s) COMMIT
+I, [2023-05-09T22:56:10.261925 #5568]  INFO -- : (0.000039s) BEGIN
+I, [2023-05-09T22:56:10.262412 #5568]  INFO -- : (0.000252s) UPDATE `votes` SET `upvote` = 1 WHERE (`vote_id` = 4)
+I, [2023-05-09T22:56:10.330680 #5568]  INFO -- : (0.068170s) COMMIT
+I, [2023-05-09T22:56:10.331016 #5568]  INFO -- : (0.000032s) BEGIN
+I, [2023-05-09T22:56:10.331398 #5568]  INFO -- : (0.000182s) UPDATE `courses` SET `course_rating` = '1' WHERE (`course_id` = 4)
+I, [2023-05-09T22:56:10.396000 #5568]  INFO -- : (0.064510s) COMMIT
+I, [2023-05-09T22:56:12.634833 #5568]  INFO -- : (0.000196s) SELECT * FROM `courses`
+I, [2023-05-09T22:56:22.768074 #5568]  INFO -- : (0.000160s) SELECT * FROM `courses` WHERE (`course_id` = '4') LIMIT 1
+I, [2023-05-09T22:56:22.768458 #5568]  INFO -- : (0.000105s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:56:22.768963 #5568]  INFO -- : (0.000201s) SELECT * FROM `votes` WHERE ((UPPER(`course`) LIKE UPPER('%4%') ESCAPE '\') AND (UPPER(`user`) LIKE UPPER('%4%') ESCAPE '\')) LIMIT 1
+I, [2023-05-09T22:56:24.708391 #5568]  INFO -- : (0.000201s) SELECT * FROM `courses` WHERE (`course_id` = '4') LIMIT 1
+I, [2023-05-09T22:56:24.708787 #5568]  INFO -- : (0.000138s) SELECT * FROM `login_details` WHERE (`username` = 'moderator1') LIMIT 1
+I, [2023-05-09T22:56:24.709308 #5568]  INFO -- : (0.000201s) SELECT * FROM `votes` WHERE ((UPPER(`course`) LIKE UPPER('%4%') ESCAPE '\') AND (UPPER(`user`) LIKE UPPER('%4%') ESCAPE '\')) LIMIT 1
+I, [2023-05-09T22:56:24.709527 #5568]  INFO -- : (0.000020s) BEGIN
+I, [2023-05-09T22:56:24.710065 #5568]  INFO -- : (0.000332s) UPDATE `votes` SET `upvote` = 0 WHERE (`vote_id` = 4)
+I, [2023-05-09T22:56:24.784519 #5568]  INFO -- : (0.074329s) COMMIT
+I, [2023-05-09T22:56:24.784841 #5568]  INFO -- : (0.000033s) BEGIN
+I, [2023-05-09T22:56:24.785286 #5568]  INFO -- : (0.000227s) UPDATE `courses` SET `course_rating` = '0' WHERE (`course_id` = 4)
+I, [2023-05-09T22:56:24.853218 #5568]  INFO -- : (0.067826s) COMMIT
+I, [2023-05-09T22:56:26.658542 #5568]  INFO -- : (0.000196s) SELECT * FROM `courses`
+>>>>>>> Stashed changes
+I, [2023-05-09T23:07:04.631109 #840]  INFO -- : (0.000314s) PRAGMA foreign_keys = 1
+I, [2023-05-09T23:07:04.631251 #840]  INFO -- : (0.000020s) PRAGMA case_sensitive_like = 1
+I, [2023-05-09T23:07:04.631933 #840]  INFO -- : (0.000083s) SELECT sqlite_version()
+I, [2023-05-09T23:07:04.632257 #840]  INFO -- : (0.000163s) PRAGMA table_xinfo('courses')
+I, [2023-05-09T23:07:04.633315 #840]  INFO -- : (0.000153s) PRAGMA table_xinfo('votes')
+I, [2023-05-09T23:07:04.636094 #840]  INFO -- : (0.000167s) PRAGMA table_xinfo('login_details')
+I, [2023-05-09T23:07:04.637388 #840]  INFO -- : (0.000203s) PRAGMA table_xinfo('users')
+I, [2023-05-09T23:07:08.824375 #840]  INFO -- : (0.000199s) SELECT * FROM `courses`
