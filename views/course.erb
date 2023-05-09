@@ -8,6 +8,8 @@
         <article class="course">
           <h3><%=h @course.name %></h2>
           <p><%=h @course.about %></p>
+          <p><strong>Duration:</strong> <%=h @course.duration%></p>
+          <p><strong>Prerequisites:</strong> <%=h @course.pre%></p>
           <div class="read-more">
             <a href=<%=h @course.link%> target="_blank">Enroll</a>
           </div>
