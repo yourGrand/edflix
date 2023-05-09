@@ -65,7 +65,7 @@ post "/dashboard" do
     @region.strip!
     @degree.strip!
     User.updateDetails(@dashUserID, @first_name, @surname, @gender, @date_of_birth, @region, @degree)
-    erb :dashboard
+    redirect '/dashboard'
   else
     @submission_error = "Please correct the errors below"
     redirect '/dashboard'
