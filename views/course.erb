@@ -8,6 +8,19 @@
         <article class="course">
           <h3><%=h @course.name %></h2>
           <p><%=h @course.about %></p>
+          <p><strong>Duration:</strong> <%=h @course.duration%></p>
+          <p><strong>Prerequisites:</strong> <%=h @course.pre%></p>
+
+          <form action="/course/<%=h @course.id %>/button" method="POST">
+            <input type="hidden" name="vote" value="upvote">
+            <button class="<%=h @upvote%>" type="submit" name="upvote_submit">Upvote</button>
+          </form>
+
+          <form action="/course/<%=h @course.id %>/button" method="POST">
+            <input type="hidden" name="vote" value="downvote">
+            <button class="<%=h @downvote%>" type="submit" name="downvote_submit">Downvote</button>
+          </form>
+          
           <div class="read-more">
             <a href=<%=h @course.link%> target="_blank">Enroll</a>
           </div>

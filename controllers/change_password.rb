@@ -1,14 +1,18 @@
 require 'sinatra'
 require_relative '../models/user'
 
-# Render the change password form
 get '/change_password' do
-  erb :change_password
+  if session[:logged_in]
+    erb :change_password
+  else
+    redirect '/login'
+  end
 end
+
 
 # Handle the password change form submission
 post '/change_password' do
-  username = params['username']
+  username = session[:username]
   old_password = params['old_password']
   new_password = params['new_password']
   confirm_password = params['confirm_password']

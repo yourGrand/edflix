@@ -317,6 +317,58 @@ form button[type="submit"]:hover {
     padding: 20px;
 }
 
+/* About us */
+
+.aboutus {
+    font-size: 18px;
+    text-align: center;
+    padding-top: 20px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Votes */
+
+.downvote {
+    background: #f88379;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.upvote {
+    background: #6495ED;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.no-vote {
+    background: var(--white);
+    color: var(--black);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
 /* Footer */
 
 footer {

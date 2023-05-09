@@ -229,17 +229,51 @@ class User < Sequel::Model(:login_details)
 
 #   def self.updateDetails(userID, first_name, surname, gender, date_of_birth, country, degree, course)
 # =======
-  def self.updateDetails(userID, first_name, surname, gender, date_of_birth, region, degree, course)
+  def self.updateDetails(userID, first_name, surname, gender, date_of_birth, region, degree)
 # >>>>>>> 172442da56a08bef4b96433daf2cd75f78f155f4
     user = DB[:users].first(user_id: userID)
-    user[:first_name] = first_name
-    user[:surname] = surname
-    user[:gender] = gender
-    user[:date_of_birth] = date_of_birth
-    user[:region] = region
-    user[:degree] = degree
-    user[:course] = course
-    user.save 
+    user.update(first_name: first_name, surname: surname, gender: gender, date_of_birth: date_of_birth, region: region, degree: degree)
+    return true
+  end
+
+  def self.adminUpdate(userID, username, email, first_name, surname, gender, date_of_birth, region, degree, suspended)
+
+    if first_name != ""
+      DB[:users].where(user_id: userID).update(first_name: first_name)
+    end
+
+    if surname != ""
+      DB[:users].where(user_id: userID).update(surname: surname)
+    end
+
+    if gender != ""
+      DB[:users].where(user_id: userID).update(gender: gender)
+    end
+
+    if date_of_birth != ""
+      DB[:users].where(user_id: userID).update(date_of_birth: date_of_birth)
+    end
+
+    if region != ""
+      DB[:users].where(user_id: userID).update(region: region)
+    end
+
+    if degree != ""
+      DB[:users].where(user_id: userID).update(degree: degree)
+    end
+
+    if suspended != ""
+      DB[:users].where(user_id: userID).update(suspended: suspended)
+    end
+
+    if username != ""
+      DB[:login_details].where(login_id: userID).update(username: username)
+    end
+
+    if email != ""
+      DB[:login_details].where(login_id: userID).update(email: email)
+    end
+
     true
   end
 
@@ -282,15 +316,11 @@ class User < Sequel::Model(:login_details)
   def self.getGender(userID)
     # Find the user with the given user ID
     user = DB[:users].where(user_id: userID).select(:gender).first
-
+ 
+    # Get the gender associated with the user
+    userGender = DB[:users].join(:genders, gender_id: :gender).where(user_id: userID).first
     
-    # Get the gender of the user
-    if user
-      userGender = user[:gender]
-      return userGender
-    else
-      return nil
-    end
+    return userGender[:gender]
   end
 
   def self.getDateOfBirth(userID)
@@ -310,43 +340,52 @@ class User < Sequel::Model(:login_details)
   def self.getRegion(userID)
     # Find the user with the given user ID
     user = DB[:users].where(user_id: userID).select(:region).first
-
+ 
+    # Get the nationality associated with the user
+    userRegion = DB[:users].join(:regions, region_id: :region).where(user_id: userID).first
     
-    # Get the region of the user
-    if user
-      userRegion = user[:region]
-      return userRegion
-    else
-      return nil
-    end
+    return userRegion[:region]
   end
 
 
   def self.getDegree(userID)
     # Find the user with the given user ID
     user = DB[:users].where(user_id: userID).select(:degree).first
-
-    # Get the degree of the user
-    if user
-      return user[:degree]
-    else
-      return nil
-    end
+ 
+    # Get the degree level associated with the user
+    userDegree = DB[:users].join(:degrees, degree_id: :degree).where(user_id: userID).first
+    
+    return userDegree[:degree]
   end
   
 
   def self.getCourse(userID)
     # Find the user with the given user ID
     user = DB[:users].where(user_id: userID).select(:course).first
-
+ 
+    # Get the course associated with the user
+    userCourse = DB[:users].join(:courses, course_id: :course).where(user_id: userID).first
     
-    # Get the courses of the user
-    if user
-      userCourse = user[:course]
-      return userCourse
-    else
-      return nil
-    end
+    return userCourse[:course_title]
+  end
+
+  def self.change_email(username, old_email, new_email)
+    # Find the user with the given username
+    user = User.first(username: username)
+  
+    # Return false if the user doesn't exist
+    return false unless user
+  
+
+    # Update the user's email
+    user.update(email: new_email)
+  
+    return true
+  end
+
+  def self.authenticateEmail(username, email)
+    user = User.first(username: username)
+    return user.email == email
   end
 
 end

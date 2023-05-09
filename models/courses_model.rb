@@ -22,4 +22,22 @@ class Course < Sequel::Model
   def image
     image_path.to_s
   end
+
+  def duration
+    course_duration.to_s
+  end
+
+  def pre
+    course_pre.to_s
+  end
+end
+
+class Vote < Sequel::Model
+  def upvote_state
+    upvote.to_i
+  end
+
+  def downvote_state
+    downvote.to_i
+  end
 end
