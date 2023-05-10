@@ -1,3 +1,4 @@
+
 <%= erb :"common/header" %>
 <!-- DASHBOARD -->
   <head>
@@ -85,7 +86,7 @@
   </div>
 
   <div class="filters">
-    <form method="get" action="/dashboard_manager">
+    <form method="get" action="/dashboard_moderator">
 
       <label for="id_filter">ID:</label>
       <select id="id_filter" name="id">
@@ -93,11 +94,6 @@
           <%= @option_tags_id %>
       </select>
 
-      <label for="role_filter">Role:</label>
-      <select id="role_filter" name="role">
-          <option value="0,All">All</option>
-          <%= @option_tags_role %>
-      </select>
 
       <label for="fname_filter">Forename:</label>
       <select id="fname_filter" name="forename">
@@ -111,37 +107,7 @@
           <%= @option_tags_surname %>
       </select>
 
-      <label for="gender_filter">Gender:</label>
-      <select id="gender_filter" name="gender">
-          <option value="0,All">All</option>
-          <%= @option_tags_gender %>
-      </select>
-
-
-      <label for="region_filter">Region:</label>
-      <select id="region_filter" name="region">
-          <option value="0,All">All</option>
-          <%= @option_tags_region %>
-      </select>
-
-      <label for="degree_filter">Degree:</label>
-      <select id="degree_filter" name="degree">
-          <option value="0,All">All</option>
-          <%= @option_tags_degree %>
-      </select>
-
-      <label for="course_filter">Course:</label>
-      <select id="course_filter" name="course">
-          <option value="0,All">All</option>
-          <%= @option_tags_course %>
-      </select>
-
-      <label for="suspended_filter">Suspended:</label>
-      <select id="suspended_filter" name="suspended">
-          <option value="0,All">All</option>
-          <%= @option_tags_suspended %>
-      </select>
-
+      
       <button type="submit">Filter</button>
     </form>
   </div> 
