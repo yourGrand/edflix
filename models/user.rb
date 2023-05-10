@@ -113,7 +113,7 @@ class User < Sequel::Model(:login_details)
   end
 
   #Contact us
-  def self.contact (firstname, lastname, email, message)
+  def self.contact (reason, firstname, lastname, email, message)
 
     DB.transaction do
       # Gets most recent contact id
