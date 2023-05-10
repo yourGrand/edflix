@@ -117,14 +117,14 @@ class User < Sequel::Model(:login_details)
 
     DB.transaction do
       # Gets most recent contact id
-      if contact.max(:ID).nil?
-        newID = 0
+      if contact.max(:id).nil?
+        newid = 0
       else
-        newID = contact.max(:ID) + 1
+        newid = contact.max(:id) + 1
       end
 
       # Adds message to database table
-      contact.insert(ID: newID, firstname: firstname, lastname: lastname, email: email, message: message)
+      contact.insert(id: newid, reason: reason, firstname: firstname, lastname: lastname, email: email, message: message)
 
       return true
     end

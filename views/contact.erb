@@ -16,6 +16,15 @@ Alternatively you can use the form below ↓↓↓.
 
 <form action="/contact" method="post">
 
+    <label for="reason">Why are you contacting us:</label>
+    <select id="reson" name="reason">
+        <option value="login">Probmlem logging in</option>
+        <option value="signup">Probmlem signing up</option>
+        <option value="course">Course suggestion</option>
+        <option value="other">Other</option>
+    </select>
+    <br/>
+
     <label for="firstname">First name:</label>
     <input type="text" id="firstname" name="firstname" placeholder="eg. John"/>
     <br/>
