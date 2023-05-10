@@ -19,6 +19,7 @@ Technologies Used
     HTML5 and CSS3: Front-end development.
     Ruby and Sinatra: Back-end development and routing.
     SQLite3: Database for storing user and course information.
+    RSpec: Testing tool for automated testing of the application.
 
 
 File Structure
