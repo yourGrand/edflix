@@ -17,8 +17,34 @@
       <label for="other">Other</label><br><br>
       <label for="date_of_birth">Date of Birth:</label>
       <input type="date" id="date_of_birth" name="date_of_birth" placeholder="Date of Birth" value="<%= h(params[:date_of_birth]) %>">
-      <input type="text" id="region" name="region" placeholder="Region" value="<%= h(params[:region]) %>">
-      <input type="text" id="degree" name="degree" placeholder="Degree" value="<%= h(params[:degree]) %>">
+      <!--input type="text" id="region" name="region" placeholder="Region" value="<%= h(params[:region]) %>"-->
+      <label for="region">Region:</label>
+      <select id="region" name="region">
+        <option value="">Select Region...</option>
+        <option value="1">North America</option>
+        <option value="2">South America</option>
+        <option value="3">Central & South Asia</option>
+        <option value="4">Southeastern Asia</option>
+        <option value="5">Northeastern Asia</option>
+        <option value="6">Australia and Oceania</option>
+        <option value="7">Northern Europe</option>
+        <option value="8">Southern Europe</option>
+        <option value="9">Eastern Europe</option>
+        <option value="10">Western Europe</option>
+        <option value="11">Middle East</option>
+        <option value="12">Northern Africa</option>
+        <option value="13">Southern Africa</option>
+        <option value="14">Central America</option>
+        <option value="15">Caribbean</option>
+      </select>
+      <label for="degree">Degree:</label>
+      <select id="degree" name="degree">
+        <option value="">Select Degree...</option>
+        <option value="1">Undergraduate</option>
+        <option value="2">Postgraduate</option>
+        <option value="3">PHD</option>
+      </select>
+      <!--input type="text" id="degree" name="degree" placeholder="Degree" value="<%= h(params[:degree]) %>"-->
       <label>Suspension:</label>
       <input type="radio" name="suspension" value="TRUE">
       <label for="TRUE">TRUE</label>

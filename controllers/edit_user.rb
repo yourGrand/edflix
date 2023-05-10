@@ -27,7 +27,7 @@ post "/edit-user" do
     elsif params[:gender] == "other"
         @gender = 3
     else
-        @gender = 1
+        @gender = 0
     end
 
     @date_of_birth = params["date_of_birth"]
