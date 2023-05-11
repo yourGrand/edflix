@@ -4,10 +4,13 @@
 <main>
   <h1>Trusted Dashboard</h1>
   <div class="buttons">
-    <a href="/trusted/add_course" class="button">Add a Course</a>
+    <a href="/add_course" target = "_blank">Add course</a>
     <a href="/trusted/course_details" class="button">Course Details</a>
     <a href="/trusted/modify_course" class="button">Modify Course</a>
   </div>
+  <button onclick="location.href='/logout'">Log Out</button>
+  <button onclick="window.open('/change_password', '_blank')">Reset Password</button>
+  <button onclick="window.open('/change_email', '_blank')">Reset Email</button>
 </main>
 
 <%= erb :"common/footer" %>
