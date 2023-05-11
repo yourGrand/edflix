@@ -2,9 +2,11 @@ require "sinatra"
 
 get "/dashboard" do
     if session[:logged_in]
+        # Gather user details from database
         @dashUsername = session[:username]
         @dashEmail = User.getEmail(@dashUsername)
         @dashUserID = User.getUserID(@dashUsername)
+        @role = User.getRole(@dashUsername)
         @first_name = User.getFirstName(@dashUserID)
         @surname = User.getSurname(@dashUserID)
         @gender = User.getGender(@dashUserID)
@@ -19,6 +21,7 @@ get "/dashboard" do
 end
 
 post "/dashboard" do
+  # Gather info from form
   @dashUsername = session[:username]
   @dashEmail = User.getEmail(@dashUsername)
   @dashUserID = User.getUserID(@dashUsername)
@@ -42,7 +45,7 @@ post "/dashboard" do
 
 
 
-  # now proceed to validation
+  # Validation of detail inputs
 
   @first_name_error = "Please enter a value for first name" if @first_name.empty?
 
@@ -57,13 +60,14 @@ post "/dashboard" do
   @degree_error = "Please enter a value for degree" if @degree.empty?
     
   if @first_name_error.nil? && @surname_error.nil? && @gender_error.nil? && @date_of_birth_error.nil? && @region_error.nil? && @degree_error.nil?
-    # sanitise the values by removing whitespace
+    # Sanitise the values by removing whitespace
     @first_name.strip!
     @surname.strip!
     @gender.strip!
     @date_of_birth.strip!
     @region.strip!
     @degree.strip!
+    # Add details to database/dashboard display
     User.updateDetails(@dashUserID, @first_name, @surname, @gender, @date_of_birth, @region, @degree)
     redirect '/dashboard'
   else
