@@ -346,6 +346,12 @@ class User < Sequel::Model(:login_details)
     return userCourse[:course_title]
   end
 
+  def self.getSuspension(userID)
+    if DB[:users].where(user_id: userID).get(:suspended) == "1"
+      return true
+    end
+  end
+
   def self.change_email(username, old_email, new_email)
     # Find the user with the given username
     user = User.first(username: username)

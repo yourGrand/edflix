@@ -82,7 +82,7 @@ get "/dashboard_moderator" do
 
                
         where_sql = where_clauses.empty? ? "" : "WHERE #{where_clauses.join(" AND ")}"
-        sql = "SELECT contact.id, contact.firstname, contact.lastname, contact.message
+        sql = "SELECT contact.id, contact.firstname, contact.lastname, contact.message, contact.reason, contact.email
             FROM contact
             #{where_sql}"
         @rows = db.execute(sql, where_args)
