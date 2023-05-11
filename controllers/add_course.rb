@@ -1,7 +1,7 @@
 require "sinatra"
 
 get "/add_course" do
-  if !session[:logged_in] || User.getRole(session[:username]) != "Moderator"
+  if !session[:logged_in] || (User.getRole(session[:username]) != "Moderator" && User.getRole(session[:username]) != "Trusted")
     redirect "/login"
   end
 
