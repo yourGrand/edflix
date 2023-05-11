@@ -40,11 +40,9 @@ post "/login" do
     session[:courses] = User.getCourses(username)
 
     if User.getRole(username) == "Learner"
-
       redirect "/dashboard"
 
     elsif User.getRole(username) == "Manager"
-
       redirect "/dashboard_manager"
 
     elsif User.getRole(username) == "Admin"
@@ -52,6 +50,9 @@ post "/login" do
 
     elsif User.getRole(username) == "Moderator"
       redirect "/dashboard_moderator"
+    
+    elsif User.getRole(username) == "trusted_pr"
+      redirect "/dashboard_trusted"
 
     else 
       redirect "/dashboard"
