@@ -89,12 +89,16 @@ post "/login" do
   
       elsif User.getRole(username) == "Moderator"
         redirect "/dashboard_moderator"
+      
+      elsif User.getRole(username) == "Trusted"
+        redirect "/dashboard_trusted"
   
       else 
         redirect "/dashboard"
       end
     end
-        
+  end
+    
   else
     @error = "Incorrect username or password"
     erb :login
