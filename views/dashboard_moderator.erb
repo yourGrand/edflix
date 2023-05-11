@@ -44,17 +44,9 @@
       <th>Username:</th>
       <td><%= @dashUsername %></td>
     </tr>
-      <tr>
+    <tr>
       <th>Email Address:</th>
       <td><%= @dashEmail %></td>
-    </tr>
-      <tr>
-      <th>Nationality:</th>
-      <td><%= @dashNationality %></td>
-    </tr>
-    <tr>
-      <th>Courses in Progress:</th>
-      <td><%= @dashCourses %></td>
     </tr>
 
   </table>
@@ -141,7 +133,7 @@
           <td><%= course.image %></td>
           <td><%= course.duration %></td>
           <td><%= course.pre %></td>
-          <td><a href="/edit-course/<%= course['course_id'] %>">Edit</a></td>
+          <td><a href="/edit-course/<%= course.id %>">Edit</a></td>
         </tr>
         <% end %>
       </tbody>

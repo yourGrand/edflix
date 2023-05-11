@@ -52,8 +52,10 @@ post "/add_course" do
         course_link: course_link,
         image_path: "images/" + course_img,
         course_duration: course_time,
-        course_pre: course_pre
+        course_pre: course_pre,
+        coutse_trusted: 0
     )
+    
     @success = true
     erb :add_course
   end
