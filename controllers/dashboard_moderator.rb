@@ -87,6 +87,8 @@ get "/dashboard_moderator" do
             #{where_sql}"
         @rows = db.execute(sql, where_args)
         @headers = db.execute("PRAGMA table_info(contact)").map { |info| info[1] }
+
+        @courses = Course.all
         
         erb :dashboard_moderator
     else

@@ -27,6 +27,7 @@
     table.database {
       margin-left:auto;
       margin-right:auto;
+      max-width: 1400px;
 
     }
 
@@ -112,6 +113,40 @@
     </form>
   </div> 
 
+  <h2>Courses</h2>
   <a href="/add_course" target = "_blank">Add course</a>
+  <div class="database_table">
+    <table class="database">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Rating</th>
+          <th>Link</th>
+          <th>Image Path</th>
+          <th>Duration</th>
+          <th>Prerequisites</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @courses.each do |course| %>
+        <tr>
+          <td><%= course.id %></td>
+          <td><%= course.name %></td>
+          <td><%= course.about %></td>
+          <td><%= course.rating %></td>
+          <td><a href=<%= course.link %>>Link</a></td>
+          <td><%= course.image %></td>
+          <td><%= course.duration %></td>
+          <td><%= course.pre %></td>
+          <td><a href="/edit-course/<%= course['course_id'] %>">Edit</a></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
 </body>
 <%= erb :"common/footer" %>

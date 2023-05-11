@@ -9,12 +9,14 @@ get "/courses" do
     erb :courses
 end
 
+# course individual pages
 get "/course/:id" do
     id = params[:id]
     @course = Course[course_id: id]
     user_id = User.getUserID(session[:username])
     vote_state = Vote.where(Sequel.ilike(:course, "%#{id}%") & Sequel.ilike(:user, "%#{user_id}%")).first
 
+    # vote check
     if (vote_state.nil?) || (vote_state.downvote_state == 0 && vote_state.upvote_state == 0)
         @upvote = no_vote
         @downvote = no_vote
