@@ -38,7 +38,7 @@
       <% elsif session[:logged_in] && session[:role] == "Learner" %>
         <a href="/dashboard">Dashboard</a>
       <% elsif session[:logged_in] && session[:role] == "Trusted" %>
-        <a href="/dashboard">Dashboard</a>
+        <a href="/dashboard_trusted">Dashboard</a>
       <% else %>
         <a href="/login">Log In</a>
       <% end %>
