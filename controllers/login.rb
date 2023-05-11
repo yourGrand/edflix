@@ -51,7 +51,7 @@ post "/login" do
     elsif User.getRole(username) == "Moderator"
       redirect "/dashboard_moderator"
     
-    elsif User.getRole(username) == "trusted_provider"
+    elsif User.getRole(username) == "Trusted"
       redirect "/dashboard_trusted"
 
     else 

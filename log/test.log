@@ -12880,3 +12880,33 @@ I, [2023-05-11T15:30:55.242389 #207]  INFO -- : (0.000092s) SELECT `degree` FROM
 I, [2023-05-11T15:30:55.242870 #207]  INFO -- : (0.000217s) SELECT * FROM `users` INNER JOIN `degrees` ON (`degrees`.`degree_id` = `users`.`degree`) WHERE (`user_id` = 23) LIMIT 1
 I, [2023-05-11T15:30:55.243174 #207]  INFO -- : (0.000092s) SELECT `course` FROM `users` WHERE (`user_id` = 23) LIMIT 1
 I, [2023-05-11T15:30:55.243656 #207]  INFO -- : (0.000227s) SELECT * FROM `users` INNER JOIN `courses` ON (`courses`.`course_id` = `users`.`course`) WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-11T16:29:50.737942 #292]  INFO -- : (0.000553s) PRAGMA foreign_keys = 1
+I, [2023-05-11T16:29:50.738236 #292]  INFO -- : (0.000036s) PRAGMA case_sensitive_like = 1
+I, [2023-05-11T16:29:50.740081 #292]  INFO -- : (0.000154s) SELECT sqlite_version()
+I, [2023-05-11T16:29:50.740608 #292]  INFO -- : (0.000276s) PRAGMA table_xinfo('contact')
+I, [2023-05-11T16:29:50.742864 #292]  INFO -- : (0.000491s) PRAGMA table_xinfo('courses')
+I, [2023-05-11T16:29:50.744636 #292]  INFO -- : (0.000372s) PRAGMA table_xinfo('votes')
+I, [2023-05-11T16:29:50.750953 #292]  INFO -- : (0.000924s) PRAGMA table_xinfo('login_details')
+I, [2023-05-11T16:29:50.754171 #292]  INFO -- : (0.000366s) PRAGMA table_xinfo('users')
+I, [2023-05-11T16:29:52.655649 #292]  INFO -- : (0.000196s) SELECT * FROM `courses`
+I, [2023-05-11T16:30:03.114255 #292]  INFO -- : (0.000192s) SELECT * FROM `login_details` WHERE (`username` = 'trusted123') LIMIT 1
+I, [2023-05-11T16:30:03.123892 #292]  INFO -- : (0.000165s) SELECT * FROM `login_details` WHERE (`username` = 'trusted123') LIMIT 1
+I, [2023-05-11T16:30:03.124308 #292]  INFO -- : (0.000105s) SELECT * FROM `login_details` WHERE (`username` = 'trusted123') LIMIT 1
+I, [2023-05-11T16:30:03.124781 #292]  INFO -- : (0.000140s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-11T16:30:03.125046 #292]  INFO -- : (0.000100s) SELECT * FROM `login_details` WHERE (`username` = 'trusted123') LIMIT 1
+I, [2023-05-11T16:30:03.125293 #292]  INFO -- : (0.000103s) SELECT * FROM `login_details` WHERE (`username` = 'trusted123') LIMIT 1
+I, [2023-05-11T16:30:03.125677 #292]  INFO -- : (0.000124s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-11T16:30:03.125957 #292]  INFO -- : (0.000106s) SELECT * FROM `login_details` WHERE (`username` = 'trusted123') LIMIT 1
+I, [2023-05-11T16:30:03.126318 #292]  INFO -- : (0.000125s) SELECT * FROM `users` INNER JOIN `regions` ON (`regions`.`region_id` = `users`.`region`) WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-11T16:30:03.126597 #292]  INFO -- : (0.000106s) SELECT * FROM `login_details` WHERE (`username` = 'trusted123') LIMIT 1
+I, [2023-05-11T16:30:03.126954 #292]  INFO -- : (0.000085s) SELECT `course_title` FROM `users` INNER JOIN `courses` ON (`courses`.`course_id` = `users`.`course`) WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-11T16:30:03.127202 #292]  INFO -- : (0.000098s) SELECT * FROM `login_details` WHERE (`username` = 'trusted123') LIMIT 1
+I, [2023-05-11T16:30:03.127523 #292]  INFO -- : (0.000114s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-11T16:30:03.127766 #292]  INFO -- : (0.000099s) SELECT * FROM `login_details` WHERE (`username` = 'trusted123') LIMIT 1
+I, [2023-05-11T16:30:03.128082 #292]  INFO -- : (0.000113s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-11T16:30:03.128318 #292]  INFO -- : (0.000098s) SELECT * FROM `login_details` WHERE (`username` = 'trusted123') LIMIT 1
+I, [2023-05-11T16:30:03.128696 #292]  INFO -- : (0.000126s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-11T16:30:03.128945 #292]  INFO -- : (0.000097s) SELECT * FROM `login_details` WHERE (`username` = 'trusted123') LIMIT 1
+I, [2023-05-11T16:30:03.129274 #292]  INFO -- : (0.000112s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 23) LIMIT 1
+I, [2023-05-11T16:30:03.129518 #292]  INFO -- : (0.000097s) SELECT * FROM `login_details` WHERE (`username` = 'trusted123') LIMIT 1
+I, [2023-05-11T16:30:03.129835 #292]  INFO -- : (0.000113s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 23) LIMIT 1
