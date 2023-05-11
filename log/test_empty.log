@@ -734,3 +734,78 @@ I, [2023-05-08T07:51:25.826490 #233]  INFO -- : (0.000024s) PRAGMA case_sensitiv
 I, [2023-05-08T07:51:25.827125 #233]  INFO -- : (0.000075s) SELECT sqlite_version()
 I, [2023-05-08T07:51:25.827451 #233]  INFO -- : (0.000142s) PRAGMA table_xinfo('courses')
 I, [2023-05-08T07:51:25.828387 #233]  INFO -- : (0.000110s) PRAGMA table_xinfo('articles')
+I, [2023-05-11T16:50:55.021030 #348]  INFO -- : (0.000327s) PRAGMA foreign_keys = 1
+I, [2023-05-11T16:50:55.025251 #348]  INFO -- : (0.000063s) PRAGMA case_sensitive_like = 1
+I, [2023-05-11T16:50:55.027987 #348]  INFO -- : (0.000155s) SELECT sqlite_version()
+I, [2023-05-11T16:50:55.028390 #348]  INFO -- : (0.000105s) PRAGMA table_xinfo('contact')
+E, [2023-05-11T16:50:55.028759 #348] ERROR -- : SQLite3::SQLException: no such table: contact: SELECT * FROM `contact` LIMIT 0
+I, [2023-05-11T16:50:55.075298 #348]  INFO -- : (0.000192s) PRAGMA table_xinfo('contact')
+E, [2023-05-11T16:50:55.075715 #348] ERROR -- : SQLite3::SQLException: no such table: contact: SELECT * FROM `contact` LIMIT 0
+I, [2023-05-11T16:50:55.098123 #348]  INFO -- : (0.000140s) PRAGMA table_xinfo('contact')
+E, [2023-05-11T16:50:55.098507 #348] ERROR -- : SQLite3::SQLException: no such table: contact: SELECT * FROM `contact` LIMIT 0
+I, [2023-05-11T16:50:55.112131 #348]  INFO -- : (0.000140s) PRAGMA table_xinfo('contact')
+E, [2023-05-11T16:50:55.112570 #348] ERROR -- : SQLite3::SQLException: no such table: contact: SELECT * FROM `contact` LIMIT 0
+I, [2023-05-11T16:50:55.120642 #348]  INFO -- : (0.000144s) PRAGMA table_xinfo('contact')
+E, [2023-05-11T16:50:55.120997 #348] ERROR -- : SQLite3::SQLException: no such table: contact: SELECT * FROM `contact` LIMIT 0
+I, [2023-05-11T16:50:55.141059 #348]  INFO -- : (0.000657s) PRAGMA table_xinfo('contact')
+E, [2023-05-11T16:50:55.141464 #348] ERROR -- : SQLite3::SQLException: no such table: contact: SELECT * FROM `contact` LIMIT 0
+I, [2023-05-11T17:48:58.273771 #1443]  INFO -- : (0.000274s) PRAGMA foreign_keys = 1
+I, [2023-05-11T17:48:58.274005 #1443]  INFO -- : (0.000022s) PRAGMA case_sensitive_like = 1
+I, [2023-05-11T17:48:58.279811 #1443]  INFO -- : (0.000104s) SELECT sqlite_version()
+I, [2023-05-11T17:48:58.280307 #1443]  INFO -- : (0.000159s) PRAGMA table_xinfo('contact')
+I, [2023-05-11T17:48:58.281525 #1443]  INFO -- : (0.000160s) PRAGMA table_xinfo('courses')
+I, [2023-05-11T17:48:58.282464 #1443]  INFO -- : (0.000158s) PRAGMA table_xinfo('votes')
+I, [2023-05-11T17:48:58.292704 #1443]  INFO -- : (0.000216s) PRAGMA table_xinfo('login_details')
+I, [2023-05-11T17:48:58.294368 #1443]  INFO -- : (0.000208s) PRAGMA table_xinfo('users')
+I, [2023-05-11T17:51:05.215060 #1523]  INFO -- : (0.000336s) PRAGMA foreign_keys = 1
+I, [2023-05-11T17:51:05.215350 #1523]  INFO -- : (0.000029s) PRAGMA case_sensitive_like = 1
+I, [2023-05-11T17:51:05.217887 #1523]  INFO -- : (0.000153s) SELECT sqlite_version()
+I, [2023-05-11T17:51:05.218379 #1523]  INFO -- : (0.000225s) PRAGMA table_xinfo('contact')
+I, [2023-05-11T17:51:05.219970 #1523]  INFO -- : (0.000236s) PRAGMA table_xinfo('courses')
+I, [2023-05-11T17:51:05.221481 #1523]  INFO -- : (0.000203s) PRAGMA table_xinfo('votes')
+I, [2023-05-11T17:51:05.225575 #1523]  INFO -- : (0.000300s) PRAGMA table_xinfo('login_details')
+I, [2023-05-11T17:51:05.227912 #1523]  INFO -- : (0.000232s) PRAGMA table_xinfo('users')
+I, [2023-05-11T17:51:05.389143 #1523]  INFO -- : (0.000165s) SELECT * FROM `courses`
+I, [2023-05-11T17:51:05.421458 #1523]  INFO -- : (0.000055s) BEGIN
+I, [2023-05-11T17:51:05.422472 #1523]  INFO -- : (0.000568s) INSERT INTO `courses` (`course_title`, `course_description`, `image_path`) VALUES ('Test', 'You better test your software', 'images/Test.png') RETURNING *
+I, [2023-05-11T17:51:05.495448 #1523]  INFO -- : (0.072798s) COMMIT
+I, [2023-05-11T17:51:05.496700 #1523]  INFO -- : (0.000359s) SELECT * FROM `courses`
+I, [2023-05-11T17:51:05.578105 #1523]  INFO -- : (0.079862s) DELETE FROM `courses` WHERE `course_id` = 1
+I, [2023-05-11T17:51:05.617044 #1523]  INFO -- : (0.000251s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-11T17:51:05.617667 #1523]  INFO -- : (0.000132s) SELECT * FROM `login_details` WHERE (`email` = 'learner1@learner1.com') LIMIT 1
+I, [2023-05-11T17:51:05.618100 #1523]  INFO -- : (0.000099s) SELECT * FROM `login_details` WHERE (`username` = 'learner1') LIMIT 1
+I, [2023-05-11T17:51:05.618342 #1523]  INFO -- : (0.000081s) SELECT * FROM `login_details` WHERE (`email` = 'learner1@learner1.com') LIMIT 1
+I, [2023-05-11T17:51:05.628741 #1523]  INFO -- : (0.000059s) BEGIN
+I, [2023-05-11T17:51:05.629379 #1523]  INFO -- : (0.000182s) SELECT max(`login_id`) AS 'max' FROM `login_details` LIMIT 1
+I, [2023-05-11T17:51:05.629949 #1523]  INFO -- : (0.000248s) INSERT INTO `login_details` (`login_id`, `email`, `username`, `password_crypt`, `iv`, `salt`, `trusted_provider`) VALUES (0, 'learner1@learner1.com', 'learner1', X'8e0f3ef937cdbf5142b5dca895978942', X'224d69003aea39d6ccba204c9f2c6a00', X'b65df8b4ea8b9fc4ce47e93899338c38', 1)
+E, [2023-05-11T17:51:05.630373 #1523] ERROR -- : SQLite3::ConstraintException: FOREIGN KEY constraint failed: INSERT INTO `users` (`user_id`, `role`, `first_name`, `surname`, `gender`, `date_of_birth`, `region`, `degree`, `course`, `suspended`, `login`) VALUES (0, 4, 'null', 'null', 0, 'null', 0, 0, 1, 2, 0)
+I, [2023-05-11T17:51:05.630905 #1523]  INFO -- : (0.000163s) ROLLBACK
+I, [2023-05-11T17:51:05.673938 #1523]  INFO -- : (0.000141s) SELECT * FROM `courses`
+I, [2023-05-11T17:51:05.681671 #1523]  INFO -- : (0.000045s) BEGIN
+I, [2023-05-11T17:51:05.682660 #1523]  INFO -- : (0.000554s) INSERT INTO `courses` (`course_title`, `course_description`, `course_rating`, `image_path`) VALUES ('Course A', 'Description A', '5', 'course_a.jpg') RETURNING *
+I, [2023-05-11T17:51:05.744083 #1523]  INFO -- : (0.061254s) COMMIT
+I, [2023-05-11T17:51:05.744361 #1523]  INFO -- : (0.000034s) BEGIN
+I, [2023-05-11T17:51:05.745101 #1523]  INFO -- : (0.000470s) INSERT INTO `courses` (`course_title`, `course_description`, `course_rating`, `image_path`) VALUES ('Course B', 'Description B', '3', 'course_b.jpg') RETURNING *
+I, [2023-05-11T17:51:05.806899 #1523]  INFO -- : (0.061664s) COMMIT
+I, [2023-05-11T17:51:05.807124 #1523]  INFO -- : (0.000035s) BEGIN
+I, [2023-05-11T17:51:05.807739 #1523]  INFO -- : (0.000423s) INSERT INTO `courses` (`course_title`, `course_description`, `course_rating`, `image_path`) VALUES ('Course C', 'Description C', '4', 'course_c.jpg') RETURNING *
+I, [2023-05-11T17:51:05.874622 #1523]  INFO -- : (0.066738s) COMMIT
+I, [2023-05-11T17:51:05.875671 #1523]  INFO -- : (0.000212s) SELECT * FROM `courses`
+I, [2023-05-11T17:51:05.969826 #1523]  INFO -- : (0.092817s) DELETE FROM `courses` WHERE `course_id` = 1
+I, [2023-05-11T17:51:06.061568 #1523]  INFO -- : (0.091550s) DELETE FROM `courses` WHERE `course_id` = 2
+I, [2023-05-11T17:51:06.124327 #1523]  INFO -- : (0.062555s) DELETE FROM `courses` WHERE `course_id` = 3
+I, [2023-05-11T17:51:06.125765 #1523]  INFO -- : (0.000167s) SELECT * FROM `courses`
+I, [2023-05-11T17:51:06.128778 #1523]  INFO -- : (0.000206s) SELECT * FROM `login_details` WHERE (`username` = 'invalid_username') LIMIT 1
+I, [2023-05-11T17:51:06.131714 #1523]  INFO -- : (0.000164s) SELECT * FROM `login_details` WHERE (`username` = 'valid_username') LIMIT 1
+I, [2023-05-11T17:51:06.154941 #1523]  INFO -- : (0.000139s) SELECT * FROM `login_details` WHERE (`username` = '') LIMIT 1
+I, [2023-05-11T17:51:06.155174 #1523]  INFO -- : (0.000078s) SELECT * FROM `login_details` WHERE (`email` = 'test@test.com') LIMIT 1
+I, [2023-05-11T17:51:06.155378 #1523]  INFO -- : (0.000074s) SELECT * FROM `login_details` WHERE (`username` = '') LIMIT 1
+I, [2023-05-11T17:51:06.155556 #1523]  INFO -- : (0.000073s) SELECT * FROM `login_details` WHERE (`email` = 'test@test.com') LIMIT 1
+I, [2023-05-11T17:51:06.168364 #1523]  INFO -- : (0.000140s) SELECT * FROM `login_details` WHERE (`username` = 'test') LIMIT 1
+I, [2023-05-11T17:51:06.168639 #1523]  INFO -- : (0.000079s) SELECT * FROM `login_details` WHERE (`email` = '') LIMIT 1
+I, [2023-05-11T17:51:06.168824 #1523]  INFO -- : (0.000074s) SELECT * FROM `login_details` WHERE (`username` = 'test') LIMIT 1
+I, [2023-05-11T17:51:06.168996 #1523]  INFO -- : (0.000071s) SELECT * FROM `login_details` WHERE (`email` = '') LIMIT 1
+I, [2023-05-11T17:51:06.186010 #1523]  INFO -- : (0.000141s) SELECT * FROM `login_details` WHERE (`username` = 'test') LIMIT 1
+I, [2023-05-11T17:51:06.186244 #1523]  INFO -- : (0.000079s) SELECT * FROM `login_details` WHERE (`email` = 'test@test.com') LIMIT 1
+I, [2023-05-11T17:51:06.186433 #1523]  INFO -- : (0.000092s) SELECT * FROM `login_details` WHERE (`username` = 'test') LIMIT 1
+I, [2023-05-11T17:51:06.186624 #1523]  INFO -- : (0.000081s) SELECT * FROM `login_details` WHERE (`email` = 'test@test.com') LIMIT 1

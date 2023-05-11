@@ -26,23 +26,6 @@ RSpec.describe "Home" do
     end
   end
 
-  describe "Article" do
-    article = Article.new(article_title: "Test Article", article_body: "This is a test article.",
-                          image_path: "images/Test.png")
-
-    it "should return the article title" do
-      expect(article.title).to eq("Test Article")
-    end
-
-    it "should return the article body" do
-      expect(article.body).to eq("This is a test article.")
-    end
-
-    it "should return the article image path" do
-      expect(article.image).to eq("images/Test.png")
-    end
-  end
-
   describe "Homepage" do
     it "should return a successful response" do
       get "/"
@@ -70,23 +53,6 @@ RSpec.describe "Home" do
       course_a.delete
       course_b.delete
       course_c.delete
-    end
-
-    it "should display a list of featured articles" do
-      # create some test articles
-      article_a = Article.new(article_title: "Article A", article_body: "Body A", image_path: "article_a.jpg")
-      article_b = Article.new(article_title: "Article B", article_body: "Body B", image_path: "article_b.jpg")
-
-      article_a.save_changes
-      article_b.save_changes
-
-      get "/"
-
-      expect(last_response.body).to include("Article A", "Article B")
-
-      # clear
-      article_a.delete
-      article_b.delete
     end
 
     it "should display an empty message when there are no courses or articles" do
