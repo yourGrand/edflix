@@ -112,25 +112,6 @@ class User < Sequel::Model(:login_details)
     end
   end
 
-  #Contact us
-  def self.contact (reason, firstname, lastname, email, message)
-
-    DB.transaction do
-      # Gets most recent contact id
-      if contact.max(:id).nil?
-        newid = 0
-      else
-        newid = contact.max(:id) + 1
-      end
-
-      # Adds message to database table
-      contact.insert(id: newid, reason: reason, firstname: firstname, lastname: lastname, email: email, message: message)
-
-      return true
-    end
-
-  end
-
   def self.getUsername(userID)
     #Find user with given id
     login_details = User.first(login_id: userID)

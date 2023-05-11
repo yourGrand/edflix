@@ -1,7 +1,7 @@
 <%= erb :"common/header" %>
 <!-- contact_us -->
 
-<h1>..::: Contact us :::..</h1>
+<h1>Contact us</h1>
 
 <p>
 If you want to suggest a new course or have a general problem
@@ -9,17 +9,16 @@ you can contact us via our phone number +44 123 456 7890 or email us at support@
 </p>
 
 <p>
-Alternatively you can use the form below ↓↓↓.
+Alternatively you can use the form below:
 </p>
 
 <br/>
 
 <form action="/contact" method="post">
 
-    <label for="reason">Why are you contacting us:</label>
+    <label for="reason">Reason:</label>
     <select id="reson" name="reason">
-        <option value="login">Probmlem logging in</option>
-        <option value="signup">Probmlem signing up</option>
+        <option value="login">Problem logging in</option>
         <option value="course">Course suggestion</option>
         <option value="other">Other</option>
     </select>
