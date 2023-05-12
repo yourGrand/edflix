@@ -12,7 +12,13 @@ post '/contact' do
     @email = params[:email]
     @message = params[:message]
 
-    # Save the message in the database
-    Contact.send(@firstname, @lastname, @message, @reason, @email)
-    erb :contact
+    if @reason.empty? || @firstname.empty? || @lastname.empty? || @email.empty? || @message.empty?
+        @error = "Please fill out all fields"
+        erb :contact
+    else
+        # Save the message in the database
+        Contact.send(@firstname, @lastname, @message, @reason, @email)
+        erb :contact
+    end
+
 end

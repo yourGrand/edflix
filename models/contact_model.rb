@@ -9,7 +9,7 @@ class Contact < Sequel::Model(:contact)
         if Contact.max(:id).nil?
             newID = 0
         else
-            newID = User.max(:id) + 1
+            newID = Contact.max(:id) + 1
         end
         
         Contact.insert(id: newID, firstname: firstname, lastname: lastname, message: message, reason: reason, email: email)

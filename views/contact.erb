@@ -16,6 +16,7 @@ Alternatively you can use the form below:
 
 <form action="/contact" method="post">
 
+
     <label for="reason">Reason:</label>
     <select id="reson" name="reason">
         <option value="login">Problem logging in</option>
@@ -38,11 +39,14 @@ Alternatively you can use the form below:
 
     <label for="freeform">Tell us what you think:</label>
     <br/>
-    <textarea id="message" name="message" rows="4" cols="50" placeholder="Edflix is great!">
-    </textarea>
+    <textarea id="message" name="message" rows="4" cols="50" placeholder="Edflix is great!"></textarea>
     <br/>
 
     <input type="submit" value="Submit"/>
+
+    <% if @error %>
+        <p class = "error"><%= @error %></p>
+    <% end %>
 </form>
 
 <%= erb :"common/footer" %>
