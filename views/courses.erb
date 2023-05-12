@@ -1,7 +1,25 @@
 <%= erb :"common/header" %>
 <!-- COURSES -->
   <main>
-  <h1>Courses</h1>
+  <h1><%=h @h1 %></h1>
+
+  <% if @error %>
+    <p class="error"><%=h @error %></p>
+  <% end %>
+  
+  <div class="filters">
+    <form method="get" action="/courses">
+
+      <select id="filter" name="filter">
+        <option value="all">All</option>
+        <option value="pop">By popularity</option>
+        <option value="trust">Trusted</option>
+      </select>
+
+      <button type="submit">Filter</button>
+    </form>
+  </div>
+
   <div class="padding">
     <% if @courses.count > 0 %>
       <% @courses.each do |course| %>

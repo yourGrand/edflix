@@ -5,7 +5,25 @@ downvote = "downvote"
 no_vote = "no-vote"
 
 get "/courses" do
+    filter = params[:filter]
+
     @courses = Course.all
+    @h1 = 'All courses'
+
+    if filter
+        if session[:logged_in]
+            if filter == 'pop'
+                @courses = Course.all.sort_by(&:rating).reverse
+                @h1 = 'Courses sorted by popularity'
+            elsif filter == 'trust'
+                @h1 = 'Courses from trusted providers'
+                @courses = Course.where(course_trusted: 1).all
+            end
+        else
+            @error = 'Only registered users have access to this function'
+        end
+    end
+
     erb :courses
 end
 
@@ -31,6 +49,10 @@ get "/course/:id" do
     erb :course
 end
 
+#post '/courses/:button' do
+
+
+# votes handlings
 post '/course/:id/button' do
     id = params[:id]
     @course = Course[course_id: id]
