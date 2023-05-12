@@ -14513,6 +14513,7 @@ I, [2023-05-12T11:36:42.726904 #736]  INFO -- : (0.000227s) PRAGMA table_xinfo('
 I, [2023-05-12T11:36:42.731845 #736]  INFO -- : (0.000300s) PRAGMA table_xinfo('login_details')
 I, [2023-05-12T11:36:42.737986 #736]  INFO -- : (0.000331s) PRAGMA table_xinfo('users')
 >>>>>>> ac9ce7a8ef1868c35229f298010dfaf3fefd8e1d
+<<<<<<< HEAD
 I, [2023-05-12T12:00:44.228684 #628]  INFO -- : (0.000309s) PRAGMA foreign_keys = 1
 I, [2023-05-12T12:00:44.228800 #628]  INFO -- : (0.000021s) PRAGMA case_sensitive_like = 1
 I, [2023-05-12T12:00:44.229963 #628]  INFO -- : (0.000199s) PRAGMA foreign_keys = 1
@@ -14603,3 +14604,13 @@ I, [2023-05-12T12:16:53.708686 #864]  INFO -- : (0.000133s) SELECT * FROM `login
 I, [2023-05-12T12:16:53.709108 #864]  INFO -- : (0.000151s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 6) LIMIT 1
 I, [2023-05-12T12:16:53.709408 #864]  INFO -- : (0.000122s) SELECT * FROM `login_details` WHERE (`username` = 'manager1') LIMIT 1
 I, [2023-05-12T12:16:53.709832 #864]  INFO -- : (0.000168s) SELECT * FROM `users` INNER JOIN `roles` ON (`roles`.`role_id` = `users`.`role`) WHERE (`user_id` = 6) LIMIT 1
+=======
+I, [2023-05-12T12:10:36.553117 #450]  INFO -- : (0.000248s) PRAGMA foreign_keys = 1
+I, [2023-05-12T12:10:36.553236 #450]  INFO -- : (0.000020s) PRAGMA case_sensitive_like = 1
+I, [2023-05-12T12:10:36.554494 #450]  INFO -- : (0.000203s) PRAGMA foreign_keys = 1
+I, [2023-05-12T12:10:36.554592 #450]  INFO -- : (0.000019s) PRAGMA case_sensitive_like = 1
+I, [2023-05-12T12:18:31.805215 #501]  INFO -- : (0.000251s) PRAGMA foreign_keys = 1
+I, [2023-05-12T12:18:31.805364 #501]  INFO -- : (0.000024s) PRAGMA case_sensitive_like = 1
+I, [2023-05-12T12:18:31.806866 #501]  INFO -- : (0.000231s) PRAGMA foreign_keys = 1
+I, [2023-05-12T12:18:31.807025 #501]  INFO -- : (0.000024s) PRAGMA case_sensitive_like = 1
+>>>>>>> 763f99b2517f7b1d5438421091f06247d5779882

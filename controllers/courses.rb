@@ -10,6 +10,7 @@ get "/courses" do
     @courses = Course.all
     @h1 = 'All courses'
 
+    # filters
     if filter
         if session[:logged_in]
             if filter == 'pop'
