@@ -51,7 +51,7 @@ post "/dashboard" do
 
   @surname_error = "Please enter a value for surname" if @surname.empty?
    
-  @gender_error = "Please select a gender" if @gender.nil?
+  @gender_error = "Please select a gender" if @gender.empty?
 
   @date_of_birth_error = "Please enter a value for date of birth" if @date_of_birth.empty?
 
