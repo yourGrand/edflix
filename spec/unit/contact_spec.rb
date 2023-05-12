@@ -5,7 +5,7 @@ ENV["APP_ENV"] = "test_empty"
 require_relative "../spec_helper"
 
 RSpec.describe 'contact us page' do
-
+  
   before(:all) do
     # Set up the database connection
     ActiveRecord::Base.establish_connection(adapter: 'sqlite3', database: ':memory:')
@@ -32,6 +32,16 @@ RSpec.describe 'contact us page' do
   after(:each) do
     # Rollback any changes made during the test
     DatabaseCleaner.clean
+  end
+
+  describe 'GET /contact' do
+    #check if the page loads
+    it 'loads the contact us page' do
+      get '/contact'
+      
+      expect(last_response.status).to eq(200)
+      expect(last_response.body).to include('Contact Us')
+    end
   end
 
   it 'submits a valid form' do
