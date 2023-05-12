@@ -61,7 +61,8 @@ post "/add_course" do
         image_path: "images/" + course_img,
         course_duration: course_time,
         course_pre: course_pre,
-        course_trusted: course_trusted
+        course_trusted: course_trusted,
+        course_hidde: 0
     )
     
     @success = true
