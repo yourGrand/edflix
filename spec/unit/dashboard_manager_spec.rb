@@ -36,38 +36,6 @@ describe 'Dashboard Manager App' do
       it 'renders the user ID filter options' do
         expect(last_response.body).to include('<option value=\'1')
       end
-
-      it 'renders the user role filter options' do
-        expect(last_response.body).to include('<option value=\'1')
-      end
-
-      it 'renders the user first name filter options' do
-        expect(last_response.body).to include('<option value=\'1')
-      end
-
-      it 'renders the user surname filter options' do
-        expect(last_response.body).to include('<option value=\'1')
-      end
-
-      it 'renders the user gender filter options' do
-        expect(last_response.body).to include('<option value=\'1')
-      end
-
-      it 'renders the user region filter options' do
-        expect(last_response.body).to include('<option value=\'1')
-      end
-
-      it 'renders the user degree filter options' do
-        expect(last_response.body).to include('<option value=\'1')
-      end
-
-      it 'renders the user course filter options' do
-        expect(last_response.body).to include('<option value=\'1')
-      end
-
-      it 'renders the user suspension filter options' do
-        expect(last_response.body).to include('<option value=\'1')
-      end
     end
 
     context 'when user is not logged in' do
