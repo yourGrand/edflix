@@ -7,7 +7,7 @@
       <input type="text" id="username" name="username" placeholder="Username" value="<%= h(params[:username]) %>">
       <input type="text" id="email" name="email" placeholder="Email" value="<%= h(params[:email]) %>">
       <input type="text" id="first_name" name="first_name" placeholder="First Name" value="<%= h(params[:first_name]) %>">
-      <input type="text" id="surname" name="surname" placeholder="Surname" value="<%= h(params[:surname]) %>">
+      <input type="text" id="surname" name="surname" placeholder="Surname" value="<%= h(params[:surname]) %>"><br><br>
       <label>Gender:</label>
       <input type="radio" id="male" name="gender" value="male">
       <label for="male">Male</label>
@@ -16,8 +16,7 @@
       <input type="radio" id="other" name="gender" value="other">
       <label for="other">Other</label><br><br>
       <label for="date_of_birth">Date of Birth:</label>
-      <input type="date" id="date_of_birth" name="date_of_birth" placeholder="Date of Birth" value="<%= h(params[:date_of_birth]) %>">
-      <!--input type="text" id="region" name="region" placeholder="Region" value="<%= h(params[:region]) %>"-->
+      <input type="date" id="date_of_birth" name="date_of_birth" placeholder="Date of Birth" value="<%= h(params[:date_of_birth]) %>"><br><br>
       <label for="region">Region:</label>
       <select id="region" name="region">
         <option value="">Select Region...</option>
@@ -43,19 +42,17 @@
         <option value="1">Undergraduate</option>
         <option value="2">Postgraduate</option>
         <option value="3">PHD</option>
-      </select>
-      <!--input type="text" id="degree" name="degree" placeholder="Degree" value="<%= h(params[:degree]) %>"-->
+      </select><br><br>
       <label>Suspension:</label>
       <input type="radio" name="suspension" value="TRUE">
       <label for="TRUE">TRUE</label>
       <input type="radio" name="suspension" value="FALSE">
-      <label for="FALSE">FALSE</label>
-
+      <label for="FALSE">FALSE</label><br><br>
       <label>Trusted provider approval:</label>
       <input type="radio" name="approval" value="TRUE">
       <label for="TRUE">TRUE</label>
       <input type="radio" name="approval" value="FALSE">
-      <label for="FALSE">FALSE</label>
+      <label for="FALSE">FALSE</label><br>
       <button type="submit">Update Details</button>
     </form>
 
