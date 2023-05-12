@@ -11,7 +11,7 @@ RSpec.describe 'contact us page' do
       get '/contact'
       
       expect(last_response.status).to eq(200)
-      expect(last_response.body).to include('Contact Us')
+      expect(last_response.body).to include('Contact us')
     end
 
 
