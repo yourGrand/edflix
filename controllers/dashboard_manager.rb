@@ -4,6 +4,7 @@ db = SQLite3::Database.new("./db/test.sqlite3")
 
 get "/dashboard_manager" do
     if session[:logged_in]
+        #grab all of the necessary data and puts them into variables
         @dashUsername = session[:username]
         @dashEmail = session[:email]
         @dashRole = session[:role]
@@ -19,7 +20,7 @@ get "/dashboard_manager" do
         course_filter = params[:course]
         suspended_filter = params[:suspended]
 
-
+        #selects all unique data from the database to be inserted into the option tag in HTML
         ids = db.execute("SELECT DISTINCT user_id FROM users")
         option_tags = []
         count = 1
@@ -112,7 +113,7 @@ get "/dashboard_manager" do
 
         where_clauses = []
         where_args = []
-
+        #checks that the filter isnt empty and then splits the values to be used for the where arguement
         if id_filter != nil
             id_id, id_name = id_filter.split(",")
             if id_id.to_i > 0
@@ -194,7 +195,7 @@ get "/dashboard_manager" do
             end
         end
         
-                
+        #Joins all of the tables and adds the where clauses created above to search the database. effectively filtering the results
         where_sql = where_clauses.empty? ? "" : "WHERE #{where_clauses.join(" AND ")}"
         sql = "SELECT users.user_id, roles.role, users.first_name, users.surname, genders.gender, users.date_of_birth, regions.region, degrees.degree, courses.course_title, suspensions.suspended, login_details.username
             FROM users
