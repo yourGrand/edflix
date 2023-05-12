@@ -3,7 +3,7 @@ require "sinatra"
 db = SQLite3::Database.new("./db/test.sqlite3")
 
 get "/dashboard_moderator" do
-    if session[:logged_in]
+    if session[:logged_in] && (User.getRole(session[:username]) == "Moderator")
         @dashUsername = session[:username]
         @dashEmail = session[:email]
         @dashRole = session[:role]
