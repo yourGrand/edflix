@@ -4,12 +4,7 @@ ENV["APP_ENV"] = "test_empty"
 # load helper
 require_relative "../spec_helper"
 
-RSpec.describe 'My Sinatra App', type: :feature do
-  include Rack::Test::Methods
-
-  def app
-    Sinatra::Application
-  end
+RSpec.describe 'contact us page' do
 
   before(:all) do
     # Set up the database connection
