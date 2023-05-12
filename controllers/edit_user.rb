@@ -42,7 +42,23 @@ post "/edit-user" do
         @suspension = "2"
     end
 
-    User.adminUpdate(@userID, @username, @email, @first_name, @surname, @gender, @date_of_birth, @region, @degree, @suspension)
+    if params[:suspension] == "TRUE"
+        @suspension = "1"
+    elsif params[:suspension] == "FALSE"
+        @suspension = "2"
+    else
+        @suspension = "2"
+    end
+
+    if params[:approval] == "TRUE"
+        @role = "5"
+    elsif params[:approval] == "FALSE"
+        @role = "4"
+    else
+        @role = "4"
+    end
+
+    User.adminUpdate(@userID, @role, @username, @email, @first_name, @surname, @gender, @date_of_birth, @region, @degree, @suspension)
 
     erb :edit_user
 end

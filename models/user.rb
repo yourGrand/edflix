@@ -214,7 +214,7 @@ class User < Sequel::Model(:login_details)
     return true
   end
 
-  def self.adminUpdate(userID, username, email, first_name, surname, gender, date_of_birth, region, degree, suspended)
+  def self.adminUpdate(userID, role, username, email, first_name, surname, gender, date_of_birth, region, degree, suspended)
 
     if first_name != ""
       DB[:users].where(user_id: userID).update(first_name: first_name)
@@ -252,6 +252,11 @@ class User < Sequel::Model(:login_details)
       DB[:login_details].where(login_id: userID).update(email: email)
     end
 
+    if role != ""
+      DB[:login_details].where(login_id: userID).update(trusted_provider: 0)
+      DB[:users].where(user_id: userID).update(role: role)
+    end
+    
     true
   end
 
