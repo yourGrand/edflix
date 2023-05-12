@@ -14,7 +14,15 @@ get "/dashboard_moderator" do
         fname_filter = params[:forename]
         surname_filter = params[:surname]
 
-
+        # change the hide status of the course if Hide buitton was pressed
+        course = Course[course_id: params[:courseid]]
+        if course
+            if course.hide_status == 0
+                course.update(course_hidden: 1)
+            else
+                course.update(course_hidden: 0)
+            end
+        end
 
         ids = db.execute("SELECT DISTINCT id FROM contact")
         option_tags = []
@@ -95,6 +103,8 @@ get "/dashboard_moderator" do
         redirect '/login'
     end
 end
+    
+
 
 
 

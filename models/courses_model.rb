@@ -30,6 +30,10 @@ class Course < Sequel::Model
   def pre
     course_pre.to_s
   end
+
+  def hide_status
+    course_hidden.to_i
+  end
 end
 
 class Vote < Sequel::Model

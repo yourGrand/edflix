@@ -24,20 +24,22 @@
   <div class="padding">
     <% if @courses.count > 0 %>
       <% @courses.each do |course| %>
-        <div class="courses-container">
-          <div class="course-shadow">
-            <img src=<%=h course.image %> class="course-img">
-            <article class="course">
-              <h3><%=h course.name %></h2>
-              <p><%=h course.about %></p>
-              <% if session[:logged_in] %>
-                <div class="read-more">
-                  <a href="course/<%=h course.id %>" target="_blank">More</a>
-                </div>
-              <% end %>
-            </article>
+        <% if course.hide_status == 0 %>
+          <div class="courses-container">
+            <div class="course-shadow">
+              <img src=<%=h course.image %> class="course-img">
+              <article class="course">
+                <h3><%=h course.name %></h2>
+                <p><%=h course.about %></p>
+                <% if session[:logged_in] %>
+                  <div class="read-more">
+                    <a href="course/<%=h course.id %>" target="_blank">More</a>
+                  </div>
+                <% end %>
+              </article>
+            </div>
           </div>
-        </div>
+        <% end %>
       <% end %>
     <% else %>
       <p>The database is empty!</p>

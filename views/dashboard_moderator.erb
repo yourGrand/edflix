@@ -119,6 +119,7 @@
           <th>Image Path</th>
           <th>Duration</th>
           <th>Prerequisites</th>
+          <th>Hide status</th>
           <th></th>
         </tr>
       </thead>
@@ -129,11 +130,28 @@
           <td><%= course.name %></td>
           <td><%= course.about %></td>
           <td><%= course.rating %></td>
-          <td><a href=<%= course.link %>>Link</a></td>
+          <td><a href=<% course.link %>>Link</a></td>
           <td><%= course.image %></td>
           <td><%= course.duration %></td>
           <td><%= course.pre %></td>
-          <td><a href="/edit-course/<%= course.id %>">Edit</a></td>
+          <td>
+            <% if course.hide_status == 1 %>
+              True
+            <% else %>
+              False
+            <% end %>
+          </td>
+          <td>
+            <a href="/edit-course/<%= course.id %>">Edit</a>
+            <form method="get" action="/dashboard_moderator">
+              <input type="hidden" name="courseid" value="<%=h course.id %>"/>
+              <% if course.hide_status == 1 %>
+                <button type="submit">Show</button>
+              <% else %>
+                <button type="submit">Hide</button>
+              <% end %>
+            </form>
+          </td>
         </tr>
         <% end %>
       </tbody>
