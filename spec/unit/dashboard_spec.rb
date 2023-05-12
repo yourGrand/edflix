@@ -10,7 +10,7 @@ describe 'Learner Dashboard' do
   end
 
   before(:all) do
-    @db = SQLite3::Database.new("./db/test.sqlite3")
+    @db = SQLite3::Database.new("./db/test_empty.sqlite3")
   end
 
   after(:all) do

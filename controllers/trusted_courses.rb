@@ -1,7 +1,7 @@
 require "sinatra"
 
 # trusted_courses.rb
-db = SQLite3::Database.new("./db/test.sqlite3")
+db = SQLite3::Database.new("./db/production.sqlite3")
 # GET route for trusted courses
 get '/trusted_courses' do
   if session[:logged_in] && (User.getRole(session[:username]) == "Trusted")

@@ -1,6 +1,6 @@
 require "sinatra"
 
-db = SQLite3::Database.new("./db/test.sqlite3")
+db = SQLite3::Database.new("./db/production.sqlite3")
 
 get "/dashboard_manager" do
     if session[:logged_in]

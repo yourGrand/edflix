@@ -3,7 +3,7 @@ require "logger"
 require "sequel"
 
 describe "DB" do
-  let(:type) { "test" }
+  let(:type) { "test_empty" }
   let(:db_path) { "#{File.dirname(__FILE__)}/../../db/" }
   let(:db) { "#{db_path}/#{type}.sqlite3" }
   let(:log_path) { "#{File.dirname(__FILE__)}/../../log/" }
