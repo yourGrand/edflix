@@ -45,6 +45,14 @@ post "/add_course" do
       @error = "Please enter prerequisites for the course"
       erb :add_course
   else
+
+    course_trusted = 0 # Default value for Moderators
+
+    if session[:logged_in]
+      user_role = User.getRole(session[:username])
+      course_trusted = 1 if user_role == "Trusted" # Set course_trusted to 1 for Trusted Course Providers
+    end
+
     Course.create(
         course_title: course_title, 
         course_description: course_about, 
@@ -53,7 +61,7 @@ post "/add_course" do
         image_path: "images/" + course_img,
         course_duration: course_time,
         course_pre: course_pre,
-        coutse_trusted: 0
+        course_trusted: course_trusted
     )
     
     @success = true
