@@ -37,5 +37,12 @@ License
 Contact
     If you have any questions, suggestions, or concerns regarding the website, please contact us via the contact us form on the website.
 
+How to run Program
+    Step 1: Clone the git repository into Codio
+    Step 2: Enter the “project” directory
+    Step 3: Type “bundle install” into the terminal to install the gems
+    Step 4: In the terminal type “sinatra” to run the program.
+
+
 
 * As codio email sending is buggy, users will instead be shown an example email containing their one time password.
