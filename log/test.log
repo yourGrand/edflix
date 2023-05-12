@@ -14513,3 +14513,11 @@ I, [2023-05-12T11:36:42.726904 #736]  INFO -- : (0.000227s) PRAGMA table_xinfo('
 I, [2023-05-12T11:36:42.731845 #736]  INFO -- : (0.000300s) PRAGMA table_xinfo('login_details')
 I, [2023-05-12T11:36:42.737986 #736]  INFO -- : (0.000331s) PRAGMA table_xinfo('users')
 >>>>>>> ac9ce7a8ef1868c35229f298010dfaf3fefd8e1d
+I, [2023-05-12T12:10:36.553117 #450]  INFO -- : (0.000248s) PRAGMA foreign_keys = 1
+I, [2023-05-12T12:10:36.553236 #450]  INFO -- : (0.000020s) PRAGMA case_sensitive_like = 1
+I, [2023-05-12T12:10:36.554494 #450]  INFO -- : (0.000203s) PRAGMA foreign_keys = 1
+I, [2023-05-12T12:10:36.554592 #450]  INFO -- : (0.000019s) PRAGMA case_sensitive_like = 1
+I, [2023-05-12T12:18:31.805215 #501]  INFO -- : (0.000251s) PRAGMA foreign_keys = 1
+I, [2023-05-12T12:18:31.805364 #501]  INFO -- : (0.000024s) PRAGMA case_sensitive_like = 1
+I, [2023-05-12T12:18:31.806866 #501]  INFO -- : (0.000231s) PRAGMA foreign_keys = 1
+I, [2023-05-12T12:18:31.807025 #501]  INFO -- : (0.000024s) PRAGMA case_sensitive_like = 1
