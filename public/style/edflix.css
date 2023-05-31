@@ -1,0 +1,473 @@
+/* variables*/
+:root {
+    --white: #ffff;
+    --black: #000000;
+    --green: #48854d;
+    --shadow: #0b076e0a;;
+    --error: #ff6347;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffff;
+    font-family: Circular, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.padding {
+    padding: 80px;
+}
+
+h1, h2 {
+    text-align: center;
+    padding-top: 20px;
+    color: var(--black);
+    font-weight: lighter;
+}
+
+/* Navigation bar */
+
+header {
+    background: var(--white);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 60px;
+    padding: 0 10px;
+}
+
+.logo a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.logo a img {
+    height: 100%;
+}
+
+nav.navigation {
+    display: none;
+}
+
+nav.navigation.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    height: 100% - 100px;
+    background: var(--white);
+}
+
+nav.navigation.active form {
+    height: 70px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+
+}
+
+nav.navigation.active form input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 20px;
+    border-bottom: 2px solid var(--green);
+}
+
+nav.navigation.active form button {
+    height: 20px;
+    background: none;
+    border: none;
+    padding: 0 0 0 10px;
+    cursor: pointer;
+}
+
+nav.navigation.active form button img {
+    height: 100%;
+}
+
+nav.navigation.active form button img:hover {
+    filter: invert(48%) sepia(14%) 
+        saturate(1528%) hue-rotate(74deg) 
+        brightness(89%) contrast(79%);
+}
+
+nav.navigation.active a {
+    padding: 20px;
+    color: var(--black);
+    font-size: 20px;
+    text-decoration: none;
+}
+
+nav.navigation.active a:hover {
+    color: var(--green);
+}
+
+.toggleBox {
+    padding: 0 10px;
+    height: 40px;
+}
+
+.toggleBox a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.toggleBox a img {
+    height: 100%;
+}
+
+.toggleBox a img:hover {
+    filter: invert(48%) sepia(14%) 
+        saturate(1528%) hue-rotate(74deg) 
+        brightness(89%) contrast(79%);
+}
+
+img.menu.hide {
+    display: none;
+}
+
+img.close-menu {
+    display: none;
+}
+
+img.close-menu.show {
+    display: flex;
+}
+
+/* Login and Signup */
+
+.signup,
+.login {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.error {
+    margin: 15px;
+    width: 100%;
+    color: var(--error);
+}
+
+.login label,
+.signup label {
+    display: none;
+}
+
+.signup input[type="text"],
+.signup input[type="password"],
+.login input[type="text"],
+.login input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 2px solid var(--green);
+    margin-bottom: 20px;
+}
+
+.login a {
+    margin: 0 0 0 10px;
+    float: right;
+    line-height: 21px;
+}
+
+.signup button[type="submit"],
+.login a,
+.read-more a, 
+.login button[type="submit"] {
+    background: var(--green);
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.signup button[type="submit"]:hover,
+.login a:hover, 
+.read-more a:hover,
+.login button[type="submit"]:hover {
+    background: #27ae60;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/*form {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.error {
+    margin: 15px;
+    width: 100%;
+    color: var(--error);
+}
+
+form label {
+    display: none;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 2px solid var(--green);
+    margin-bottom: 20px;
+}
+
+form a {
+    margin: 0 0 0 10px;
+    float: right;
+    line-height: 21px;
+}
+
+form a, .read-more a, 
+form button[type="submit"] {
+    background: var(--green);
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+form a:hover, .read-more a:hover,
+form button[type="submit"]:hover {
+    background: #27ae60;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}*/
+
+/* Courses */
+.courses-container {
+	padding-bottom: 30px;
+}
+
+.course-shadow {
+	box-shadow: 0 5px 20px 0 #d1d9e6;
+	border-radius: 50px;
+	padding: 20px;
+    display: flex;
+}
+
+.course-img {
+    margin-left: auto;
+    margin-right: auto;
+    float: right;    
+    padding: 40px;
+    flex: 40%;
+    width: 580px;
+    align-self: center;
+    border-radius: 70px;
+}
+
+.course {
+	text-align: center;
+    background-color: white;
+    padding: 40px;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 18px;
+    flex: 60%;
+}
+
+.course p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.read-more {
+    padding: 20px;
+}
+
+/* About us */
+
+.aboutus {
+    font-size: 18px;
+    text-align: center;
+    padding-top: 20px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Votes */
+
+.downvote {
+    background: #f88379;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.upvote {
+    background: #6495ED;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.no-vote {
+    background: var(--white);
+    color: var(--black);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+
+footer {
+    clear: both;  /* move past any floated elements */
+    font-size: 14px;
+    text-align: center;
+    padding: 20px 40px 0 40px;
+}
+
+footer ul {
+    list-style: none;
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 16px;
+    display: block;
+    padding: 0;
+}
+
+footer li {
+    padding: 0.25em 0 0.25em 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--black);
+    cursor: pointer
+}
+
+footer a:hover { color: var(--green); }
+
+.footer_title {
+    color: var(--black);
+    width: 100%;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 0.25em 0 0.25em 0;
+}
+
+footer p {
+    color: var(--black);
+    padding-bottom: 1.25em;
+}
+
+@media screen and (min-width: 768px) {
+    nav.navigation {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: right;
+        float: right;
+
+    }
+
+    nav.navigation form {
+        height: 50px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        width: 45%;
+    }
+
+    nav.navigation form input {
+        height: 100%;
+        width: 100%;
+        border: none;
+        font-size: 16px;
+        border-bottom: 2px solid var(--green);
+    }
+
+    nav.navigation form button {
+        height: 20px;
+        background: none;
+        border: none;
+        padding: 0 0 0 10px;
+        cursor: pointer;
+    }
+
+    nav.navigation form button img {
+        height: 100%;
+    }
+
+    nav.navigation form button img:hover {
+        filter: invert(48%) sepia(14%) 
+            saturate(1528%) hue-rotate(74deg) 
+            brightness(89%) contrast(79%);
+    }
+
+    nav.navigation a {
+        padding: 10px;
+        color: var(--black);
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+    nav.navigation a:hover {
+        color: var(--green);
+    }
+
+    div.toggleBox {
+        display: none;
+    }
+}

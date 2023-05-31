@@ -1,0 +1,162 @@
+
+<%= erb :"common/header" %>
+<!-- DASHBOARD -->
+  <head>
+    <style>
+
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      margin-right: 20px;
+      margin-left: auto;
+    }  
+    th, td {
+      padding: 5px;
+      text-align: left;
+    }
+    h1 {
+      margin-left: 20px;
+    }
+
+    .logout {
+      text-align: right;
+      color: red;
+      margin-right: 50px;
+    }
+
+    table.database {
+      margin-left:auto;
+      margin-right:auto;
+      max-width: 1400px;
+
+    }
+
+  </style>
+</head>
+<body>
+  <h1>
+    Welcome to the Edflix Moderator Dashboard.
+  </h1>
+
+  <table>
+    <caption>User Information</caption>
+    <tr>
+      <th>Username:</th>
+      <td><%= @dashUsername %></td>
+    </tr>
+    <tr>
+      <th>Email Address:</th>
+      <td><%= @dashEmail %></td>
+    </tr>
+
+  </table>
+
+  <div class="logout">
+    <a href="/logout">Log Out</a>
+  </div>
+
+  <div class = "database_table">
+
+    <table class = "database">
+      <thead>
+        <tr>
+          <% @headers.each do |header| %>
+            <th><%= header %></th>
+          <% end %>
+        </tr>
+      </thead>
+      <tbody>
+        <% @rows.each do |row| %>
+          <tr>
+            <% row.each do |column| %>
+              <td><%= column %></td>
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+  </div>
+
+  <div class="filters">
+    <form method="get" action="/dashboard_moderator">
+
+      <label for="id_filter">ID:</label>
+      <select id="id_filter" name="id">
+          <option value="0,All">All</option>
+          <%= @option_tags_id %>
+      </select>
+
+
+      <label for="fname_filter">Forename:</label>
+      <select id="fname_filter" name="forename">
+          <option value="0,All">All</option>
+          <%= @option_tags_fname %>
+      </select>
+
+      <label for="sname_filter">Surname:</label>
+      <select id="sname_filter" name="surname">
+          <option value="0,All">All</option>
+          <%= @option_tags_surname %>
+      </select>
+
+      
+      <button type="submit">Filter</button>
+    </form>
+  </div> 
+
+  <h2>Courses</h2>
+  <a href="/add_course" target = "_blank">Add course</a>
+  <div class="database_table">
+    <table class="database">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Rating</th>
+          <th>Link</th>
+          <th>Image Path</th>
+          <th>Duration</th>
+          <th>Prerequisites</th>
+          <th>Hide status</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @courses.each do |course| %>
+        <tr>
+          <td><%= course.id %></td>
+          <td><%= course.name %></td>
+          <td><%= course.about %></td>
+          <td><%= course.rating %></td>
+          <td><a href=<% course.link %>>Link</a></td>
+          <td><%= course.image %></td>
+          <td><%= course.duration %></td>
+          <td><%= course.pre %></td>
+          <td>
+            <% if course.hide_status == 1 %>
+              True
+            <% else %>
+              False
+            <% end %>
+          </td>
+          <td>
+            <a href="/edit-course/<%= course.id %>">Edit</a>
+            <form method="get" action="/dashboard_moderator">
+              <input type="hidden" name="courseid" value="<%=h course.id %>"/>
+              <% if course.hide_status == 1 %>
+                <button type="submit">Show</button>
+              <% else %>
+                <button type="submit">Hide</button>
+              <% end %>
+            </form>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+<%= erb :"common/footer" %>

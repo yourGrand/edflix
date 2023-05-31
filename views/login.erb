@@ -1,0 +1,22 @@
+<%= erb :"common/header" %>
+<!-- LOGIN -->
+  <main>
+    <form class="login" method="post" action="/login">
+      <% if @error %>
+        <p class = "error"><%= @error %></p>
+      <% end %>
+      <input type="text" id="username" name="username" placeholder="Username" value="<%= h(params[:username]) %>">
+      <input type="password" id="password" name="password" placeholder="Password" value="<%= h(params[:password]) %>">
+      <button type="submit">Log In</button>
+
+      <a href="register">Sign up</a>
+      <a href ="forgot_password">Forgot your password?</a>
+    </form>
+  </main>
+
+<%= erb :"common/footer" %>
+
+  
+
+  
+

@@ -1,0 +1,6 @@
+# Logfile created on 2023-03-03 19:17:28 +0000 by logger.rb/66358
+I, [2023-03-03T19:17:29.023785 #139]  INFO -- : (0.000211s) PRAGMA foreign_keys = 1
+I, [2023-03-03T19:17:29.023925 #139]  INFO -- : (0.000024s) PRAGMA case_sensitive_like = 1
+I, [2023-03-03T19:17:29.024546 #139]  INFO -- : (0.000087s) SELECT sqlite_version()
+I, [2023-03-03T19:17:29.024837 #139]  INFO -- : (0.000072s) PRAGMA table_xinfo('courses')
+E, [2023-03-03T19:17:29.025099 #139] ERROR -- : SQLite3::SQLException: no such table: courses: SELECT * FROM `courses` LIMIT 0

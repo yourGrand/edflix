@@ -1,0 +1,87 @@
+<%= erb :"common/header" %>
+
+<!-- TRUSTED DASHBOARD -->
+<head>
+  <style>
+
+    main {
+      text-align: center;
+    }
+
+    table {
+      border: 1px solid black;
+      border-collapse: collapse;
+      margin: 20px auto;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 10px;
+      text-align: left;
+    }
+
+    caption {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 20px 0;
+    }
+
+    .buttons {
+      margin-bottom: 20px;
+    }
+
+    .buttons a, .buttons button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 5px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .buttons a:hover, .buttons button:hover {
+      background-color: #45a049;
+    }
+
+    .logout {
+      text-align: right;
+      color: red;
+      margin-right: 50px;
+    }
+  </style>
+</head>
+
+<main>
+  <h1>Welcome to the Edflix Trusted Course Provider Dashboard</h1>
+
+  <table>
+    <caption>User Information</caption>
+    <tr>
+      <th>Username:</th>
+      <td><%= @dashUsername %></td>
+    </tr>
+    <tr>
+      <th>Email Address:</th>
+      <td><%= @dashEmail %></td>
+    </tr>
+
+  </table>
+
+  <div class="buttons">
+    <a href="/add_course" target = "_blank">Add course</a>
+    <a href="/trusted_courses" class="button">Course Details</a>
+  </div>
+  <button onclick="location.href='/logout'">Log Out</button>
+  <button onclick="window.open('/change_password', '_blank')">Reset Password</button>
+  <button onclick="window.open('/change_email', '_blank')">Reset Email</button>
+</main>
+
+<%= erb :"common/footer" %>
+

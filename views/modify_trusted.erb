@@ -1,0 +1,34 @@
+<!-- modify_trusted.erb -->
+
+<%= erb :"common/header" %>
+
+<h2>Modify Course</h2>
+
+<form action="/modify_trusted" method="POST">
+  <input type="hidden" name="course_id" value="<%= @course.course_id %>">
+
+  <label for="coursetitle">Title:</label>
+  <input type="text" id="coursetitle" name="coursetitle" value="<%= @course.course_title %>" required>
+
+  <label for="description">Description:</label>
+  <textarea id="description" name="description" required><%= @course.course_description %></textarea>
+
+  <label for="rating">Rating:</label>
+  <input type="text" id="rating" name="rating" value="<%= @course.course_rating %>" required>
+
+  <label for="duration">Duration:</label>
+  <input type="text" id="duration" name="duration" value="<%= @course.course_duration %>" required>
+
+  <label for="prerequisites">Prerequisites:</label>
+  <input type="text" id="prerequisites" name="prerequisites" value="<%= @course.course_pre %>" required>
+
+  <input type="submit" value="Modify Course">
+</form>
+<% if session[:confirmation_message] %>
+  <div id="confirmation-message">
+    <%= session[:confirmation_message] %>
+  </div>
+  <% session[:confirmation_message] = nil %>
+<% end %>
+
+<%= erb :"common/footer" %>

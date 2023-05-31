@@ -1,0 +1,42 @@
+<%= erb :"common/header" %>
+<!-- ADD COURSE FORM -->
+  <main>
+    <div class="add-course-div">
+      <h2>Add a new course</h2>
+      <% if @error %>
+        <p class = "error"><%= @error %></p>
+      <% elsif @success %>
+        <p>Course was successfully added</p>
+      <% end %>
+      <form class="add-course" method="post", action="/add_course">
+        <label for="coursetitle">Course title:</label>
+        <input type="text" id="coursetitle" name="coursetitle" placeholder="Course title"/>
+        <br/>
+
+        <label for="about">Course description:</label>
+        <br/>
+        <textarea id="about" name="about" rows="10" cols="50" placeholder="Course description"></textarea>
+        <br/>
+
+        <label for="courselink">Course link:</label>
+        <input type="text" id="courselink" name="courselink" placeholder="Course link"/>
+        <br/>
+
+        <label for="imgname">Image file name with an extension .png, .jpg or .jpeg:</label>
+        <input type="text" id="imgname" name="imgname" placeholder="Image file name"/>
+        <br/>
+
+        <label for="coursetime">Course duration:</label>
+        <input type="text" id="coursetime" name="coursetime" placeholder="Course duration"/>
+        <br/>
+
+        <label for="coursepre">Course prerequisites:</label>
+        <br/>
+        <textarea id="coursepre" name="coursepre" rows="10" cols="50" placeholder="Course prerequisites"></textarea>
+        <br/>
+
+        <button type="submit">Add course</button>
+      </form>
+    </div>
+  </main>
+<%= erb :"common/footer" %>

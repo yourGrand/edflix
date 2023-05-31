@@ -1,0 +1,30 @@
+<%= erb :"common/header" %>
+<!-- SEARCH -->
+<main>
+<% if session[:logged_in] %>
+  <h2>Search results for "<%=h @query %>"</h2>
+  <div class="padding">
+    <% if @results.count > 0 %>
+      <% @results.each do |result| %>
+        <div class="courses-container">
+          <div class="course-shadow">
+            <img src=<%=h result.image %> class="course-img">
+            <article class="course">
+              <h3><%=h result.name %></h2>
+              <p><%=h result.about %></p>
+              <div class="read-more">
+                <a href="course/<%=h result.id %>" target="_blank">More</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      <h2>No results</h2>
+    <% end %> 
+  </div>
+<% else %>
+  <h2 class="error">Only registered users can use this function!</h2>
+<% end %>
+</main>
+<%= erb :"common/footer" %>
