@@ -26,20 +26,20 @@ Welcome to our website! This platform is designed to provide users with a wide r
      -Managers: Have access to filtered reports on user activities and courses.
 
 ## Technologies Used
-**HTML5 and CSS3**: Front-end development.
-**Ruby and Sinatra**: Back-end development and routing.
-**SQLite3**: Database for storing user and course information.
-**RSpec**: Testing tool for automated testing of the application.
+- **HTML5 and CSS3**: Front-end development.
+- **Ruby and Sinatra**: Back-end development and routing.
+- **SQLite3**: Database for storing user and course information.
+- **RSpec**: Testing tool for automated testing of the application.
 
 
 ## File Structure
-**app.rb**: Ruby file containing the server-side code and route handling.
-**controllers/**: Directory containing .rb files that handle interactions between models and views.
-**models/**: Directory containing classes that interact with the database.
-**spec/**: Directory containing testing files (RSpec and end-to-end).
-**views/**: Directory containing HTML templates for different pages.
-**public/**: Directory for static files such as CSS stylesheets and JavaScript files.
-**db/**: Directory containing the SQLite3 database files and migration scripts.
+- **app.rb**: Ruby file containing the server-side code and route handling.
+- **controllers/**: Directory containing .rb files that handle interactions between models and views.
+- **models/**: Directory containing classes that interact with the database.
+- **spec/**: Directory containing testing files (RSpec and end-to-end).
+- **views/**: Directory containing HTML templates for different pages.
+- **public/**: Directory for static files such as CSS stylesheets and JavaScript files.
+- **db/**: Directory containing the SQLite3 database files and migration scripts.
 
 ## License
 This project is licensed under the MIT License.
@@ -48,10 +48,10 @@ This project is licensed under the MIT License.
 If you have any questions, suggestions, or concerns regarding the website, please contact us via LinkedIn.
 
 ## How to run Program
-Step 1: Clone the git repository
-Step 2: Enter the “project” directory
-Step 3: Type “bundle install” into the terminal to install the gems
-Step 4: In the terminal type “sinatra” to run the program.
+1) Clone the git repository
+2) Enter the “project” directory
+3) Type “bundle install” into the terminal to install the gems
+4) In the terminal type “sinatra” to run the program.
 
 ## Disclaimer
 The project is not completed and requires further development. As we are full-time university students, we keep working on it during our free time.
